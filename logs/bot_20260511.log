@@ -2091,3 +2091,1589 @@
 2026-05-11 23:21:51 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
 2026-05-11 23:21:52 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
 2026-05-11 23:21:53 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 23:22:52 [INFO    ] main                 [DRY-RUN] DRY-RUN MODE - no real orders placed
+2026-05-11 23:22:52 [INFO    ] mexc_client          MEXCClient initialized | dry_run=True
+2026-05-11 23:22:52 [INFO    ] data_fetcher         Database initialized: data/trades.db
+2026-05-11 23:22:52 [INFO    ] ai_analyst           AI Analyst running in rule-based mode (no GEMINI_API_KEY)
+2026-05-11 23:22:52 [INFO    ] trader               Loaded 1 open positions from DB
+2026-05-11 23:22:52 [INFO    ] trader               Trader ready | dry_run=True | open=1
+2026-05-11 23:22:52 [INFO    ] main                 ============================================================
+2026-05-11 23:22:52 [INFO    ] main                   MEXC SCALPING AI BOT  |  dry_run=True
+2026-05-11 23:22:52 [INFO    ] main                   Symbols : BTC_USDT, ETH_USDT, XAUT_USDT, SILVER_USDT, USOIL_USDT
+2026-05-11 23:22:52 [INFO    ] main                   Interval: Min1 | Check: 1s
+2026-05-11 23:22:52 [INFO    ] main                 ============================================================
+2026-05-11 23:22:52 [INFO    ] mexc_client          Testing MEXC connection...
+2026-05-11 23:22:54 [ERROR   ] mexc_client          API error GET /api/v1/contract/ticker?symbol=BTC_USDT: Requests are too frequent, please try again later
+2026-05-11 23:22:54 [ERROR   ] mexc_client          ✗ Public API failed
+2026-05-11 23:22:54 [WARNING ] main                 [WARN] API test failed – running in reduced mode (public data only)
+2026-05-11 23:22:54 [INFO    ] main                 Loading 1-minute historical data...
+2026-05-11 23:22:54 [INFO    ] data_fetcher         Loading history for BTC_USDT...
+2026-05-11 23:22:54 [INFO    ] data_fetcher           [OK] BTC_USDT: 300 candles loaded
+2026-05-11 23:22:54 [INFO    ] data_fetcher         Loading history for ETH_USDT...
+2026-05-11 23:22:54 [INFO    ] data_fetcher           [OK] ETH_USDT: 300 candles loaded
+2026-05-11 23:22:54 [INFO    ] data_fetcher         Loading history for XAUT_USDT...
+2026-05-11 23:22:54 [INFO    ] data_fetcher           [OK] XAUT_USDT: 300 candles loaded
+2026-05-11 23:22:54 [INFO    ] data_fetcher         Loading history for SILVER_USDT...
+2026-05-11 23:22:55 [INFO    ] data_fetcher           [OK] SILVER_USDT: 300 candles loaded
+2026-05-11 23:22:55 [INFO    ] data_fetcher         Loading history for USOIL_USDT...
+2026-05-11 23:22:55 [INFO    ] data_fetcher           [OK] USOIL_USDT: 301 candles loaded
+2026-05-11 23:22:55 [INFO    ] data_fetcher         Database initialized: data/trades_htf.db
+2026-05-11 23:22:55 [INFO    ] main                 Loading 5-minute higher-timeframe data...
+2026-05-11 23:22:55 [INFO    ] data_fetcher         Loading history for BTC_USDT...
+2026-05-11 23:22:55 [INFO    ] data_fetcher           [OK] BTC_USDT: 100 candles loaded
+2026-05-11 23:22:55 [INFO    ] data_fetcher         Loading history for ETH_USDT...
+2026-05-11 23:22:55 [INFO    ] data_fetcher           [OK] ETH_USDT: 100 candles loaded
+2026-05-11 23:22:55 [INFO    ] data_fetcher         Loading history for XAUT_USDT...
+2026-05-11 23:22:56 [INFO    ] data_fetcher           [OK] XAUT_USDT: 100 candles loaded
+2026-05-11 23:22:56 [INFO    ] data_fetcher         Loading history for SILVER_USDT...
+2026-05-11 23:22:56 [INFO    ] data_fetcher           [OK] SILVER_USDT: 100 candles loaded
+2026-05-11 23:22:56 [INFO    ] data_fetcher         Loading history for USOIL_USDT...
+2026-05-11 23:22:56 [INFO    ] data_fetcher           [OK] USOIL_USDT: 101 candles loaded
+2026-05-11 23:22:57 [INFO    ] main                   Leverage set: BTC_USDT x 10
+2026-05-11 23:22:57 [INFO    ] main                   Leverage set: ETH_USDT x 10
+2026-05-11 23:22:57 [INFO    ] main                   Leverage set: XAUT_USDT x 10
+2026-05-11 23:22:58 [INFO    ] main                   Leverage set: SILVER_USDT x 10
+2026-05-11 23:22:58 [INFO    ] main                   Leverage set: USOIL_USDT x 10
+2026-05-11 23:22:58 [INFO    ] main                 Initializing AI models...
+2026-05-11 23:22:58 [INFO    ] ai_model             Loaded saved model for BTC_USDT
+2026-05-11 23:22:58 [INFO    ] ai_model             Loaded saved model for ETH_USDT
+2026-05-11 23:22:58 [INFO    ] ai_model             Loaded saved model for XAUT_USDT
+2026-05-11 23:22:58 [INFO    ] ai_model             Loaded saved model for SILVER_USDT
+2026-05-11 23:22:58 [INFO    ] ai_model             Loaded saved model for USOIL_USDT
+2026-05-11 23:22:59 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 23:22:59 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 23:22:59 [INFO    ] main                 [OK] WebSocket live feed active
+2026-05-11 23:22:59 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 23:22:59 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 23:22:59 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 23:22:59 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 23:22:59 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 23:22:59 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:22:59 [INFO    ] risk_manager         Daily reset | balance=100.00 USDT
+2026-05-11 23:22:59 [INFO    ] main                 Starting balance: 100.00 USDT
+2026-05-11 23:22:59 [INFO    ] main                 [RUN] Scalping loop started
+2026-05-11 23:22:59 [INFO    ] main                 [DASHBOARD] Dashboard -> http://localhost:5000
+2026-05-11 23:23:59 [INFO    ] main                 [START] Bot STARTED by dashboard
+2026-05-11 23:24:04 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 23:24:04 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 23:24:09 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 23:24:10 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 23:24:10 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 23:24:10 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 23:24:10 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 23:24:10 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 23:24:10 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 23:24:10 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 23:25:18 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 23:25:18 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 23:25:23 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 23:25:24 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 23:25:24 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 23:25:24 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 23:25:24 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 23:25:24 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 23:25:24 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 23:25:24 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 23:26:29 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 23:26:29 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 23:26:34 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 23:26:35 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 23:26:35 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 23:26:35 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 23:26:35 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 23:26:35 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 23:26:35 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 23:26:35 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 23:27:44 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 23:27:44 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 23:27:49 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 23:27:50 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 23:27:50 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 23:27:50 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 23:27:50 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 23:27:50 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 23:27:50 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 23:27:50 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 23:28:58 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 23:28:58 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 23:29:03 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 23:29:04 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 23:29:04 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 23:29:04 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 23:29:04 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 23:29:04 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 23:29:04 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 23:29:04 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 23:30:08 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 23:30:08 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 23:30:13 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 23:30:14 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 23:30:14 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 23:30:14 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 23:30:14 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 23:30:14 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 23:30:14 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 23:30:14 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 23:31:08 [INFO    ] strategy             [OK] [BUY] ETH_USDT | score=10/12 ADX=404 HTF=UP AI=HOLD(1.00) RSI=81 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:31:08 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:31:08 [INFO    ] risk_manager         Order | ETH_USDT BUY @2340.3200 SL=2337.2400(-3.0800) TP=2346.4800(+6.1600) vol=65 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:31:08 [INFO    ] trader               Already have position in ETH_USDT, skipping
+2026-05-11 23:31:10 [INFO    ] strategy             [OK] [BUY] ETH_USDT | score=10/12 ADX=403 HTF=UP AI=HOLD(1.00) RSI=80 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:31:10 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:31:10 [INFO    ] risk_manager         Order | ETH_USDT BUY @2340.9700 SL=2337.8071(-3.1629) TP=2347.2957(+6.3257) vol=63 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:31:10 [INFO    ] trader               Already have position in ETH_USDT, skipping
+2026-05-11 23:31:12 [INFO    ] strategy             [OK] [BUY] ETH_USDT | score=10/12 ADX=403 HTF=UP AI=HOLD(1.00) RSI=80 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:31:12 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:31:12 [INFO    ] risk_manager         Order | ETH_USDT BUY @2340.9700 SL=2337.8071(-3.1629) TP=2347.2957(+6.3257) vol=63 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:31:12 [INFO    ] trader               Already have position in ETH_USDT, skipping
+2026-05-11 23:31:14 [INFO    ] strategy             [OK] [BUY] ETH_USDT | score=10/12 ADX=403 HTF=UP AI=HOLD(1.00) RSI=82 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:31:14 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:31:14 [INFO    ] risk_manager         Order | ETH_USDT BUY @2340.6400 SL=2337.4771(-3.1629) TP=2346.9657(+6.3257) vol=63 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:31:14 [INFO    ] trader               Already have position in ETH_USDT, skipping
+2026-05-11 23:31:16 [INFO    ] strategy             [OK] [BUY] ETH_USDT | score=10/12 ADX=403 HTF=UP AI=HOLD(1.00) RSI=82 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:31:16 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:31:16 [INFO    ] risk_manager         Order | ETH_USDT BUY @2340.6400 SL=2337.4771(-3.1629) TP=2346.9657(+6.3257) vol=63 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:31:16 [INFO    ] trader               Already have position in ETH_USDT, skipping
+2026-05-11 23:31:18 [INFO    ] strategy             [OK] [BUY] ETH_USDT | score=10/12 ADX=403 HTF=UP AI=HOLD(1.00) RSI=82 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:31:18 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:31:18 [INFO    ] risk_manager         Order | ETH_USDT BUY @2341.4800 SL=2338.3171(-3.1629) TP=2347.8057(+6.3257) vol=63 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:31:18 [INFO    ] trader               Already have position in ETH_USDT, skipping
+2026-05-11 23:31:20 [INFO    ] strategy             [OK] [BUY] ETH_USDT | score=10/12 ADX=403 HTF=UP AI=HOLD(1.00) RSI=82 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:31:20 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:31:20 [INFO    ] risk_manager         Order | ETH_USDT BUY @2341.4900 SL=2338.3271(-3.1629) TP=2347.8157(+6.3257) vol=63 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:31:20 [INFO    ] trader               Already have position in ETH_USDT, skipping
+2026-05-11 23:31:21 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 23:31:21 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 23:31:22 [INFO    ] strategy             [OK] [BUY] ETH_USDT | score=10/12 ADX=403 HTF=UP AI=HOLD(1.00) RSI=80 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:31:22 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:31:22 [INFO    ] risk_manager         Order | ETH_USDT BUY @2341.4900 SL=2338.3271(-3.1629) TP=2347.8157(+6.3257) vol=63 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:31:22 [INFO    ] trader               Already have position in ETH_USDT, skipping
+2026-05-11 23:31:24 [INFO    ] strategy             [OK] [BUY] ETH_USDT | score=10/12 ADX=403 HTF=UP AI=HOLD(1.00) RSI=80 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:31:24 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:31:24 [INFO    ] risk_manager         Order | ETH_USDT BUY @2341.4900 SL=2338.3271(-3.1629) TP=2347.8157(+6.3257) vol=63 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:31:24 [INFO    ] trader               Already have position in ETH_USDT, skipping
+2026-05-11 23:31:26 [INFO    ] strategy             [OK] [BUY] ETH_USDT | score=10/12 ADX=403 HTF=UP AI=HOLD(1.00) RSI=80 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:31:26 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:31:26 [INFO    ] risk_manager         Order | ETH_USDT BUY @2341.4900 SL=2338.3271(-3.1629) TP=2347.8157(+6.3257) vol=63 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:31:26 [INFO    ] trader               Already have position in ETH_USDT, skipping
+2026-05-11 23:31:26 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 23:31:27 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 23:31:27 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 23:31:27 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 23:31:27 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 23:31:27 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 23:31:27 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 23:31:27 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 23:31:28 [INFO    ] strategy             [OK] [BUY] ETH_USDT | score=10/12 ADX=403 HTF=UP AI=HOLD(1.00) RSI=80 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:31:28 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:31:28 [INFO    ] risk_manager         Order | ETH_USDT BUY @2341.4900 SL=2338.3271(-3.1629) TP=2347.8157(+6.3257) vol=63 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:31:28 [INFO    ] trader               Already have position in ETH_USDT, skipping
+2026-05-11 23:31:30 [INFO    ] strategy             [OK] [BUY] ETH_USDT | score=10/12 ADX=403 HTF=UP AI=HOLD(1.00) RSI=81 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:31:30 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:31:30 [INFO    ] risk_manager         Order | ETH_USDT BUY @2341.4900 SL=2338.3271(-3.1629) TP=2347.8157(+6.3257) vol=63 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:31:30 [INFO    ] trader               Already have position in ETH_USDT, skipping
+2026-05-11 23:31:32 [INFO    ] strategy             [OK] [BUY] ETH_USDT | score=10/12 ADX=403 HTF=UP AI=HOLD(1.00) RSI=81 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:31:32 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:31:32 [INFO    ] risk_manager         Order | ETH_USDT BUY @2340.8700 SL=2337.7071(-3.1629) TP=2347.1957(+6.3257) vol=63 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:31:32 [INFO    ] trader               Already have position in ETH_USDT, skipping
+2026-05-11 23:31:33 [INFO    ] strategy             [OK] [BUY] ETH_USDT | score=10/12 ADX=403 HTF=UP AI=HOLD(1.00) RSI=81 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:31:34 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:31:34 [INFO    ] risk_manager         Order | ETH_USDT BUY @2341.1900 SL=2338.0271(-3.1629) TP=2347.5157(+6.3257) vol=63 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:31:34 [INFO    ] trader               Already have position in ETH_USDT, skipping
+2026-05-11 23:31:36 [INFO    ] strategy             [OK] [BUY] ETH_USDT | score=10/12 ADX=403 HTF=UP AI=HOLD(1.00) RSI=81 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:31:36 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:31:36 [INFO    ] risk_manager         Order | ETH_USDT BUY @2341.0700 SL=2337.9071(-3.1629) TP=2347.3957(+6.3257) vol=63 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:31:36 [INFO    ] trader               Already have position in ETH_USDT, skipping
+2026-05-11 23:31:38 [INFO    ] strategy             [OK] [BUY] ETH_USDT | score=10/12 ADX=403 HTF=UP AI=HOLD(1.00) RSI=81 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:31:38 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:31:38 [INFO    ] risk_manager         Order | ETH_USDT BUY @2341.2000 SL=2338.0371(-3.1629) TP=2347.5257(+6.3257) vol=63 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:31:38 [INFO    ] trader               Already have position in ETH_USDT, skipping
+2026-05-11 23:31:40 [INFO    ] strategy             [OK] [BUY] ETH_USDT | score=10/12 ADX=403 HTF=UP AI=HOLD(1.00) RSI=80 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:31:40 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:31:40 [INFO    ] risk_manager         Order | ETH_USDT BUY @2341.2300 SL=2338.0671(-3.1629) TP=2347.5557(+6.3257) vol=63 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:31:40 [INFO    ] trader               Already have position in ETH_USDT, skipping
+2026-05-11 23:31:43 [INFO    ] strategy             [OK] [BUY] ETH_USDT | score=10/12 ADX=403 HTF=UP AI=HOLD(1.00) RSI=80 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:31:43 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:31:43 [INFO    ] risk_manager         Order | ETH_USDT BUY @2341.2300 SL=2338.0671(-3.1629) TP=2347.5557(+6.3257) vol=63 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:31:43 [INFO    ] trader               Already have position in ETH_USDT, skipping
+2026-05-11 23:31:45 [INFO    ] strategy             [OK] [BUY] ETH_USDT | score=10/12 ADX=403 HTF=UP AI=HOLD(1.00) RSI=81 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:31:46 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:31:46 [INFO    ] risk_manager         Order | ETH_USDT BUY @2340.8500 SL=2337.6871(-3.1629) TP=2347.1757(+6.3257) vol=63 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:31:46 [INFO    ] trader               Already have position in ETH_USDT, skipping
+2026-05-11 23:31:48 [INFO    ] strategy             [OK] [BUY] ETH_USDT | score=10/12 ADX=403 HTF=UP AI=HOLD(1.00) RSI=80 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:31:48 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:31:48 [INFO    ] risk_manager         Order | ETH_USDT BUY @2341.2200 SL=2338.0571(-3.1629) TP=2347.5457(+6.3257) vol=63 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:31:48 [INFO    ] trader               Already have position in ETH_USDT, skipping
+2026-05-11 23:31:50 [INFO    ] strategy             [OK] [BUY] ETH_USDT | score=10/12 ADX=403 HTF=UP AI=HOLD(1.00) RSI=79 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:31:50 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:31:50 [INFO    ] risk_manager         Order | ETH_USDT BUY @2340.8700 SL=2337.7071(-3.1629) TP=2347.1957(+6.3257) vol=63 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:31:50 [INFO    ] trader               Already have position in ETH_USDT, skipping
+2026-05-11 23:31:53 [INFO    ] strategy             [OK] [BUY] ETH_USDT | score=10/12 ADX=403 HTF=UP AI=HOLD(1.00) RSI=79 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:31:53 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:31:53 [INFO    ] risk_manager         Order | ETH_USDT BUY @2340.6800 SL=2337.5171(-3.1629) TP=2347.0057(+6.3257) vol=63 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:31:53 [INFO    ] trader               Already have position in ETH_USDT, skipping
+2026-05-11 23:31:55 [INFO    ] strategy             [OK] [BUY] ETH_USDT | score=10/12 ADX=403 HTF=UP AI=HOLD(1.00) RSI=79 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:31:56 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:31:56 [INFO    ] risk_manager         Order | ETH_USDT BUY @2340.6800 SL=2337.5171(-3.1629) TP=2347.0057(+6.3257) vol=63 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:31:56 [INFO    ] trader               Already have position in ETH_USDT, skipping
+2026-05-11 23:31:58 [INFO    ] strategy             [OK] [BUY] ETH_USDT | score=10/12 ADX=403 HTF=UP AI=HOLD(1.00) RSI=80 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:31:58 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:31:58 [INFO    ] risk_manager         Order | ETH_USDT BUY @2340.6800 SL=2337.5171(-3.1629) TP=2347.0057(+6.3257) vol=63 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:31:58 [INFO    ] trader               Already have position in ETH_USDT, skipping
+2026-05-11 23:32:00 [INFO    ] strategy             [OK] [BUY] ETH_USDT | score=10/12 ADX=403 HTF=UP AI=HOLD(1.00) RSI=81 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:32:00 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:32:00 [INFO    ] risk_manager         Order | ETH_USDT BUY @2340.8200 SL=2337.6571(-3.1629) TP=2347.1457(+6.3257) vol=63 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:32:00 [INFO    ] trader               Already have position in ETH_USDT, skipping
+2026-05-11 23:32:02 [INFO    ] strategy             [OK] [BUY] ETH_USDT | score=10/12 ADX=403 HTF=UP AI=HOLD(1.00) RSI=81 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:32:02 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:32:02 [INFO    ] risk_manager         Order | ETH_USDT BUY @2341.0800 SL=2337.9171(-3.1629) TP=2347.4057(+6.3257) vol=63 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:32:02 [INFO    ] trader               Already have position in ETH_USDT, skipping
+2026-05-11 23:32:05 [INFO    ] strategy             [OK] [BUY] ETH_USDT | score=10/12 ADX=403 HTF=UP AI=HOLD(1.00) RSI=81 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:32:06 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:32:06 [INFO    ] risk_manager         Order | ETH_USDT BUY @2341.0900 SL=2337.9271(-3.1629) TP=2347.4157(+6.3257) vol=63 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:32:06 [INFO    ] trader               Already have position in ETH_USDT, skipping
+2026-05-11 23:32:08 [INFO    ] strategy             [OK] [BUY] ETH_USDT | score=10/12 ADX=403 HTF=UP AI=HOLD(1.00) RSI=81 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:32:08 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:32:08 [INFO    ] risk_manager         Order | ETH_USDT BUY @2341.0900 SL=2337.9271(-3.1629) TP=2347.4157(+6.3257) vol=63 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:32:08 [INFO    ] trader               Already have position in ETH_USDT, skipping
+2026-05-11 23:32:10 [INFO    ] strategy             [OK] [BUY] ETH_USDT | score=10/12 ADX=403 HTF=UP AI=HOLD(1.00) RSI=81 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:32:11 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:32:11 [INFO    ] risk_manager         Order | ETH_USDT BUY @2341.1300 SL=2337.9671(-3.1629) TP=2347.4557(+6.3257) vol=63 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:32:11 [INFO    ] trader               Already have position in ETH_USDT, skipping
+2026-05-11 23:32:14 [INFO    ] strategy             [OK] [BUY] ETH_USDT | score=10/12 ADX=403 HTF=UP AI=HOLD(1.00) RSI=82 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:32:15 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:32:15 [INFO    ] risk_manager         Order | ETH_USDT BUY @2341.2400 SL=2338.0771(-3.1629) TP=2347.5657(+6.3257) vol=63 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:32:15 [INFO    ] trader               Already have position in ETH_USDT, skipping
+2026-05-11 23:32:17 [INFO    ] strategy             [OK] [BUY] ETH_USDT | score=10/12 ADX=403 HTF=UP AI=HOLD(1.00) RSI=81 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:32:18 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:32:18 [INFO    ] risk_manager         Order | ETH_USDT BUY @2341.3900 SL=2338.2271(-3.1629) TP=2347.7157(+6.3257) vol=63 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:32:18 [INFO    ] trader               Already have position in ETH_USDT, skipping
+2026-05-11 23:32:20 [INFO    ] strategy             [OK] [BUY] ETH_USDT | score=10/12 ADX=403 HTF=UP AI=HOLD(1.00) RSI=80 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:32:20 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:32:20 [INFO    ] risk_manager         Order | ETH_USDT BUY @2341.3900 SL=2338.2271(-3.1629) TP=2347.7157(+6.3257) vol=63 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:32:20 [INFO    ] trader               Already have position in ETH_USDT, skipping
+2026-05-11 23:32:25 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:32:27 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:32:29 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:32:34 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:32:34 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 23:32:34 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 23:32:36 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:32:39 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:32:39 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 23:32:40 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 23:32:40 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 23:32:40 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 23:32:40 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 23:32:40 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 23:32:40 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 23:32:40 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 23:32:41 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:32:45 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:32:47 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:32:50 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:32:52 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:32:54 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:32:56 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:32:58 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:33:00 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:33:02 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:33:04 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:33:07 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:33:09 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:33:11 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:33:12 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:33:15 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:33:18 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:33:21 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:33:24 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:33:27 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:33:30 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:33:32 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:33:35 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:33:37 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:33:39 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:33:41 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:33:41 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 23:33:41 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 23:33:43 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:33:46 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:33:46 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 23:33:47 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 23:33:47 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 23:33:47 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 23:33:47 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 23:33:47 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 23:33:47 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 23:33:47 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 23:33:48 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:33:50 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:33:52 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:33:54 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:33:56 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:33:58 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:34:00 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:34:03 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:34:06 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:34:07 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:34:09 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:34:11 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:34:13 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:34:14 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:34:16 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:34:18 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:34:53 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 23:34:53 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 23:34:58 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 23:34:59 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 23:34:59 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 23:34:59 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 23:34:59 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 23:34:59 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 23:34:59 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 23:34:59 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 23:35:13 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:35:15 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:35:18 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:36:09 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 23:36:09 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 23:36:14 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 23:36:15 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 23:36:15 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 23:36:15 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 23:36:15 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 23:36:15 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 23:36:15 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 23:36:15 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 23:37:18 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 23:37:18 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 23:37:23 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 23:37:24 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 23:37:24 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 23:37:24 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 23:37:24 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 23:37:24 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 23:37:24 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 23:37:24 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 23:38:33 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 23:38:33 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 23:38:38 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 23:38:38 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 23:38:38 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 23:38:38 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 23:38:38 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 23:38:38 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 23:38:38 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 23:38:38 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 23:39:44 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 23:39:44 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 23:39:49 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 23:39:51 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 23:39:51 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 23:39:51 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 23:39:51 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 23:39:51 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 23:39:51 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 23:39:51 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 23:40:26 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:40:28 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:40:32 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:40:43 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:40:45 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:40:47 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:40:48 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:40:50 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:40:52 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:40:53 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 23:40:53 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 23:40:54 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:40:56 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:40:58 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:40:58 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 23:40:59 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 23:40:59 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 23:40:59 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 23:40:59 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 23:40:59 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 23:40:59 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 23:40:59 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 23:41:00 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:41:03 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:41:04 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:41:06 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:41:12 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:41:13 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:41:15 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:41:17 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:41:19 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:41:21 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:41:23 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:41:24 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:41:26 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:41:28 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:41:29 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:41:31 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:41:48 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:41:50 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:41:52 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:41:53 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:41:55 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:41:57 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:41:58 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:42:02 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:42:04 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:42:04 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 23:42:04 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 23:42:07 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:42:09 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:42:09 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 23:42:10 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 23:42:10 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 23:42:10 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 23:42:10 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 23:42:10 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 23:42:10 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 23:42:10 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 23:42:11 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:42:12 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:42:14 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:42:16 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:42:18 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:42:20 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:42:21 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:42:23 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:42:25 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:42:26 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:42:28 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:42:29 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:42:31 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:42:33 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:42:37 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:42:39 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:42:41 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:42:43 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:42:47 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:42:49 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:42:51 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:42:53 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:42:56 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:42:58 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:43:00 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:43:01 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:43:04 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:43:06 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:43:08 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:43:10 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:43:11 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:43:13 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:43:14 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 23:43:14 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 23:43:14 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:43:16 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:43:18 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:43:19 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 23:43:20 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 23:43:20 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 23:43:20 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 23:43:20 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 23:43:20 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 23:43:20 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 23:43:20 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 23:43:21 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:43:23 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:43:25 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:43:27 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:43:28 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:43:39 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:43:41 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:43:54 [INFO    ] main                 [DRY-RUN] DRY-RUN MODE - no real orders placed
+2026-05-11 23:43:54 [INFO    ] mexc_client          MEXCClient initialized | dry_run=True
+2026-05-11 23:43:54 [INFO    ] data_fetcher         Database initialized: data/trades.db
+2026-05-11 23:43:54 [INFO    ] ai_analyst           AI Analyst running in rule-based mode (no GEMINI_API_KEY)
+2026-05-11 23:43:54 [INFO    ] trader               Loaded 1 open positions from DB
+2026-05-11 23:43:54 [INFO    ] trader               Trader ready | dry_run=True | open=1
+2026-05-11 23:43:54 [INFO    ] main                 ============================================================
+2026-05-11 23:43:54 [INFO    ] main                   MEXC SCALPING AI BOT  |  dry_run=True
+2026-05-11 23:43:54 [INFO    ] main                   Symbols : BTC_USDT, ETH_USDT, XAUT_USDT, SILVER_USDT, USOIL_USDT
+2026-05-11 23:43:54 [INFO    ] main                   Interval: Min1 | Check: 1s
+2026-05-11 23:43:54 [INFO    ] main                 ============================================================
+2026-05-11 23:43:54 [INFO    ] mexc_client          Testing MEXC connection...
+2026-05-11 23:43:56 [INFO    ] mexc_client          ✓ Public API OK | BTC price: 81931.8
+2026-05-11 23:43:56 [WARNING ] mexc_client          API keys not configured – only public API tested
+2026-05-11 23:43:56 [INFO    ] main                 Loading 1-minute historical data...
+2026-05-11 23:43:56 [INFO    ] data_fetcher         Loading history for BTC_USDT...
+2026-05-11 23:43:56 [INFO    ] data_fetcher           [OK] BTC_USDT: 300 candles loaded
+2026-05-11 23:43:56 [INFO    ] data_fetcher         Loading history for ETH_USDT...
+2026-05-11 23:43:56 [INFO    ] data_fetcher           [OK] ETH_USDT: 300 candles loaded
+2026-05-11 23:43:56 [INFO    ] data_fetcher         Loading history for XAUT_USDT...
+2026-05-11 23:43:56 [INFO    ] data_fetcher           [OK] XAUT_USDT: 300 candles loaded
+2026-05-11 23:43:56 [INFO    ] data_fetcher         Loading history for SILVER_USDT...
+2026-05-11 23:43:57 [INFO    ] data_fetcher           [OK] SILVER_USDT: 300 candles loaded
+2026-05-11 23:43:57 [INFO    ] data_fetcher         Loading history for USOIL_USDT...
+2026-05-11 23:43:57 [INFO    ] data_fetcher           [OK] USOIL_USDT: 301 candles loaded
+2026-05-11 23:43:57 [INFO    ] data_fetcher         Database initialized: data/trades_htf.db
+2026-05-11 23:43:57 [INFO    ] main                 Loading 5-minute higher-timeframe data...
+2026-05-11 23:43:57 [INFO    ] data_fetcher         Loading history for BTC_USDT...
+2026-05-11 23:43:57 [INFO    ] data_fetcher           [OK] BTC_USDT: 100 candles loaded
+2026-05-11 23:43:57 [INFO    ] data_fetcher         Loading history for ETH_USDT...
+2026-05-11 23:43:57 [INFO    ] data_fetcher           [OK] ETH_USDT: 100 candles loaded
+2026-05-11 23:43:57 [INFO    ] data_fetcher         Loading history for XAUT_USDT...
+2026-05-11 23:43:57 [INFO    ] data_fetcher           [OK] XAUT_USDT: 100 candles loaded
+2026-05-11 23:43:57 [INFO    ] data_fetcher         Loading history for SILVER_USDT...
+2026-05-11 23:43:58 [INFO    ] data_fetcher           [OK] SILVER_USDT: 100 candles loaded
+2026-05-11 23:43:58 [INFO    ] data_fetcher         Loading history for USOIL_USDT...
+2026-05-11 23:43:58 [INFO    ] data_fetcher           [OK] USOIL_USDT: 101 candles loaded
+2026-05-11 23:43:58 [INFO    ] main                   Leverage set: BTC_USDT x 50
+2026-05-11 23:43:59 [INFO    ] main                   Leverage set: ETH_USDT x 50
+2026-05-11 23:43:59 [INFO    ] main                   Leverage set: XAUT_USDT x 50
+2026-05-11 23:43:59 [INFO    ] main                   Leverage set: SILVER_USDT x 50
+2026-05-11 23:44:00 [INFO    ] main                   Leverage set: USOIL_USDT x 50
+2026-05-11 23:44:00 [INFO    ] main                 Initializing AI models...
+2026-05-11 23:44:00 [INFO    ] ai_model             Loaded saved model for BTC_USDT
+2026-05-11 23:44:00 [INFO    ] ai_model             Loaded saved model for ETH_USDT
+2026-05-11 23:44:00 [INFO    ] ai_model             Loaded saved model for XAUT_USDT
+2026-05-11 23:44:00 [INFO    ] ai_model             Loaded saved model for SILVER_USDT
+2026-05-11 23:44:00 [INFO    ] ai_model             Loaded saved model for USOIL_USDT
+2026-05-11 23:44:01 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 23:44:01 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 23:44:01 [INFO    ] main                 [OK] WebSocket live feed active
+2026-05-11 23:44:01 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 23:44:01 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 23:44:01 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 23:44:01 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 23:44:01 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 23:44:01 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:44:01 [INFO    ] risk_manager         Daily reset | balance=100.00 USDT
+2026-05-11 23:44:01 [INFO    ] main                 Starting balance: 100.00 USDT
+2026-05-11 23:44:01 [INFO    ] main                 [RUN] Scalping loop started
+2026-05-11 23:44:01 [INFO    ] main                 [DASHBOARD] Dashboard -> http://localhost:5000
+2026-05-11 23:44:10 [INFO    ] main                 [START] Bot STARTED by dashboard
+2026-05-11 23:44:28 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 23:44:28 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 23:44:33 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 23:44:34 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 23:44:34 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 23:44:34 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 23:44:34 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 23:44:34 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 23:44:34 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 23:44:34 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 23:45:08 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 23:45:08 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 23:45:13 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 23:45:14 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 23:45:14 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 23:45:14 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 23:45:14 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 23:45:14 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 23:45:14 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 23:45:14 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 23:45:39 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 23:45:39 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 23:45:44 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 23:45:45 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 23:45:45 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 23:45:45 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 23:45:45 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 23:45:45 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 23:45:45 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 23:45:45 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 23:46:21 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 23:46:21 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 23:46:26 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 23:46:27 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 23:46:27 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 23:46:27 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 23:46:27 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 23:46:27 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 23:46:27 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 23:46:27 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 23:46:39 [INFO    ] strategy             [OK] [BUY] ETH_USDT | score=10/12 ADX=180 HTF=UP AI=HOLD(1.00) RSI=71 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:46:39 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:46:39 [INFO    ] risk_manager         Order | ETH_USDT BUY @2339.9900 SL=2337.4700(-2.5200) TP=2345.0300(+5.0400) vol=79 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:46:39 [INFO    ] trader               Already have position in ETH_USDT, skipping
+2026-05-11 23:46:42 [INFO    ] strategy             [OK] [BUY] ETH_USDT | score=10/12 ADX=180 HTF=UP AI=HOLD(1.00) RSI=71 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:46:42 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:46:42 [INFO    ] risk_manager         Order | ETH_USDT BUY @2340.1200 SL=2337.6000(-2.5200) TP=2345.1600(+5.0400) vol=79 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:46:42 [INFO    ] trader               Already have position in ETH_USDT, skipping
+2026-05-11 23:46:48 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 23:46:48 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 23:46:53 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 23:46:54 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 23:46:54 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 23:46:54 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 23:46:54 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 23:46:54 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 23:46:54 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 23:46:54 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 23:47:05 [INFO    ] strategy             [OK] [BUY] ETH_USDT | score=10/12 ADX=180 HTF=UP AI=HOLD(1.00) RSI=73 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:47:06 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:47:06 [INFO    ] risk_manager         Order | ETH_USDT BUY @2339.9900 SL=2337.4214(-2.5686) TP=2345.1271(+5.1371) vol=78 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:47:06 [INFO    ] trader               Already have position in ETH_USDT, skipping
+2026-05-11 23:47:08 [INFO    ] strategy             [OK] [BUY] ETH_USDT | score=10/12 ADX=180 HTF=UP AI=HOLD(1.00) RSI=75 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:47:08 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:47:08 [INFO    ] risk_manager         Order | ETH_USDT BUY @2339.9900 SL=2337.3586(-2.6314) TP=2345.2529(+5.2629) vol=76 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:47:08 [INFO    ] trader               Already have position in ETH_USDT, skipping
+2026-05-11 23:47:11 [INFO    ] strategy             [OK] [BUY] ETH_USDT | score=10/12 ADX=180 HTF=UP AI=HOLD(1.00) RSI=75 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:47:11 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:47:11 [INFO    ] risk_manager         Order | ETH_USDT BUY @2340.5800 SL=2337.9486(-2.6314) TP=2345.8429(+5.2629) vol=76 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:47:11 [INFO    ] trader               Already have position in ETH_USDT, skipping
+2026-05-11 23:47:13 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:47:16 [INFO    ] strategy             [OK] [BUY] ETH_USDT | score=10/12 ADX=180 HTF=UP AI=HOLD(1.00) RSI=74 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:47:16 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:47:16 [INFO    ] risk_manager         Order | ETH_USDT BUY @2340.7300 SL=2338.0357(-2.6943) TP=2346.1186(+5.3886) vol=74 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:47:16 [INFO    ] trader               Already have position in ETH_USDT, skipping
+2026-05-11 23:47:19 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:47:21 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:47:24 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:47:26 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:47:28 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 23:47:28 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 23:47:29 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:47:31 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:47:33 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 23:47:34 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:47:35 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 23:47:35 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 23:47:35 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 23:47:35 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 23:47:35 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 23:47:35 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 23:47:35 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 23:47:37 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:47:40 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:47:43 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:47:45 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:47:48 [INFO    ] strategy             [OK] [BUY] BTC_USDT | score=11/12 ADX=181 HTF=UP AI=HOLD(1.00) RSI=60 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:47:48 [INFO    ] strategy             [OK] [BUY] BTC_USDT | score=11/12 ADX=375 HTF=UP AI=HOLD(1.00) RSI=85 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:47:48 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:47:48 [INFO    ] risk_manager         Order | BTC_USDT BUY @81982.2000 SL=81886.0286(-96.1714) TP=82174.5429(+192.3429) vol=208 cs=0.0001 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:47:48 [INFO    ] mexc_client          [DRY-RUN] place_order symbol=BTC_USDT side=1 vol=208 slp=81886.028571 tp=82174.542857
+2026-05-11 23:47:48 [INFO    ] trader               [OPEN] BUY BTC_USDT | entry=81982.2 vol=208 SL=81886.028571 TP=82174.542857
+2026-05-11 23:47:49 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:47:50 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:47:50 [INFO    ] risk_manager         Order | BTC_USDT BUY @81982.2000 SL=81818.5143(-163.6857) TP=82309.5714(+327.3714) vol=122 cs=0.0001 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:47:50 [INFO    ] mexc_client          [DRY-RUN] place_order symbol=BTC_USDT side=1 vol=122 slp=81818.514286 tp=82309.571429
+2026-05-11 23:47:50 [INFO    ] trader               [OPEN] BUY BTC_USDT | entry=81982.2 vol=122 SL=81818.514286 TP=82309.571429
+2026-05-11 23:47:51 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:47:53 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:47:54 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 23:47:54 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 23:47:55 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:47:58 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:47:58 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=10/12 ADX=393 HTF=UP AI=HOLD(0.97) RSI=48 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:47:59 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:47:59 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9000 SL=85.7886(-0.1114) TP=86.1229(+0.2229) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:47:59 [INFO    ] mexc_client          [DRY-RUN] place_order symbol=SILVER_USDT side=1 vol=500 slp=85.788571 tp=86.122857
+2026-05-11 23:47:59 [INFO    ] trader               [OPEN] BUY SILVER_USDT | entry=85.9 vol=500 SL=85.788571 TP=86.122857
+2026-05-11 23:47:59 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 23:48:00 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 23:48:00 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 23:48:00 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 23:48:00 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 23:48:00 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 23:48:00 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 23:48:00 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 23:48:01 [INFO    ] strategy             [OK] [BUY] BTC_USDT | score=10/12 ADX=185 HTF=UP AI=HOLD(1.00) RSI=64 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:48:01 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:48:01 [INFO    ] risk_manager         Order | BTC_USDT BUY @82018.2000 SL=81916.9143(-101.2857) TP=82220.7714(+202.5714) vol=197 cs=0.0001 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:48:01 [INFO    ] trader               Already have position in BTC_USDT, skipping
+2026-05-11 23:48:01 [INFO    ] strategy             [OK] [BUY] BTC_USDT | score=11/12 ADX=375 HTF=UP AI=HOLD(1.00) RSI=87 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:48:01 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:48:01 [INFO    ] risk_manager         Order | BTC_USDT BUY @82008.8000 SL=81836.7714(-172.0286) TP=82352.8571(+344.0571) vol=116 cs=0.0001 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:48:01 [INFO    ] trader               Already have position in BTC_USDT, skipping
+2026-05-11 23:48:01 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:48:03 [INFO    ] strategy             [OK] [BUY] BTC_USDT | score=10/12 ADX=189 HTF=UP AI=HOLD(1.00) RSI=68 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:48:03 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:48:03 [INFO    ] risk_manager         Order | BTC_USDT BUY @82038.7000 SL=81931.4143(-107.2857) TP=82253.2714(+214.5714) vol=186 cs=0.0001 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:48:03 [INFO    ] trader               Already have position in BTC_USDT, skipping
+2026-05-11 23:48:04 [INFO    ] strategy             [OK] [BUY] BTC_USDT | score=11/12 ADX=375 HTF=UP AI=HOLD(1.00) RSI=87 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:48:04 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:48:04 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:48:04 [INFO    ] risk_manager         Order | BTC_USDT BUY @82018.2000 SL=81843.2571(-174.9429) TP=82368.0857(+349.8857) vol=114 cs=0.0001 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:48:04 [INFO    ] trader               Already have position in BTC_USDT, skipping
+2026-05-11 23:48:06 [INFO    ] strategy             [OK] [BUY] BTC_USDT | score=10/12 ADX=191 HTF=UP AI=HOLD(1.00) RSI=69 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:48:06 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:48:06 [INFO    ] risk_manager         Order | BTC_USDT BUY @82038.7000 SL=81928.2429(-110.4571) TP=82259.6143(+220.9143) vol=181 cs=0.0001 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:48:06 [INFO    ] trader               Already have position in BTC_USDT, skipping
+2026-05-11 23:48:07 [INFO    ] strategy             [OK] [BUY] BTC_USDT | score=11/12 ADX=375 HTF=UP AI=HOLD(1.00) RSI=87 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:48:07 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:48:07 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:48:07 [INFO    ] risk_manager         Order | BTC_USDT BUY @82038.7000 SL=81859.4429(-179.2571) TP=82397.2143(+358.5143) vol=112 cs=0.0001 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:48:07 [INFO    ] trader               Already have position in BTC_USDT, skipping
+2026-05-11 23:48:09 [INFO    ] strategy             [OK] [BUY] BTC_USDT | score=10/12 ADX=192 HTF=UP AI=HOLD(1.00) RSI=66 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:48:10 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:48:10 [INFO    ] risk_manager         Order | BTC_USDT BUY @82043.0000 SL=81931.2571(-111.7429) TP=82266.4857(+223.4857) vol=179 cs=0.0001 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:48:10 [INFO    ] trader               Already have position in BTC_USDT, skipping
+2026-05-11 23:48:10 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:48:10 [INFO    ] strategy             [OK] [BUY] BTC_USDT | score=11/12 ADX=375 HTF=UP AI=HOLD(1.00) RSI=87 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:48:10 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:48:10 [INFO    ] risk_manager         Order | BTC_USDT BUY @82031.8000 SL=81852.5429(-179.2571) TP=82390.3143(+358.5143) vol=112 cs=0.0001 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:48:10 [INFO    ] trader               Already have position in BTC_USDT, skipping
+2026-05-11 23:48:12 [INFO    ] strategy             [OK] [BUY] BTC_USDT | score=10/12 ADX=192 HTF=UP AI=HOLD(1.00) RSI=66 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:48:13 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:48:13 [INFO    ] risk_manager         Order | BTC_USDT BUY @82027.8000 SL=81916.0571(-111.7429) TP=82251.2857(+223.4857) vol=179 cs=0.0001 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:48:13 [INFO    ] trader               Already have position in BTC_USDT, skipping
+2026-05-11 23:48:13 [INFO    ] strategy             [OK] [BUY] BTC_USDT | score=11/12 ADX=375 HTF=UP AI=HOLD(1.00) RSI=86 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:48:13 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:48:13 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:48:13 [INFO    ] risk_manager         Order | BTC_USDT BUY @82027.8000 SL=81848.5429(-179.2571) TP=82386.3143(+358.5143) vol=112 cs=0.0001 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:48:13 [INFO    ] trader               Already have position in BTC_USDT, skipping
+2026-05-11 23:48:16 [INFO    ] strategy             [OK] [BUY] BTC_USDT | score=10/12 ADX=192 HTF=UP AI=HOLD(1.00) RSI=64 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:48:16 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:48:16 [INFO    ] risk_manager         Order | BTC_USDT BUY @82027.8000 SL=81916.0571(-111.7429) TP=82251.2857(+223.4857) vol=179 cs=0.0001 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:48:16 [INFO    ] trader               Already have position in BTC_USDT, skipping
+2026-05-11 23:48:16 [INFO    ] strategy             [OK] [BUY] BTC_USDT | score=11/12 ADX=375 HTF=UP AI=HOLD(1.00) RSI=86 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:48:16 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:48:16 [INFO    ] risk_manager         Order | BTC_USDT BUY @82027.8000 SL=81848.5429(-179.2571) TP=82386.3143(+358.5143) vol=112 cs=0.0001 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:48:16 [INFO    ] trader               Already have position in BTC_USDT, skipping
+2026-05-11 23:48:16 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:48:19 [INFO    ] strategy             [OK] [BUY] BTC_USDT | score=11/12 ADX=192 HTF=UP AI=HOLD(1.00) RSI=63 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:48:19 [INFO    ] strategy             [OK] [BUY] BTC_USDT | score=11/12 ADX=375 HTF=UP AI=HOLD(1.00) RSI=85 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:48:19 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:48:19 [INFO    ] risk_manager         Order | BTC_USDT BUY @82018.3000 SL=81906.5571(-111.7429) TP=82241.7857(+223.4857) vol=179 cs=0.0001 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:48:19 [INFO    ] trader               Already have position in BTC_USDT, skipping
+2026-05-11 23:48:20 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:48:20 [INFO    ] risk_manager         Order | BTC_USDT BUY @82018.3000 SL=81839.0429(-179.2571) TP=82376.8143(+358.5143) vol=112 cs=0.0001 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:48:20 [INFO    ] trader               Already have position in BTC_USDT, skipping
+2026-05-11 23:48:20 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:48:22 [INFO    ] strategy             [OK] [BUY] BTC_USDT | score=11/12 ADX=375 HTF=UP AI=HOLD(1.00) RSI=85 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:48:22 [INFO    ] strategy             [OK] [BUY] BTC_USDT | score=11/12 ADX=192 HTF=UP AI=HOLD(1.00) RSI=62 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:48:22 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:48:22 [INFO    ] risk_manager         Order | BTC_USDT BUY @82013.3000 SL=81834.0429(-179.2571) TP=82371.8143(+358.5143) vol=112 cs=0.0001 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:48:22 [INFO    ] trader               Already have position in BTC_USDT, skipping
+2026-05-11 23:48:22 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:48:22 [INFO    ] risk_manager         Order | BTC_USDT BUY @82013.3000 SL=81901.5571(-111.7429) TP=82236.7857(+223.4857) vol=179 cs=0.0001 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:48:22 [INFO    ] trader               Already have position in BTC_USDT, skipping
+2026-05-11 23:48:23 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:48:25 [INFO    ] strategy             [OK] [BUY] BTC_USDT | score=11/12 ADX=375 HTF=UP AI=HOLD(1.00) RSI=85 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:48:25 [INFO    ] strategy             [OK] [BUY] BTC_USDT | score=11/12 ADX=192 HTF=UP AI=HOLD(1.00) RSI=62 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:48:25 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:48:25 [INFO    ] risk_manager         Order | BTC_USDT BUY @82009.4000 SL=81830.1429(-179.2571) TP=82367.9143(+358.5143) vol=112 cs=0.0001 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:48:25 [INFO    ] trader               Already have position in BTC_USDT, skipping
+2026-05-11 23:48:25 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:48:25 [INFO    ] risk_manager         Order | BTC_USDT BUY @82009.4000 SL=81897.6571(-111.7429) TP=82232.8857(+223.4857) vol=179 cs=0.0001 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:48:25 [INFO    ] trader               Already have position in BTC_USDT, skipping
+2026-05-11 23:48:26 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:48:28 [INFO    ] strategy             [OK] [BUY] BTC_USDT | score=11/12 ADX=375 HTF=UP AI=HOLD(1.00) RSI=85 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:48:28 [INFO    ] strategy             [OK] [BUY] BTC_USDT | score=12/12 ADX=192 HTF=UP AI=HOLD(1.00) RSI=60 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:48:28 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:48:28 [INFO    ] risk_manager         Order | BTC_USDT BUY @82009.4000 SL=81897.6571(-111.7429) TP=82232.8857(+223.4857) vol=179 cs=0.0001 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:48:28 [INFO    ] trader               Already have position in BTC_USDT, skipping
+2026-05-11 23:48:28 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:48:28 [INFO    ] risk_manager         Order | BTC_USDT BUY @82009.4000 SL=81830.1429(-179.2571) TP=82367.9143(+358.5143) vol=112 cs=0.0001 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:48:28 [INFO    ] trader               Already have position in BTC_USDT, skipping
+2026-05-11 23:48:28 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:48:30 [INFO    ] strategy             [OK] [BUY] BTC_USDT | score=11/12 ADX=375 HTF=UP AI=HOLD(1.00) RSI=85 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:48:31 [INFO    ] strategy             [OK] [BUY] BTC_USDT | score=12/12 ADX=192 HTF=UP AI=HOLD(1.00) RSI=60 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:48:31 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:48:31 [INFO    ] risk_manager         Order | BTC_USDT BUY @82000.8000 SL=81821.5429(-179.2571) TP=82359.3143(+358.5143) vol=112 cs=0.0001 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:48:31 [INFO    ] trader               Already have position in BTC_USDT, skipping
+2026-05-11 23:48:31 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:48:31 [INFO    ] risk_manager         Order | BTC_USDT BUY @82000.8000 SL=81889.0571(-111.7429) TP=82224.2857(+223.4857) vol=179 cs=0.0001 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:48:31 [INFO    ] trader               Already have position in BTC_USDT, skipping
+2026-05-11 23:48:31 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:48:32 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=10/12 ADX=393 HTF=UP AI=HOLD(0.97) RSI=48 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:48:33 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:48:33 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9000 SL=85.7857(-0.1143) TP=86.1286(+0.2286) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:48:33 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:48:33 [INFO    ] strategy             [OK] [BUY] BTC_USDT | score=11/12 ADX=375 HTF=UP AI=HOLD(1.00) RSI=86 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:48:34 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:48:34 [INFO    ] risk_manager         Order | BTC_USDT BUY @82005.2000 SL=81825.9429(-179.2571) TP=82363.7143(+358.5143) vol=112 cs=0.0001 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:48:34 [INFO    ] trader               Already have position in BTC_USDT, skipping
+2026-05-11 23:48:34 [INFO    ] strategy             [OK] [BUY] BTC_USDT | score=11/12 ADX=192 HTF=UP AI=HOLD(1.00) RSI=62 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:48:35 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:48:35 [INFO    ] risk_manager         Order | BTC_USDT BUY @82005.2000 SL=81893.4571(-111.7429) TP=82228.6857(+223.4857) vol=179 cs=0.0001 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:48:35 [INFO    ] trader               Already have position in BTC_USDT, skipping
+2026-05-11 23:48:35 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:48:36 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=10/12 ADX=393 HTF=UP AI=HOLD(0.97) RSI=48 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:48:36 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:48:36 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9200 SL=85.8057(-0.1143) TP=86.1486(+0.2286) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:48:36 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:48:36 [INFO    ] strategy             [OK] [BUY] BTC_USDT | score=11/12 ADX=375 HTF=UP AI=HOLD(1.00) RSI=85 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:48:37 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:48:37 [INFO    ] risk_manager         Order | BTC_USDT BUY @82005.2000 SL=81825.9429(-179.2571) TP=82363.7143(+358.5143) vol=112 cs=0.0001 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:48:37 [INFO    ] trader               Already have position in BTC_USDT, skipping
+2026-05-11 23:48:38 [INFO    ] strategy             [OK] [BUY] BTC_USDT | score=11/12 ADX=192 HTF=UP AI=HOLD(1.00) RSI=62 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:48:38 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:48:38 [INFO    ] risk_manager         Order | BTC_USDT BUY @82010.0000 SL=81898.2571(-111.7429) TP=82233.4857(+223.4857) vol=179 cs=0.0001 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:48:38 [INFO    ] trader               Already have position in BTC_USDT, skipping
+2026-05-11 23:48:39 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:48:39 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 23:48:39 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 23:48:39 [INFO    ] strategy             [OK] [BUY] BTC_USDT | score=11/12 ADX=375 HTF=UP AI=HOLD(1.00) RSI=85 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:48:39 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:48:39 [INFO    ] risk_manager         Order | BTC_USDT BUY @82010.0000 SL=81830.7429(-179.2571) TP=82368.5143(+358.5143) vol=112 cs=0.0001 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:48:39 [INFO    ] trader               Already have position in BTC_USDT, skipping
+2026-05-11 23:48:39 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=10/12 ADX=393 HTF=UP AI=HOLD(0.97) RSI=48 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:48:40 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:48:40 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9200 SL=85.8057(-0.1143) TP=86.1486(+0.2286) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:48:40 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:48:42 [INFO    ] strategy             [OK] [BUY] BTC_USDT | score=11/12 ADX=192 HTF=UP AI=HOLD(1.00) RSI=62 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:48:42 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:48:42 [INFO    ] risk_manager         Order | BTC_USDT BUY @82010.0000 SL=81898.2571(-111.7429) TP=82233.4857(+223.4857) vol=179 cs=0.0001 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:48:42 [INFO    ] trader               Already have position in BTC_USDT, skipping
+2026-05-11 23:48:42 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:48:42 [INFO    ] strategy             [OK] [BUY] BTC_USDT | score=11/12 ADX=375 HTF=UP AI=HOLD(1.00) RSI=85 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:48:43 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:48:43 [INFO    ] risk_manager         Order | BTC_USDT BUY @82009.9000 SL=81830.6429(-179.2571) TP=82368.4143(+358.5143) vol=112 cs=0.0001 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:48:43 [INFO    ] trader               Already have position in BTC_USDT, skipping
+2026-05-11 23:48:43 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=10/12 ADX=393 HTF=UP AI=HOLD(0.97) RSI=48 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:48:43 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:48:43 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9200 SL=85.8057(-0.1143) TP=86.1486(+0.2286) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:48:43 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:48:44 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 23:48:45 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 23:48:45 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 23:48:45 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 23:48:45 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 23:48:45 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 23:48:45 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 23:48:45 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 23:48:45 [INFO    ] strategy             [OK] [BUY] BTC_USDT | score=11/12 ADX=192 HTF=UP AI=HOLD(1.00) RSI=62 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:48:45 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:48:45 [INFO    ] risk_manager         Order | BTC_USDT BUY @82010.0000 SL=81898.2571(-111.7429) TP=82233.4857(+223.4857) vol=179 cs=0.0001 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:48:45 [INFO    ] trader               Already have position in BTC_USDT, skipping
+2026-05-11 23:48:45 [INFO    ] strategy             [OK] [BUY] BTC_USDT | score=11/12 ADX=375 HTF=UP AI=HOLD(1.00) RSI=85 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:48:45 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:48:45 [INFO    ] risk_manager         Order | BTC_USDT BUY @82009.9000 SL=81830.6429(-179.2571) TP=82368.4143(+358.5143) vol=112 cs=0.0001 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:48:45 [INFO    ] trader               Already have position in BTC_USDT, skipping
+2026-05-11 23:48:45 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:48:46 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=10/12 ADX=393 HTF=UP AI=HOLD(0.97) RSI=48 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:48:47 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:48:47 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9200 SL=85.8057(-0.1143) TP=86.1486(+0.2286) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:48:47 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:48:48 [INFO    ] strategy             [OK] [BUY] BTC_USDT | score=11/12 ADX=375 HTF=UP AI=HOLD(1.00) RSI=85 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:48:48 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:48:48 [INFO    ] risk_manager         Order | BTC_USDT BUY @82009.9000 SL=81830.6429(-179.2571) TP=82368.4143(+358.5143) vol=112 cs=0.0001 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:48:48 [INFO    ] trader               Already have position in BTC_USDT, skipping
+2026-05-11 23:48:48 [INFO    ] strategy             [OK] [BUY] BTC_USDT | score=11/12 ADX=192 HTF=UP AI=HOLD(1.00) RSI=62 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:48:49 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:48:49 [INFO    ] risk_manager         Order | BTC_USDT BUY @82009.9000 SL=81898.1571(-111.7429) TP=82233.3857(+223.4857) vol=179 cs=0.0001 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:48:49 [INFO    ] trader               Already have position in BTC_USDT, skipping
+2026-05-11 23:48:49 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:48:50 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=11/12 ADX=393 HTF=UP AI=HOLD(0.97) RSI=48 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:48:50 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:48:50 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9200 SL=85.8057(-0.1143) TP=86.1486(+0.2286) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:48:50 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:48:50 [INFO    ] strategy             [OK] [BUY] BTC_USDT | score=11/12 ADX=375 HTF=UP AI=HOLD(1.00) RSI=85 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:48:51 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:48:51 [INFO    ] risk_manager         Order | BTC_USDT BUY @82009.9000 SL=81830.6429(-179.2571) TP=82368.4143(+358.5143) vol=112 cs=0.0001 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:48:51 [INFO    ] trader               Already have position in BTC_USDT, skipping
+2026-05-11 23:48:52 [INFO    ] strategy             [OK] [BUY] BTC_USDT | score=11/12 ADX=192 HTF=UP AI=HOLD(1.00) RSI=62 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:48:52 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:48:52 [INFO    ] risk_manager         Order | BTC_USDT BUY @82009.9000 SL=81898.1571(-111.7429) TP=82233.3857(+223.4857) vol=179 cs=0.0001 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:48:52 [INFO    ] trader               Already have position in BTC_USDT, skipping
+2026-05-11 23:48:53 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:48:54 [INFO    ] strategy             [OK] [BUY] BTC_USDT | score=11/12 ADX=375 HTF=UP AI=HOLD(1.00) RSI=85 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:48:54 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=11/12 ADX=393 HTF=UP AI=HOLD(0.97) RSI=48 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:48:54 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:48:54 [INFO    ] risk_manager         Order | BTC_USDT BUY @82009.9000 SL=81830.6429(-179.2571) TP=82368.4143(+358.5143) vol=112 cs=0.0001 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:48:54 [INFO    ] trader               Already have position in BTC_USDT, skipping
+2026-05-11 23:48:54 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:48:54 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9200 SL=85.8057(-0.1143) TP=86.1486(+0.2286) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:48:54 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:48:56 [INFO    ] strategy             [OK] [BUY] BTC_USDT | score=11/12 ADX=192 HTF=UP AI=HOLD(1.00) RSI=62 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:48:56 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:48:56 [INFO    ] risk_manager         Order | BTC_USDT BUY @82008.9000 SL=81897.1571(-111.7429) TP=82232.3857(+223.4857) vol=179 cs=0.0001 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:48:56 [INFO    ] trader               Already have position in BTC_USDT, skipping
+2026-05-11 23:48:57 [INFO    ] strategy             [OK] [BUY] BTC_USDT | score=11/12 ADX=375 HTF=UP AI=HOLD(1.00) RSI=85 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:48:57 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:48:57 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:48:57 [INFO    ] risk_manager         Order | BTC_USDT BUY @82008.9000 SL=81829.6429(-179.2571) TP=82367.4143(+358.5143) vol=112 cs=0.0001 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:48:57 [INFO    ] trader               Already have position in BTC_USDT, skipping
+2026-05-11 23:48:58 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=11/12 ADX=393 HTF=UP AI=HOLD(0.97) RSI=48 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:48:58 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:48:58 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9200 SL=85.8057(-0.1143) TP=86.1486(+0.2286) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:48:58 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:49:00 [INFO    ] strategy             [OK] [BUY] BTC_USDT | score=11/12 ADX=375 HTF=UP AI=HOLD(1.00) RSI=85 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:49:00 [INFO    ] strategy             [OK] [BUY] BTC_USDT | score=11/12 ADX=192 HTF=UP AI=HOLD(1.00) RSI=62 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:49:00 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:49:00 [INFO    ] risk_manager         Order | BTC_USDT BUY @82008.9000 SL=81897.1571(-111.7429) TP=82232.3857(+223.4857) vol=179 cs=0.0001 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:49:00 [INFO    ] trader               Already have position in BTC_USDT, skipping
+2026-05-11 23:49:00 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:49:00 [INFO    ] risk_manager         Order | BTC_USDT BUY @82008.9000 SL=81829.6429(-179.2571) TP=82367.4143(+358.5143) vol=112 cs=0.0001 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:49:00 [INFO    ] trader               Already have position in BTC_USDT, skipping
+2026-05-11 23:49:01 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:49:02 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=11/12 ADX=393 HTF=UP AI=HOLD(0.97) RSI=48 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:49:02 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:49:02 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9200 SL=85.8057(-0.1143) TP=86.1486(+0.2286) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:49:02 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:49:03 [INFO    ] strategy             [OK] [BUY] BTC_USDT | score=11/12 ADX=375 HTF=UP AI=HOLD(1.00) RSI=86 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:49:03 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:49:03 [INFO    ] risk_manager         Order | BTC_USDT BUY @82008.7000 SL=81829.4429(-179.2571) TP=82367.2143(+358.5143) vol=112 cs=0.0001 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:49:03 [INFO    ] trader               Already have position in BTC_USDT, skipping
+2026-05-11 23:49:05 [INFO    ] strategy             [OK] [BUY] BTC_USDT | score=10/12 ADX=192 HTF=UP AI=HOLD(1.00) RSI=64 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:49:05 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:49:05 [INFO    ] risk_manager         Order | BTC_USDT BUY @82008.7000 SL=81896.9571(-111.7429) TP=82232.1857(+223.4857) vol=179 cs=0.0001 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:49:05 [INFO    ] trader               Already have position in BTC_USDT, skipping
+2026-05-11 23:49:05 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:49:06 [WARNING ] strategy             [WARN] AI risk veto BTC_USDT: BTC_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:49:08 [INFO    ] strategy             [OK] [BUY] BTC_USDT | score=11/12 ADX=192 HTF=UP AI=HOLD(1.00) RSI=61 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:49:08 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:49:08 [INFO    ] risk_manager         Order | BTC_USDT BUY @82017.0000 SL=81905.2571(-111.7429) TP=82240.4857(+223.4857) vol=179 cs=0.0001 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:49:08 [INFO    ] trader               Already have position in BTC_USDT, skipping
+2026-05-11 23:49:08 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:49:09 [WARNING ] strategy             [WARN] AI risk veto BTC_USDT: BTC_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:49:09 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 23:49:09 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 23:49:11 [INFO    ] strategy             [OK] [BUY] BTC_USDT | score=11/12 ADX=192 HTF=UP AI=HOLD(1.00) RSI=60 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:49:11 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:49:11 [INFO    ] risk_manager         Order | BTC_USDT BUY @82004.6000 SL=81892.8571(-111.7429) TP=82228.0857(+223.4857) vol=179 cs=0.0001 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:49:11 [INFO    ] trader               Already have position in BTC_USDT, skipping
+2026-05-11 23:49:12 [WARNING ] strategy             [WARN] AI risk veto BTC_USDT: BTC_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:49:12 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:49:14 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 23:49:14 [WARNING ] strategy             [WARN] AI risk veto BTC_USDT: BTC_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:49:14 [INFO    ] strategy             [OK] [BUY] BTC_USDT | score=11/12 ADX=192 HTF=UP AI=HOLD(1.00) RSI=60 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:49:15 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:49:15 [INFO    ] risk_manager         Order | BTC_USDT BUY @82003.0000 SL=81891.2571(-111.7429) TP=82226.4857(+223.4857) vol=179 cs=0.0001 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:49:15 [INFO    ] trader               Already have position in BTC_USDT, skipping
+2026-05-11 23:49:15 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 23:49:15 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 23:49:15 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 23:49:15 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 23:49:15 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 23:49:15 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 23:49:15 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 23:49:15 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:49:17 [WARNING ] strategy             [WARN] AI risk veto BTC_USDT: BTC_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:49:18 [INFO    ] strategy             [OK] [BUY] BTC_USDT | score=11/12 ADX=192 HTF=UP AI=HOLD(1.00) RSI=60 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:49:18 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:49:18 [INFO    ] risk_manager         Order | BTC_USDT BUY @82002.9000 SL=81891.1571(-111.7429) TP=82226.3857(+223.4857) vol=179 cs=0.0001 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:49:18 [INFO    ] trader               Already have position in BTC_USDT, skipping
+2026-05-11 23:49:19 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:49:20 [WARNING ] strategy             [WARN] AI risk veto BTC_USDT: BTC_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:49:22 [INFO    ] strategy             [OK] [BUY] BTC_USDT | score=11/12 ADX=192 HTF=UP AI=HOLD(1.00) RSI=60 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:49:22 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:49:22 [INFO    ] risk_manager         Order | BTC_USDT BUY @82002.9000 SL=81891.1571(-111.7429) TP=82226.3857(+223.4857) vol=179 cs=0.0001 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:49:22 [INFO    ] trader               Already have position in BTC_USDT, skipping
+2026-05-11 23:49:22 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:49:23 [WARNING ] strategy             [WARN] AI risk veto BTC_USDT: BTC_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:49:25 [INFO    ] strategy             [OK] [BUY] BTC_USDT | score=11/12 ADX=192 HTF=UP AI=HOLD(1.00) RSI=60 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:49:25 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:49:25 [INFO    ] risk_manager         Order | BTC_USDT BUY @82003.0000 SL=81891.2571(-111.7429) TP=82226.4857(+223.4857) vol=179 cs=0.0001 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:49:25 [INFO    ] trader               Already have position in BTC_USDT, skipping
+2026-05-11 23:49:25 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:49:25 [WARNING ] strategy             [WARN] AI risk veto BTC_USDT: BTC_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:49:28 [INFO    ] strategy             [OK] [BUY] BTC_USDT | score=10/12 ADX=192 HTF=UP AI=HOLD(1.00) RSI=59 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:49:28 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:49:28 [INFO    ] risk_manager         Order | BTC_USDT BUY @82002.9000 SL=81891.1571(-111.7429) TP=82226.3857(+223.4857) vol=179 cs=0.0001 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:49:28 [INFO    ] trader               Already have position in BTC_USDT, skipping
+2026-05-11 23:49:28 [WARNING ] strategy             [WARN] AI risk veto BTC_USDT: BTC_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:49:28 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:49:31 [INFO    ] strategy             [OK] [BUY] BTC_USDT | score=10/12 ADX=192 HTF=UP AI=HOLD(1.00) RSI=59 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:49:31 [WARNING ] strategy             [WARN] AI risk veto BTC_USDT: BTC_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:49:31 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:49:31 [INFO    ] risk_manager         Order | BTC_USDT BUY @81995.9000 SL=81884.1571(-111.7429) TP=82219.3857(+223.4857) vol=179 cs=0.0001 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:49:31 [INFO    ] trader               Already have position in BTC_USDT, skipping
+2026-05-11 23:49:31 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:49:33 [WARNING ] strategy             [WARN] AI risk veto BTC_USDT: BTC_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:49:33 [INFO    ] strategy             [OK] [BUY] BTC_USDT | score=10/12 ADX=192 HTF=UP AI=HOLD(1.00) RSI=58 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:49:34 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:49:34 [INFO    ] risk_manager         Order | BTC_USDT BUY @81995.9000 SL=81884.1571(-111.7429) TP=82219.3857(+223.4857) vol=179 cs=0.0001 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:49:34 [INFO    ] trader               Already have position in BTC_USDT, skipping
+2026-05-11 23:49:34 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:49:36 [WARNING ] strategy             [WARN] AI risk veto BTC_USDT: BTC_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:49:38 [INFO    ] strategy             [OK] [BUY] BTC_USDT | score=10/12 ADX=192 HTF=UP AI=HOLD(1.00) RSI=58 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:49:38 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:49:38 [INFO    ] risk_manager         Order | BTC_USDT BUY @81995.4000 SL=81883.6571(-111.7429) TP=82218.8857(+223.4857) vol=179 cs=0.0001 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:49:38 [INFO    ] trader               Already have position in BTC_USDT, skipping
+2026-05-11 23:49:39 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:49:41 [WARNING ] strategy             [WARN] AI risk veto BTC_USDT: BTC_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:49:43 [INFO    ] strategy             [OK] [BUY] BTC_USDT | score=10/12 ADX=192 HTF=UP AI=HOLD(1.00) RSI=58 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:49:43 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:49:43 [INFO    ] risk_manager         Order | BTC_USDT BUY @81999.9000 SL=81888.1571(-111.7429) TP=82223.3857(+223.4857) vol=179 cs=0.0001 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:49:43 [INFO    ] trader               Already have position in BTC_USDT, skipping
+2026-05-11 23:49:43 [WARNING ] strategy             [WARN] AI risk veto BTC_USDT: BTC_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:49:44 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:49:49 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 23:49:49 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 23:49:50 [INFO    ] strategy             [OK] [BUY] ETH_USDT | score=11/12 ADX=183 HTF=UP AI=HOLD(1.00) RSI=74 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:49:50 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:49:50 [INFO    ] risk_manager         Order | ETH_USDT BUY @2340.9100 SL=2337.5900(-3.3200) TP=2347.5500(+6.6400) vol=60 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:49:50 [INFO    ] trader               Already have position in ETH_USDT, skipping
+2026-05-11 23:49:53 [INFO    ] strategy             [OK] [BUY] ETH_USDT | score=11/12 ADX=183 HTF=UP AI=HOLD(1.00) RSI=74 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:49:53 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:49:53 [INFO    ] risk_manager         Order | ETH_USDT BUY @2340.5400 SL=2337.2200(-3.3200) TP=2347.1800(+6.6400) vol=60 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:49:53 [INFO    ] trader               Already have position in ETH_USDT, skipping
+2026-05-11 23:49:54 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 23:49:55 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 23:49:55 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 23:49:55 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 23:49:55 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 23:49:55 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 23:49:55 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 23:49:55 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 23:49:56 [INFO    ] strategy             [OK] [BUY] ETH_USDT | score=11/12 ADX=183 HTF=UP AI=HOLD(1.00) RSI=74 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:49:56 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:49:56 [INFO    ] risk_manager         Order | ETH_USDT BUY @2340.5400 SL=2337.2200(-3.3200) TP=2347.1800(+6.6400) vol=60 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:49:56 [INFO    ] trader               Already have position in ETH_USDT, skipping
+2026-05-11 23:49:59 [INFO    ] strategy             [OK] [BUY] ETH_USDT | score=11/12 ADX=183 HTF=UP AI=HOLD(1.00) RSI=73 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:49:59 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:49:59 [INFO    ] risk_manager         Order | ETH_USDT BUY @2340.3800 SL=2337.0600(-3.3200) TP=2347.0200(+6.6400) vol=60 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:49:59 [INFO    ] trader               Already have position in ETH_USDT, skipping
+2026-05-11 23:50:02 [INFO    ] strategy             [OK] [BUY] ETH_USDT | score=11/12 ADX=183 HTF=UP AI=HOLD(1.00) RSI=73 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:50:02 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:50:02 [INFO    ] risk_manager         Order | ETH_USDT BUY @2340.3900 SL=2337.0700(-3.3200) TP=2347.0300(+6.6400) vol=60 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:50:02 [INFO    ] trader               Already have position in ETH_USDT, skipping
+2026-05-11 23:50:04 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:50:04 [WARNING ] strategy             [WARN] AI risk veto BTC_USDT: BTC_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:50:07 [INFO    ] strategy             [OK] [BUY] ETH_USDT | score=11/12 ADX=183 HTF=UP AI=HOLD(1.00) RSI=76 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:50:07 [WARNING ] strategy             [WARN] AI risk veto BTC_USDT: BTC_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:50:07 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:50:07 [INFO    ] risk_manager         Order | ETH_USDT BUY @2340.3900 SL=2337.0700(-3.3200) TP=2347.0300(+6.6400) vol=60 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:50:07 [INFO    ] trader               Already have position in ETH_USDT, skipping
+2026-05-11 23:50:09 [INFO    ] strategy             [OK] [BUY] ETH_USDT | score=11/12 ADX=183 HTF=UP AI=HOLD(1.00) RSI=74 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:50:10 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:50:10 [INFO    ] risk_manager         Order | ETH_USDT BUY @2340.7100 SL=2337.3900(-3.3200) TP=2347.3500(+6.6400) vol=60 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:50:10 [INFO    ] trader               Already have position in ETH_USDT, skipping
+2026-05-11 23:50:12 [INFO    ] strategy             [OK] [BUY] ETH_USDT | score=11/12 ADX=183 HTF=UP AI=HOLD(1.00) RSI=74 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:50:12 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:50:12 [INFO    ] risk_manager         Order | ETH_USDT BUY @2340.5200 SL=2337.2000(-3.3200) TP=2347.1600(+6.6400) vol=60 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:50:12 [INFO    ] trader               Already have position in ETH_USDT, skipping
+2026-05-11 23:50:15 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:50:18 [INFO    ] strategy             [OK] [BUY] ETH_USDT | score=11/12 ADX=183 HTF=UP AI=HOLD(1.00) RSI=74 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:50:18 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:50:18 [INFO    ] risk_manager         Order | ETH_USDT BUY @2340.6400 SL=2337.3200(-3.3200) TP=2347.2800(+6.6400) vol=60 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:50:18 [INFO    ] trader               Already have position in ETH_USDT, skipping
+2026-05-11 23:50:19 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 23:50:19 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 23:50:23 [INFO    ] strategy             [OK] [BUY] ETH_USDT | score=11/12 ADX=183 HTF=UP AI=HOLD(1.00) RSI=73 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:50:23 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:50:23 [INFO    ] risk_manager         Order | ETH_USDT BUY @2340.5000 SL=2337.1800(-3.3200) TP=2347.1400(+6.6400) vol=60 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:50:23 [INFO    ] trader               Already have position in ETH_USDT, skipping
+2026-05-11 23:50:24 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 23:50:25 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 23:50:25 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 23:50:25 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 23:50:25 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 23:50:25 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 23:50:25 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 23:50:25 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 23:50:25 [INFO    ] strategy             [OK] [BUY] ETH_USDT | score=11/12 ADX=183 HTF=UP AI=HOLD(1.00) RSI=72 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:50:26 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:50:26 [INFO    ] risk_manager         Order | ETH_USDT BUY @2340.3300 SL=2337.0100(-3.3200) TP=2346.9700(+6.6400) vol=60 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:50:26 [INFO    ] trader               Already have position in ETH_USDT, skipping
+2026-05-11 23:50:27 [WARNING ] strategy             [WARN] AI risk veto BTC_USDT: BTC_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:50:30 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:50:32 [WARNING ] strategy             [WARN] AI risk veto BTC_USDT: BTC_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:50:33 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:50:34 [WARNING ] strategy             [WARN] AI risk veto BTC_USDT: BTC_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:50:36 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:50:37 [WARNING ] strategy             [WARN] AI risk veto BTC_USDT: BTC_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:50:39 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:50:40 [WARNING ] strategy             [WARN] AI risk veto BTC_USDT: BTC_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:50:41 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:50:42 [WARNING ] strategy             [WARN] AI risk veto BTC_USDT: BTC_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:50:44 [INFO    ] strategy             [OK] [BUY] BTC_USDT | score=12/12 ADX=192 HTF=UP AI=HOLD(1.00) RSI=60 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:50:44 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:50:44 [INFO    ] risk_manager         Order | BTC_USDT BUY @81992.0000 SL=81880.2571(-111.7429) TP=82215.4857(+223.4857) vol=179 cs=0.0001 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:50:44 [INFO    ] trader               Already have position in BTC_USDT, skipping
+2026-05-11 23:50:44 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:50:45 [WARNING ] strategy             [WARN] AI risk veto BTC_USDT: BTC_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:50:47 [INFO    ] strategy             [OK] [BUY] BTC_USDT | score=12/12 ADX=192 HTF=UP AI=HOLD(1.00) RSI=60 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:50:47 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:50:47 [INFO    ] risk_manager         Order | BTC_USDT BUY @82000.0000 SL=81888.2571(-111.7429) TP=82223.4857(+223.4857) vol=179 cs=0.0001 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:50:47 [INFO    ] trader               Already have position in BTC_USDT, skipping
+2026-05-11 23:50:47 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:50:47 [WARNING ] strategy             [WARN] AI risk veto BTC_USDT: BTC_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:50:49 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=10/12 ADX=500 HTF=UP AI=HOLD(0.97) RSI=75 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:50:49 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:50:49 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9000 SL=85.7000(-0.2000) TP=86.3000(+0.4000) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:50:49 [INFO    ] mexc_client          [DRY-RUN] place_order symbol=SILVER_USDT side=1 vol=500 slp=85.7 tp=86.3
+2026-05-11 23:50:49 [INFO    ] trader               [OPEN] BUY SILVER_USDT | entry=85.9 vol=500 SL=85.7 TP=86.3
+2026-05-11 23:50:50 [INFO    ] strategy             [OK] [BUY] BTC_USDT | score=12/12 ADX=192 HTF=UP AI=HOLD(1.00) RSI=60 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:50:50 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:50:50 [INFO    ] risk_manager         Order | BTC_USDT BUY @81999.9000 SL=81888.1571(-111.7429) TP=82223.3857(+223.4857) vol=179 cs=0.0001 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:50:50 [INFO    ] trader               Already have position in BTC_USDT, skipping
+2026-05-11 23:50:52 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:50:54 [WARNING ] strategy             [WARN] AI risk veto BTC_USDT: BTC_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:50:57 [INFO    ] strategy             [OK] [BUY] BTC_USDT | score=11/12 ADX=192 HTF=UP AI=HOLD(1.00) RSI=62 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:50:58 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:50:58 [INFO    ] risk_manager         Order | BTC_USDT BUY @82016.0000 SL=81904.2571(-111.7429) TP=82239.4857(+223.4857) vol=179 cs=0.0001 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:50:58 [INFO    ] trader               Already have position in BTC_USDT, skipping
+2026-05-11 23:50:58 [WARNING ] strategy             [WARN] AI risk veto BTC_USDT: BTC_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:50:58 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:50:59 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 23:50:59 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 23:51:00 [WARNING ] strategy             [WARN] AI risk veto BTC_USDT: BTC_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:51:01 [INFO    ] strategy             [OK] [BUY] BTC_USDT | score=11/12 ADX=192 HTF=UP AI=HOLD(1.00) RSI=62 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:51:01 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:51:01 [INFO    ] risk_manager         Order | BTC_USDT BUY @82009.4000 SL=81897.6571(-111.7429) TP=82232.8857(+223.4857) vol=179 cs=0.0001 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:51:01 [INFO    ] trader               Already have position in BTC_USDT, skipping
+2026-05-11 23:51:01 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=10/12 ADX=500 HTF=UP AI=HOLD(0.97) RSI=75 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:51:01 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:51:02 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:51:02 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.8900 SL=85.6900(-0.2000) TP=86.2900(+0.4000) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:51:02 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:51:03 [WARNING ] strategy             [WARN] AI risk veto BTC_USDT: BTC_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:51:03 [INFO    ] strategy             [OK] [BUY] BTC_USDT | score=11/12 ADX=192 HTF=UP AI=HOLD(1.00) RSI=62 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:51:04 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:51:04 [INFO    ] risk_manager         Order | BTC_USDT BUY @82009.4000 SL=81897.6571(-111.7429) TP=82232.8857(+223.4857) vol=179 cs=0.0001 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:51:04 [INFO    ] trader               Already have position in BTC_USDT, skipping
+2026-05-11 23:51:04 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 23:51:04 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:51:05 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 23:51:05 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 23:51:05 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 23:51:05 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 23:51:05 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 23:51:05 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 23:51:05 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 23:51:05 [WARNING ] strategy             [WARN] AI risk veto BTC_USDT: BTC_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:51:06 [INFO    ] strategy             [OK] [BUY] BTC_USDT | score=11/12 ADX=192 HTF=UP AI=HOLD(1.00) RSI=62 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:51:06 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:51:06 [INFO    ] risk_manager         Order | BTC_USDT BUY @82008.6000 SL=81896.8571(-111.7429) TP=82232.0857(+223.4857) vol=179 cs=0.0001 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:51:06 [INFO    ] trader               Already have position in BTC_USDT, skipping
+2026-05-11 23:51:07 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:51:08 [WARNING ] strategy             [WARN] AI risk veto BTC_USDT: BTC_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:51:09 [INFO    ] strategy             [OK] [BUY] BTC_USDT | score=11/12 ADX=192 HTF=UP AI=HOLD(1.00) RSI=62 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:51:09 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:51:09 [INFO    ] risk_manager         Order | BTC_USDT BUY @82008.7000 SL=81896.9571(-111.7429) TP=82232.1857(+223.4857) vol=179 cs=0.0001 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:51:09 [INFO    ] trader               Already have position in BTC_USDT, skipping
+2026-05-11 23:51:10 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:51:10 [WARNING ] strategy             [WARN] AI risk veto BTC_USDT: BTC_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:51:12 [INFO    ] strategy             [OK] [BUY] BTC_USDT | score=11/12 ADX=192 HTF=UP AI=HOLD(1.00) RSI=62 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:51:12 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:51:12 [INFO    ] risk_manager         Order | BTC_USDT BUY @82008.6000 SL=81896.8571(-111.7429) TP=82232.0857(+223.4857) vol=179 cs=0.0001 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:51:12 [INFO    ] trader               Already have position in BTC_USDT, skipping
+2026-05-11 23:51:13 [WARNING ] strategy             [WARN] AI risk veto BTC_USDT: BTC_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:51:13 [INFO    ] strategy             [OK] [BUY] ETH_USDT | score=11/12 ADX=183 HTF=UP AI=HOLD(1.00) RSI=74 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:51:13 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:51:13 [INFO    ] risk_manager         Order | ETH_USDT BUY @2340.6300 SL=2337.3100(-3.3200) TP=2347.2700(+6.6400) vol=60 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:51:13 [INFO    ] trader               Already have position in ETH_USDT, skipping
+2026-05-11 23:51:15 [WARNING ] strategy             [WARN] AI risk veto BTC_USDT: BTC_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:51:15 [INFO    ] strategy             [OK] [BUY] BTC_USDT | score=11/12 ADX=192 HTF=UP AI=HOLD(1.00) RSI=61 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:51:16 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:51:16 [INFO    ] risk_manager         Order | BTC_USDT BUY @82008.7000 SL=81896.9571(-111.7429) TP=82232.1857(+223.4857) vol=179 cs=0.0001 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:51:16 [INFO    ] trader               Already have position in BTC_USDT, skipping
+2026-05-11 23:51:16 [INFO    ] strategy             [OK] [BUY] ETH_USDT | score=11/12 ADX=183 HTF=UP AI=HOLD(1.00) RSI=74 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:51:16 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:51:16 [INFO    ] risk_manager         Order | ETH_USDT BUY @2340.6300 SL=2337.3100(-3.3200) TP=2347.2700(+6.6400) vol=60 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:51:16 [INFO    ] trader               Already have position in ETH_USDT, skipping
+2026-05-11 23:51:17 [WARNING ] strategy             [WARN] AI risk veto BTC_USDT: BTC_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:51:19 [INFO    ] strategy             [OK] [BUY] BTC_USDT | score=11/12 ADX=192 HTF=UP AI=HOLD(1.00) RSI=61 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:51:19 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:51:19 [INFO    ] risk_manager         Order | BTC_USDT BUY @82004.3000 SL=81892.5571(-111.7429) TP=82227.7857(+223.4857) vol=179 cs=0.0001 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:51:19 [INFO    ] trader               Already have position in BTC_USDT, skipping
+2026-05-11 23:51:20 [INFO    ] strategy             [OK] [BUY] ETH_USDT | score=11/12 ADX=183 HTF=UP AI=HOLD(1.00) RSI=73 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:51:20 [WARNING ] strategy             [WARN] AI risk veto BTC_USDT: BTC_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:51:20 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:51:20 [INFO    ] risk_manager         Order | ETH_USDT BUY @2340.5100 SL=2337.1900(-3.3200) TP=2347.1500(+6.6400) vol=60 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:51:20 [INFO    ] trader               Already have position in ETH_USDT, skipping
+2026-05-11 23:51:23 [INFO    ] strategy             [OK] [BUY] BTC_USDT | score=12/12 ADX=192 HTF=UP AI=HOLD(1.00) RSI=60 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:51:23 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:51:23 [INFO    ] risk_manager         Order | BTC_USDT BUY @82008.4000 SL=81896.6571(-111.7429) TP=82231.8857(+223.4857) vol=179 cs=0.0001 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:51:23 [INFO    ] trader               Already have position in BTC_USDT, skipping
+2026-05-11 23:51:23 [WARNING ] strategy             [WARN] AI risk veto BTC_USDT: BTC_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:51:24 [INFO    ] strategy             [OK] [BUY] ETH_USDT | score=11/12 ADX=183 HTF=UP AI=HOLD(1.00) RSI=71 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:51:24 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:51:24 [INFO    ] risk_manager         Order | ETH_USDT BUY @2340.4400 SL=2337.1200(-3.3200) TP=2347.0800(+6.6400) vol=60 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:51:24 [INFO    ] trader               Already have position in ETH_USDT, skipping
+2026-05-11 23:51:25 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=10/12 ADX=500 HTF=UP AI=HOLD(0.97) RSI=75 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:51:25 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:51:25 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9000 SL=85.7000(-0.2000) TP=86.3000(+0.4000) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:51:25 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:51:27 [WARNING ] strategy             [WARN] AI risk veto BTC_USDT: BTC_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:51:28 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=10/12 ADX=500 HTF=UP AI=HOLD(0.97) RSI=75 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:51:28 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 23:51:28 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 23:51:28 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:51:28 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.8900 SL=85.6900(-0.2000) TP=86.2900(+0.4000) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:51:28 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:51:30 [WARNING ] strategy             [WARN] AI risk veto BTC_USDT: BTC_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:51:33 [WARNING ] strategy             [WARN] AI risk veto BTC_USDT: BTC_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:51:33 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 23:51:34 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 23:51:34 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 23:51:34 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 23:51:34 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 23:51:34 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 23:51:34 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 23:51:34 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 23:51:45 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=10/12 ADX=500 HTF=UP AI=HOLD(0.95) RSI=81 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:51:45 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:51:45 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9100 SL=85.7100(-0.2000) TP=86.3100(+0.4000) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:51:45 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:51:46 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=10/12 ADX=393 HTF=UP AI=HOLD(0.97) RSI=50 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:51:46 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:51:46 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9100 SL=85.7957(-0.1143) TP=86.1386(+0.2286) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:51:46 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:51:47 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=10/12 ADX=500 HTF=UP AI=HOLD(0.95) RSI=81 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:51:48 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:51:48 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9100 SL=85.7100(-0.2000) TP=86.3100(+0.4000) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:51:48 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:51:48 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=10/12 ADX=393 HTF=UP AI=HOLD(0.97) RSI=50 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:51:49 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:51:49 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9300 SL=85.8157(-0.1143) TP=86.1586(+0.2286) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:51:49 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:51:50 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=10/12 ADX=500 HTF=UP AI=HOLD(0.95) RSI=81 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:51:50 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:51:50 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9300 SL=85.7300(-0.2000) TP=86.3300(+0.4000) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:51:50 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:51:52 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=10/12 ADX=393 HTF=UP AI=HOLD(0.97) RSI=50 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:51:52 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:51:52 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9300 SL=85.8157(-0.1143) TP=86.1586(+0.2286) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:51:52 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:51:53 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=10/12 ADX=500 HTF=UP AI=HOLD(0.95) RSI=81 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:51:54 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:51:54 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9300 SL=85.7300(-0.2000) TP=86.3300(+0.4000) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:51:54 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:51:54 [INFO    ] strategy             [OK] [BUY] ETH_USDT | score=11/12 ADX=183 HTF=UP AI=HOLD(1.00) RSI=74 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:51:54 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:51:54 [INFO    ] risk_manager         Order | ETH_USDT BUY @2340.0100 SL=2336.6900(-3.3200) TP=2346.6500(+6.6400) vol=60 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:51:54 [INFO    ] trader               Already have position in ETH_USDT, skipping
+2026-05-11 23:51:55 [WARNING ] strategy             [WARN] AI risk veto BTC_USDT: BTC_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:51:55 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=10/12 ADX=393 HTF=UP AI=HOLD(0.97) RSI=52 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:51:56 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:51:56 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9300 SL=85.8129(-0.1171) TP=86.1643(+0.2343) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:51:56 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:51:57 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=10/12 ADX=500 HTF=UP AI=HOLD(0.95) RSI=82 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:51:57 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:51:57 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9300 SL=85.7243(-0.2057) TP=86.3414(+0.4114) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:51:57 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:51:58 [INFO    ] strategy             [OK] [BUY] BTC_USDT | score=12/12 ADX=192 HTF=UP AI=HOLD(1.00) RSI=60 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:51:58 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:51:58 [INFO    ] risk_manager         Order | BTC_USDT BUY @81989.5000 SL=81877.7571(-111.7429) TP=82212.9857(+223.4857) vol=179 cs=0.0001 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:51:58 [INFO    ] trader               Already have position in BTC_USDT, skipping
+2026-05-11 23:51:58 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:51:59 [WARNING ] strategy             [WARN] AI risk veto BTC_USDT: BTC_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:52:00 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=10/12 ADX=406 HTF=UP AI=HOLD(0.97) RSI=52 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:52:00 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:52:00 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9300 SL=85.8100(-0.1200) TP=86.1700(+0.2400) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:52:00 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:52:00 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=10/12 ADX=500 HTF=UP AI=HOLD(0.95) RSI=82 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:52:00 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:52:00 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9300 SL=85.7243(-0.2057) TP=86.3414(+0.4114) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:52:01 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:52:02 [INFO    ] strategy             [OK] [BUY] ETH_USDT | score=11/12 ADX=183 HTF=UP AI=HOLD(1.00) RSI=72 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:52:02 [WARNING ] strategy             [WARN] AI risk veto BTC_USDT: BTC_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:52:02 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:52:02 [INFO    ] risk_manager         Order | ETH_USDT BUY @2340.6200 SL=2337.3000(-3.3200) TP=2347.2600(+6.6400) vol=60 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:52:02 [INFO    ] trader               Already have position in ETH_USDT, skipping
+2026-05-11 23:52:03 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=10/12 ADX=406 HTF=UP AI=HOLD(0.97) RSI=52 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:52:03 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:52:03 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9400 SL=85.8200(-0.1200) TP=86.1800(+0.2400) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:52:03 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:52:04 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=10/12 ADX=500 HTF=UP AI=HOLD(0.95) RSI=82 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:52:04 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:52:04 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9400 SL=85.7343(-0.2057) TP=86.3514(+0.4114) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:52:04 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:52:05 [WARNING ] strategy             [WARN] AI risk veto BTC_USDT: BTC_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:52:06 [INFO    ] strategy             [OK] [BUY] ETH_USDT | score=11/12 ADX=183 HTF=UP AI=HOLD(1.00) RSI=72 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:52:06 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:52:06 [INFO    ] risk_manager         Order | ETH_USDT BUY @2340.3200 SL=2337.0000(-3.3200) TP=2346.9600(+6.6400) vol=60 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:52:06 [INFO    ] trader               Already have position in ETH_USDT, skipping
+2026-05-11 23:52:07 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=10/12 ADX=406 HTF=UP AI=HOLD(0.97) RSI=50 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:52:07 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:52:07 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9400 SL=85.8200(-0.1200) TP=86.1800(+0.2400) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:52:07 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:52:07 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=10/12 ADX=500 HTF=UP AI=HOLD(0.95) RSI=81 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:52:07 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:52:07 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9400 SL=85.7343(-0.2057) TP=86.3514(+0.4114) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:52:07 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:52:10 [INFO    ] strategy             [OK] [BUY] ETH_USDT | score=11/12 ADX=183 HTF=UP AI=HOLD(1.00) RSI=70 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:52:10 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:52:10 [INFO    ] risk_manager         Order | ETH_USDT BUY @2340.3100 SL=2336.9900(-3.3200) TP=2346.9500(+6.6400) vol=60 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:52:10 [INFO    ] trader               Already have position in ETH_USDT, skipping
+2026-05-11 23:52:11 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=10/12 ADX=500 HTF=UP AI=HOLD(0.95) RSI=82 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:52:11 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:52:11 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9300 SL=85.7243(-0.2057) TP=86.3414(+0.4114) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:52:11 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:52:11 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=10/12 ADX=406 HTF=UP AI=HOLD(0.97) RSI=52 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:52:11 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:52:11 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9300 SL=85.8100(-0.1200) TP=86.1700(+0.2400) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:52:11 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:52:14 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 23:52:14 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 23:52:14 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=10/12 ADX=500 HTF=UP AI=HOLD(0.93) RSI=83 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:52:14 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:52:14 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9400 SL=85.7314(-0.2086) TP=86.3571(+0.4171) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:52:14 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:52:14 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=10/12 ADX=417 HTF=UP AI=HOLD(0.97) RSI=56 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:52:14 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:52:14 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9400 SL=85.8171(-0.1229) TP=86.1857(+0.2457) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:52:14 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:52:16 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=10/12 ADX=500 HTF=UP AI=HOLD(0.93) RSI=83 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:52:17 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:52:17 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9600 SL=85.7514(-0.2086) TP=86.3771(+0.4171) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:52:17 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:52:17 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=10/12 ADX=417 HTF=UP AI=HOLD(0.97) RSI=56 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:52:17 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:52:17 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9400 SL=85.8171(-0.1229) TP=86.1857(+0.2457) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:52:17 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:52:19 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 23:52:19 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=10/12 ADX=500 HTF=UP AI=HOLD(0.94) RSI=82 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:52:20 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:52:20 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9600 SL=85.7514(-0.2086) TP=86.3771(+0.4171) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:52:20 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:52:20 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=10/12 ADX=417 HTF=UP AI=HOLD(0.97) RSI=56 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:52:20 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 23:52:20 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 23:52:20 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 23:52:20 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 23:52:20 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 23:52:20 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 23:52:20 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 23:52:20 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:52:20 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9400 SL=85.8171(-0.1229) TP=86.1857(+0.2457) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:52:20 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:52:22 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=10/12 ADX=500 HTF=UP AI=HOLD(0.93) RSI=83 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:52:22 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:52:22 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9600 SL=85.7514(-0.2086) TP=86.3771(+0.4171) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:52:22 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:52:23 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=10/12 ADX=417 HTF=UP AI=HOLD(0.97) RSI=56 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:52:23 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:52:23 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9400 SL=85.8171(-0.1229) TP=86.1857(+0.2457) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:52:23 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:52:25 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=10/12 ADX=500 HTF=UP AI=HOLD(0.93) RSI=83 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:52:26 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:52:26 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9600 SL=85.7514(-0.2086) TP=86.3771(+0.4171) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:52:26 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:52:26 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=10/12 ADX=417 HTF=UP AI=HOLD(0.97) RSI=56 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:52:26 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:52:26 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9600 SL=85.8371(-0.1229) TP=86.2057(+0.2457) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:52:26 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:52:28 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=10/12 ADX=500 HTF=UP AI=HOLD(0.93) RSI=83 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:52:29 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:52:29 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9600 SL=85.7514(-0.2086) TP=86.3771(+0.4171) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:52:29 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:52:29 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=10/12 ADX=417 HTF=UP AI=HOLD(0.97) RSI=56 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:52:29 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:52:29 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9600 SL=85.8371(-0.1229) TP=86.2057(+0.2457) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:52:29 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:52:31 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=10/12 ADX=500 HTF=UP AI=HOLD(0.93) RSI=83 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:52:32 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:52:32 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9600 SL=85.7514(-0.2086) TP=86.3771(+0.4171) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:52:32 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:52:32 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=10/12 ADX=417 HTF=UP AI=HOLD(0.97) RSI=56 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:52:32 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:52:32 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9600 SL=85.8371(-0.1229) TP=86.2057(+0.2457) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:52:32 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:52:34 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=10/12 ADX=500 HTF=UP AI=HOLD(0.93) RSI=83 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:52:34 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 23:52:34 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 23:52:34 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:52:34 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9600 SL=85.7514(-0.2086) TP=86.3771(+0.4171) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:52:34 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:52:34 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=10/12 ADX=417 HTF=UP AI=HOLD(0.97) RSI=56 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:52:34 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:52:34 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9600 SL=85.8371(-0.1229) TP=86.2057(+0.2457) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:52:34 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:52:37 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=10/12 ADX=500 HTF=UP AI=HOLD(0.93) RSI=83 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:52:37 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=10/12 ADX=417 HTF=UP AI=HOLD(0.97) RSI=56 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:52:37 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:52:37 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9600 SL=85.7514(-0.2086) TP=86.3771(+0.4171) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:52:37 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:52:37 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:52:37 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9600 SL=85.8371(-0.1229) TP=86.2057(+0.2457) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:52:37 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:52:39 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 23:52:40 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=10/12 ADX=500 HTF=UP AI=HOLD(0.93) RSI=83 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:52:40 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 23:52:40 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 23:52:40 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 23:52:40 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 23:52:40 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 23:52:40 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 23:52:40 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 23:52:40 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=10/12 ADX=417 HTF=UP AI=HOLD(0.97) RSI=56 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:52:40 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:52:40 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9600 SL=85.8371(-0.1229) TP=86.2057(+0.2457) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:52:40 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:52:40 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:52:40 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9600 SL=85.7514(-0.2086) TP=86.3771(+0.4171) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:52:40 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:52:43 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=10/12 ADX=500 HTF=UP AI=HOLD(0.93) RSI=83 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:52:43 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=10/12 ADX=417 HTF=UP AI=HOLD(0.97) RSI=56 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:52:43 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:52:43 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9600 SL=85.7514(-0.2086) TP=86.3771(+0.4171) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:52:43 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:52:43 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:52:43 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9600 SL=85.8371(-0.1229) TP=86.2057(+0.2457) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:52:43 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:52:46 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=10/12 ADX=500 HTF=UP AI=HOLD(0.95) RSI=82 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:52:46 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:52:46 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9600 SL=85.7514(-0.2086) TP=86.3771(+0.4171) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:52:46 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:52:46 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=10/12 ADX=417 HTF=UP AI=HOLD(0.97) RSI=52 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:52:46 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:52:46 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9600 SL=85.8371(-0.1229) TP=86.2057(+0.2457) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:52:46 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:52:48 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=10/12 ADX=500 HTF=UP AI=HOLD(0.95) RSI=81 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:52:48 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:52:48 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9300 SL=85.7214(-0.2086) TP=86.3471(+0.4171) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:52:48 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:52:49 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=11/12 ADX=417 HTF=UP AI=HOLD(0.97) RSI=50 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:52:49 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:52:49 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9400 SL=85.8171(-0.1229) TP=86.1857(+0.2457) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:52:49 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:52:52 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=10/12 ADX=500 HTF=UP AI=HOLD(0.95) RSI=81 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:52:52 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:52:52 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9300 SL=85.7214(-0.2086) TP=86.3471(+0.4171) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:52:52 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:52:55 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=11/12 ADX=417 HTF=UP AI=HOLD(0.97) RSI=50 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:52:55 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:52:55 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9300 SL=85.8071(-0.1229) TP=86.1757(+0.2457) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:52:55 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:53:18 [ERROR   ] mexc_client          WebSocket error: ping/pong timed out
+2026-05-11 23:53:19 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 23:53:23 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=10/12 ADX=500 HTF=UP AI=HOLD(0.95) RSI=81 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:53:23 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:53:23 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9300 SL=85.7214(-0.2086) TP=86.3471(+0.4171) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:53:23 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:53:24 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 23:53:26 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=10/12 ADX=417 HTF=UP AI=HOLD(0.97) RSI=52 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:53:26 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:53:26 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9300 SL=85.8071(-0.1229) TP=86.1757(+0.2457) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:53:26 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:53:27 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 23:53:27 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 23:53:27 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 23:53:27 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 23:53:27 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 23:53:27 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 23:53:27 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 23:53:34 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=10/12 ADX=500 HTF=UP AI=HOLD(0.95) RSI=82 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:53:34 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:53:34 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9300 SL=85.7214(-0.2086) TP=86.3471(+0.4171) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:53:34 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:53:37 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=10/12 ADX=417 HTF=UP AI=HOLD(0.97) RSI=52 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:53:37 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:53:37 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9400 SL=85.8171(-0.1229) TP=86.1857(+0.2457) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:53:37 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:53:39 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=10/12 ADX=500 HTF=UP AI=HOLD(0.95) RSI=82 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:53:39 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:53:39 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9400 SL=85.7314(-0.2086) TP=86.3571(+0.4171) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:53:39 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:53:41 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=11/12 ADX=417 HTF=UP AI=HOLD(0.97) RSI=50 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:53:42 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:53:42 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9400 SL=85.8171(-0.1229) TP=86.1857(+0.2457) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:53:42 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:53:55 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=10/12 ADX=500 HTF=UP AI=HOLD(0.95) RSI=81 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:53:55 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:53:55 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9300 SL=85.7214(-0.2086) TP=86.3471(+0.4171) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:53:55 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:53:56 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 23:53:56 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 23:53:56 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=11/12 ADX=417 HTF=UP AI=HOLD(0.97) RSI=50 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:53:56 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:53:56 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9300 SL=85.8071(-0.1229) TP=86.1757(+0.2457) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:53:56 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:53:58 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=10/12 ADX=500 HTF=UP AI=HOLD(0.95) RSI=81 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:53:58 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:53:58 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9300 SL=85.7214(-0.2086) TP=86.3471(+0.4171) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:53:58 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:53:59 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=11/12 ADX=417 HTF=UP AI=HOLD(0.97) RSI=48 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:53:59 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:53:59 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9200 SL=85.7971(-0.1229) TP=86.1657(+0.2457) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:53:59 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:54:01 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=10/12 ADX=500 HTF=UP AI=HOLD(0.95) RSI=81 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:54:01 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:54:01 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9300 SL=85.7214(-0.2086) TP=86.3471(+0.4171) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:54:01 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:54:01 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 23:54:02 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 23:54:02 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 23:54:02 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 23:54:02 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 23:54:02 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 23:54:02 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 23:54:02 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 23:54:03 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=11/12 ADX=417 HTF=UP AI=HOLD(0.97) RSI=48 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:54:03 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:54:03 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9200 SL=85.7971(-0.1229) TP=86.1657(+0.2457) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:54:03 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:54:10 [INFO    ] mexc_client          [DRY-RUN] place_order symbol=BTC_USDT side=4 vol=208 slp=None tp=None
+2026-05-11 23:54:14 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=10/12 ADX=500 HTF=UP AI=HOLD(0.95) RSI=81 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:54:14 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=11/12 ADX=417 HTF=UP AI=HOLD(0.97) RSI=48 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:54:14 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:54:14 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9000 SL=85.6914(-0.2086) TP=86.3171(+0.4171) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:54:14 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:54:14 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:54:14 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9000 SL=85.7771(-0.1229) TP=86.1457(+0.2457) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:54:14 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:54:16 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=10/12 ADX=500 HTF=UP AI=HOLD(0.95) RSI=81 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:54:16 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:54:16 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9000 SL=85.6914(-0.2086) TP=86.3171(+0.4171) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:54:16 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:54:16 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=11/12 ADX=417 HTF=UP AI=HOLD(0.97) RSI=48 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:54:17 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:54:17 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9000 SL=85.7771(-0.1229) TP=86.1457(+0.2457) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:54:17 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:54:29 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=10/12 ADX=500 HTF=UP AI=HOLD(0.95) RSI=81 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:54:30 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:54:30 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9100 SL=85.7014(-0.2086) TP=86.3271(+0.4171) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:54:30 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:54:30 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=11/12 ADX=417 HTF=UP AI=HOLD(0.97) RSI=48 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:54:31 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:54:31 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9100 SL=85.7871(-0.1229) TP=86.1557(+0.2457) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:54:31 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:54:31 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 23:54:31 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 23:54:32 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=10/12 ADX=500 HTF=UP AI=HOLD(0.95) RSI=81 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:54:32 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:54:32 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9100 SL=85.7014(-0.2086) TP=86.3271(+0.4171) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:54:32 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:54:33 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=11/12 ADX=417 HTF=UP AI=HOLD(0.97) RSI=48 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:54:33 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:54:33 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9200 SL=85.7971(-0.1229) TP=86.1657(+0.2457) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:54:33 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:54:34 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=10/12 ADX=500 HTF=UP AI=HOLD(0.95) RSI=81 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:54:34 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:54:34 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9200 SL=85.7114(-0.2086) TP=86.3371(+0.4171) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:54:34 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:54:35 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=11/12 ADX=417 HTF=UP AI=HOLD(0.97) RSI=48 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:54:35 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:54:35 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9200 SL=85.7971(-0.1229) TP=86.1657(+0.2457) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:54:35 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:54:36 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=10/12 ADX=500 HTF=UP AI=HOLD(0.95) RSI=81 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:54:36 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:54:36 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9200 SL=85.7114(-0.2086) TP=86.3371(+0.4171) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:54:36 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:54:36 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 23:54:37 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=11/12 ADX=417 HTF=UP AI=HOLD(0.97) RSI=48 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:54:37 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 23:54:37 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 23:54:37 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 23:54:37 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 23:54:37 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 23:54:37 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 23:54:37 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 23:54:37 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:54:37 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9200 SL=85.7971(-0.1229) TP=86.1657(+0.2457) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:54:37 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:54:38 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=10/12 ADX=500 HTF=UP AI=HOLD(0.95) RSI=81 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:54:38 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:54:38 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9200 SL=85.7114(-0.2086) TP=86.3371(+0.4171) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:54:38 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:54:40 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=11/12 ADX=417 HTF=UP AI=HOLD(0.97) RSI=48 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:54:40 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:54:40 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9200 SL=85.7971(-0.1229) TP=86.1657(+0.2457) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:54:40 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:54:40 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=10/12 ADX=500 HTF=UP AI=HOLD(0.95) RSI=81 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:54:41 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:54:41 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9200 SL=85.7114(-0.2086) TP=86.3371(+0.4171) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:54:41 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:54:43 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=11/12 ADX=417 HTF=UP AI=HOLD(0.97) RSI=48 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:54:43 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:54:43 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9200 SL=85.7971(-0.1229) TP=86.1657(+0.2457) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:54:43 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:54:49 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=10/12 ADX=500 HTF=UP AI=HOLD(0.95) RSI=81 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:54:50 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:54:50 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9100 SL=85.7014(-0.2086) TP=86.3271(+0.4171) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:54:50 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:54:51 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=11/12 ADX=417 HTF=UP AI=HOLD(0.97) RSI=48 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:54:52 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:54:52 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9200 SL=85.7971(-0.1229) TP=86.1657(+0.2457) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:54:52 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:54:52 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=10/12 ADX=500 HTF=UP AI=HOLD(0.95) RSI=81 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:54:52 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:54:52 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9200 SL=85.7114(-0.2086) TP=86.3371(+0.4171) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:54:52 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:54:54 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=11/12 ADX=417 HTF=UP AI=HOLD(0.97) RSI=48 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 23:54:54 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:54:54 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.9200 SL=85.7971(-0.1229) TP=86.1657(+0.2457) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:54:54 [INFO    ] trader               Already have position in SILVER_USDT, skipping
+2026-05-11 23:54:54 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=10/12 ADX=500 HTF=UP AI=HOLD(0.95) RSI=81 SLx2.0 TPx4.0 WR=100% streak=0SL

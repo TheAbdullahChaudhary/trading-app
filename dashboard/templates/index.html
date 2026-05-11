@@ -37,6 +37,7 @@
     <button class="btn btn-success" id="btnStart" onclick="control('start')">▶ Start</button>
     <button class="btn btn-warning" id="btnPause" onclick="control('pause')">⏸ Pause</button>
     <button class="btn btn-danger"  id="btnStop"  onclick="control('stop')">⏹ Stop</button>
+    <button class="btn btn-panic"  id="btnPanic" onclick="closeAll()">🔥 Close All</button>
   </div>
 </header>
 
@@ -106,10 +107,10 @@
           <thead><tr>
             <th>Symbol</th><th>Side</th><th>Volume</th>
             <th>Entry</th><th>Stop Loss</th><th>Take Profit</th>
-            <th>Unreal. PnL</th><th>Confidence</th>
+            <th>Unreal. PnL</th><th>Confidence</th><th>Action</th>
           </tr></thead>
           <tbody id="positionsTable">
-            <tr><td colspan="8" class="empty-row">No open positions</td></tr>
+            <tr><td colspan="9" class="empty-row">No open positions</td></tr>
           </tbody>
         </table>
       </div>

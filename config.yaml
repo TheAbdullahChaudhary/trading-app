@@ -12,23 +12,23 @@ mexc:
 symbols:
   - name: "BTC_USDT"
     display: "Bitcoin"
-    leverage: 10
+    leverage: 50       # High leverage as requested
     min_size: 1
   - name: "ETH_USDT"
     display: "Ethereum"
-    leverage: 10
+    leverage: 50
     min_size: 1
   - name: "XAUT_USDT"
     display: "Gold"
-    leverage: 10
+    leverage: 50
     min_size: 1
   - name: "SILVER_USDT"
     display: "Silver"
-    leverage: 10
+    leverage: 50
     min_size: 1
   - name: "USOIL_USDT"
     display: "Crude Oil"
-    leverage: 10
+    leverage: 50
     min_size: 1
 
 trading:
@@ -40,11 +40,11 @@ trading:
 
 risk:
   risk_per_trade_pct: 2.0    # 2% per trade = $2 on $100 demo account
-  max_open_positions: 10     # up to 10 concurrent positions (2 per coin)
+  max_open_positions: 10     # up to 10 concurrent positions
   max_daily_drawdown_pct: 10.0  # stop at -$10 loss/day
-  sl_atr_multiplier: 1.0     # tight SL for scalping
-  tp_atr_multiplier: 2.0     # 1:2 R:R
-  max_trades_per_hour: 30
+  sl_atr_multiplier: 0.8     # Tight SL for quick exit
+  tp_atr_multiplier: 0.8     # Aggressive TP for quick profit
+  max_trades_per_hour: 50
   cooldown_seconds: 10
 
 ai:

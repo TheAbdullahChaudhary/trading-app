@@ -90,6 +90,21 @@ def control(cmd):
     return jsonify({"ok": True, "state": _bot_state})
 
 
+@app.route("/api/control/close_all", methods=["POST"])
+def close_all():
+    if _trader:
+        _trader.close_all_positions()
+    return jsonify({"ok": True, "message": "Manual close triggered"})
+
+
+@app.route("/api/control/close/<symbol>", methods=["POST"])
+def close_one(symbol):
+    if _trader:
+        ok = _trader.close_position_by_symbol(symbol)
+        return jsonify({"ok": ok, "message": f"Close {symbol} {'triggered' if ok else 'failed'}"})
+    return jsonify({"ok": False, "message": "Trader not available"})
+
+
 # -------------------- AI ROUTES --------------------
 
 @app.route("/api/ai/insights")

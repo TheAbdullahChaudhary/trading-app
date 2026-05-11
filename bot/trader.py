@@ -243,6 +243,31 @@ class Trader:
         }
         self._trade_log.append(record)
 
+    def close_all_positions(self):
+        """Emergency manual close for all symbols."""
+        with self._lock:
+            symbols = list(self._positions.keys())
+        
+        for sym in symbols:
+            with self._lock:
+                pos = self._positions.get(sym)
+            if pos:
+                price = self.client.get_ticker(sym).get("data", {}).get("lastPrice", pos.entry_price)
+                self._close_position(pos, float(price), "MANUAL_CLOSE")
+        
+        log.info(f"[MANUAL] All positions closed ({len(symbols)})")
+
+    def close_position_by_symbol(self, symbol: str):
+        """Manually close a specific position."""
+        with self._lock:
+            pos = self._positions.get(symbol)
+        if pos:
+            ticker = self.client.get_ticker(symbol).get("data", {})
+            price  = ticker.get("lastPrice", pos.entry_price)
+            self._close_position(pos, float(price), "MANUAL_CLOSE")
+            return True
+        return False
+
     # ------------------- QUERY ----------------
 
     def get_open_positions(self) -> list:

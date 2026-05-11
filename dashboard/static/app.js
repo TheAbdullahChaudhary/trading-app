@@ -134,7 +134,7 @@ function renderPositions(positions) {
   document.getElementById('posCountBadge').textContent = positions.length;
   document.getElementById('statOpen').textContent      = positions.length;
   if (!positions.length) {
-    tb.innerHTML = '<tr><td colspan="8" class="empty-row">No open positions</td></tr>';
+    tb.innerHTML = '<tr><td colspan="9" class="empty-row">No open positions</td></tr>';
     return;
   }
   tb.innerHTML = positions.map(p => {
@@ -148,8 +148,23 @@ function renderPositions(positions) {
       <td class="pnl-pos">${fmtNum(p.take_profit)}</td>
       <td class="${pnl>=0?'pnl-pos':'pnl-neg'}">${pnl>=0?'+':''}${fmtNum(pnl)} USDT</td>
       <td>${p.confidence ? (p.confidence*100).toFixed(0)+'%' : '—'}</td>
+      <td><button class="btn-sm btn-danger" onclick="closePosition('${p.symbol}')">Close</button></td>
     </tr>`;
   }).join('');
+}
+
+function closePosition(symbol) {
+  if (!confirm(`Close ${symbol} position?`)) return;
+  fetch(`/api/control/close/${symbol}`, { method:'POST' })
+    .then(r=>r.json())
+    .then(d => {
+      if (d.ok) {
+        showNotif(`🔥 Manual Close: ${symbol}`, "sell");
+        fetchAll();
+      } else {
+        showNotif(`❌ Failed to close ${symbol}: ${d.message}`, "warn");
+      }
+    });
 }
 
 // ══════════════════ TRADES ══════════════════
@@ -221,6 +236,16 @@ function updateBotStatus(s) {
 function control(cmd) {
   fetch(`/api/control/${cmd}`, { method:'POST' })
     .then(r=>r.json()).then(d=>updateBotStatus(d.state));
+}
+
+function closeAll() {
+  if (!confirm("Are you sure you want to CLOSE ALL open positions immediately?")) return;
+  fetch('/api/control/close_all', { method:'POST' })
+    .then(r=>r.json())
+    .then(d => {
+      showNotif("🔥 Emergency: All positions closed manually", "sell");
+      fetchAll();
+    });
 }
 
 // ══════════════════ AI MODE BADGE ══════════════════
