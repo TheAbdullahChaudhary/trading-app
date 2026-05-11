@@ -1,0 +1,1184 @@
+2026-05-11 19:55:12 [INFO    ] mexc_client          MEXCClient initialized | dry_run=True
+2026-05-11 19:55:12 [INFO    ] mexc_client          [DRY-RUN] place_order symbol=BTC_USDT side=1 vol=1 slp=None tp=None
+2026-05-11 19:55:12 [INFO    ] mexc_client          MEXCClient initialized | dry_run=True
+2026-05-11 19:55:12 [INFO    ] mexc_client          [DRY-RUN] cancel_order order123
+2026-05-11 19:55:12 [INFO    ] mexc_client          MEXCClient initialized | dry_run=True
+2026-05-11 19:55:12 [INFO    ] mexc_client          MEXCClient initialized | dry_run=True
+2026-05-11 19:55:12 [INFO    ] risk_manager         Scalp order | BUY @50000.0000 SL=49250.0000(-750.0000) TP=51500.0000(+1500.0000) vol=1 risk=10.00U
+2026-05-11 19:55:12 [INFO    ] risk_manager         Scalp order | SELL @100.0000 SL=102.0000(-2.0000) TP=97.0000(+3.0000) vol=2 risk=5.00U
+2026-05-11 19:55:12 [INFO    ] risk_manager         Daily reset | balance=1000.00 USDT
+2026-05-11 19:55:12 [INFO    ] risk_manager         Daily reset | balance=1000.00 USDT
+2026-05-11 19:59:19 [INFO    ] main                 🟡 DRY-RUN MODE – no real orders placed
+2026-05-11 19:59:19 [INFO    ] mexc_client          MEXCClient initialized | dry_run=True
+2026-05-11 19:59:19 [INFO    ] data_fetcher         Database initialized: data/trades.db
+2026-05-11 19:59:19 [INFO    ] trader               Loaded 0 open positions from DB
+2026-05-11 19:59:19 [INFO    ] trader               Trader ready | dry_run=True | open=0
+2026-05-11 19:59:19 [INFO    ] main                 ============================================================
+2026-05-11 19:59:19 [INFO    ] main                   MEXC SCALPING AI BOT  |  dry_run=True
+2026-05-11 19:59:19 [INFO    ] main                   Symbols : BTC_USDT, ETH_USDT, XAU_USDT, XAG_USDT, OIL_USDT
+2026-05-11 19:59:19 [INFO    ] main                   Interval: Min1 | Check: 15s
+2026-05-11 19:59:19 [INFO    ] main                 ============================================================
+2026-05-11 19:59:19 [INFO    ] mexc_client          Testing MEXC connection...
+2026-05-11 19:59:20 [INFO    ] mexc_client          ✓ Public API OK | BTC price: 80883.4
+2026-05-11 19:59:20 [WARNING ] mexc_client          API keys not configured – only public API tested
+2026-05-11 19:59:20 [INFO    ] main                 Loading 1-minute historical data...
+2026-05-11 19:59:20 [INFO    ] data_fetcher         Loading history for BTC_USDT...
+2026-05-11 19:59:20 [INFO    ] data_fetcher           ✓ BTC_USDT: 300 candles loaded
+2026-05-11 19:59:20 [INFO    ] data_fetcher         Loading history for ETH_USDT...
+2026-05-11 19:59:21 [INFO    ] data_fetcher           ✓ ETH_USDT: 300 candles loaded
+2026-05-11 19:59:21 [INFO    ] data_fetcher         Loading history for XAU_USDT...
+2026-05-11 19:59:21 [ERROR   ] mexc_client          API error GET /api/v1/contract/kline/XAU_USDT: Contract does not exist
+2026-05-11 19:59:21 [WARNING ] data_fetcher           ✗ No candles for XAU_USDT
+2026-05-11 19:59:21 [INFO    ] data_fetcher         Loading history for XAG_USDT...
+2026-05-11 19:59:21 [ERROR   ] mexc_client          API error GET /api/v1/contract/kline/XAG_USDT: Contract does not exist
+2026-05-11 19:59:21 [WARNING ] data_fetcher           ✗ No candles for XAG_USDT
+2026-05-11 19:59:21 [INFO    ] data_fetcher         Loading history for OIL_USDT...
+2026-05-11 19:59:21 [ERROR   ] mexc_client          API error GET /api/v1/contract/kline/OIL_USDT: Contract does not exist
+2026-05-11 19:59:21 [WARNING ] data_fetcher           ✗ No candles for OIL_USDT
+2026-05-11 19:59:21 [INFO    ] data_fetcher         Database initialized: data/trades_htf.db
+2026-05-11 19:59:21 [INFO    ] main                 Loading 5-minute higher-timeframe data...
+2026-05-11 19:59:21 [INFO    ] data_fetcher         Loading history for BTC_USDT...
+2026-05-11 19:59:22 [INFO    ] data_fetcher           ✓ BTC_USDT: 100 candles loaded
+2026-05-11 19:59:22 [INFO    ] data_fetcher         Loading history for ETH_USDT...
+2026-05-11 19:59:22 [INFO    ] data_fetcher           ✓ ETH_USDT: 100 candles loaded
+2026-05-11 19:59:22 [INFO    ] data_fetcher         Loading history for XAU_USDT...
+2026-05-11 19:59:22 [ERROR   ] mexc_client          API error GET /api/v1/contract/kline/XAU_USDT: Contract does not exist
+2026-05-11 19:59:22 [WARNING ] data_fetcher           ✗ No candles for XAU_USDT
+2026-05-11 19:59:22 [INFO    ] data_fetcher         Loading history for XAG_USDT...
+2026-05-11 19:59:22 [ERROR   ] mexc_client          API error GET /api/v1/contract/kline/XAG_USDT: Contract does not exist
+2026-05-11 19:59:22 [WARNING ] data_fetcher           ✗ No candles for XAG_USDT
+2026-05-11 19:59:22 [INFO    ] data_fetcher         Loading history for OIL_USDT...
+2026-05-11 19:59:23 [ERROR   ] mexc_client          API error GET /api/v1/contract/kline/OIL_USDT: Contract does not exist
+2026-05-11 19:59:23 [WARNING ] data_fetcher           ✗ No candles for OIL_USDT
+2026-05-11 19:59:23 [INFO    ] main                   Leverage set: BTC_USDT × 20
+2026-05-11 19:59:23 [INFO    ] main                   Leverage set: ETH_USDT × 20
+2026-05-11 19:59:24 [INFO    ] main                   Leverage set: XAU_USDT × 20
+2026-05-11 19:59:24 [INFO    ] main                   Leverage set: XAG_USDT × 20
+2026-05-11 19:59:25 [INFO    ] main                   Leverage set: OIL_USDT × 20
+2026-05-11 19:59:25 [INFO    ] main                 Initializing AI models...
+2026-05-11 19:59:25 [INFO    ] ai_model             ✓ Model trained & saved for BTC_USDT (211 samples)
+2026-05-11 19:59:25 [INFO    ] ai_model             ✓ Model trained & saved for ETH_USDT (211 samples)
+2026-05-11 19:59:26 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 19:59:26 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 19:59:26 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 19:59:26 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 19:59:26 [INFO    ] main                 ✅ WebSocket live feed active
+2026-05-11 19:59:26 [INFO    ] mexc_client          Subscribed to XAU_USDT
+2026-05-11 19:59:27 [INFO    ] mexc_client          Subscribed to XAG_USDT
+2026-05-11 19:59:27 [INFO    ] mexc_client          Subscribed to OIL_USDT
+2026-05-11 19:59:27 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 19:59:27 [INFO    ] risk_manager         Daily reset | balance=1000.00 USDT
+2026-05-11 19:59:27 [INFO    ] main                 Starting balance: 1000.00 USDT
+2026-05-11 19:59:27 [INFO    ] main                 🚀 Scalping loop started
+2026-05-11 19:59:27 [ERROR   ] data_fetcher         on_kline error: 'str' object has no attribute 'get'
+2026-05-11 19:59:27 [INFO    ] main                 📊 Dashboard → http://localhost:5000
+2026-05-11 19:59:27 [ERROR   ] data_fetcher         on_kline error: 'str' object has no attribute 'get'
+2026-05-11 20:03:24 [INFO    ] main                 🟡 DRY-RUN MODE – no real orders placed
+2026-05-11 20:03:24 [INFO    ] mexc_client          MEXCClient initialized | dry_run=True
+2026-05-11 20:03:24 [INFO    ] data_fetcher         Database initialized: data/trades.db
+2026-05-11 20:03:24 [INFO    ] trader               Loaded 0 open positions from DB
+2026-05-11 20:03:24 [INFO    ] trader               Trader ready | dry_run=True | open=0
+2026-05-11 20:03:24 [INFO    ] main                 ============================================================
+2026-05-11 20:03:24 [INFO    ] main                   MEXC SCALPING AI BOT  |  dry_run=True
+2026-05-11 20:03:24 [INFO    ] main                   Symbols : BTC_USDT, ETH_USDT, XAUT_USDT, SILVER_USDT, USOIL_USDT
+2026-05-11 20:03:24 [INFO    ] main                   Interval: Min1 | Check: 15s
+2026-05-11 20:03:24 [INFO    ] main                 ============================================================
+2026-05-11 20:03:24 [INFO    ] mexc_client          Testing MEXC connection...
+2026-05-11 20:03:25 [INFO    ] mexc_client          ✓ Public API OK | BTC price: 80849.5
+2026-05-11 20:03:25 [WARNING ] mexc_client          API keys not configured – only public API tested
+2026-05-11 20:03:25 [INFO    ] main                 Loading 1-minute historical data...
+2026-05-11 20:03:25 [INFO    ] data_fetcher         Loading history for BTC_USDT...
+2026-05-11 20:03:25 [INFO    ] data_fetcher           ✓ BTC_USDT: 300 candles loaded
+2026-05-11 20:03:25 [INFO    ] data_fetcher         Loading history for ETH_USDT...
+2026-05-11 20:03:25 [INFO    ] data_fetcher           ✓ ETH_USDT: 300 candles loaded
+2026-05-11 20:03:25 [INFO    ] data_fetcher         Loading history for XAUT_USDT...
+2026-05-11 20:03:26 [INFO    ] data_fetcher           ✓ XAUT_USDT: 300 candles loaded
+2026-05-11 20:03:26 [INFO    ] data_fetcher         Loading history for SILVER_USDT...
+2026-05-11 20:03:26 [INFO    ] data_fetcher           ✓ SILVER_USDT: 300 candles loaded
+2026-05-11 20:03:26 [INFO    ] data_fetcher         Loading history for USOIL_USDT...
+2026-05-11 20:03:26 [INFO    ] data_fetcher           ✓ USOIL_USDT: 301 candles loaded
+2026-05-11 20:03:26 [INFO    ] data_fetcher         Database initialized: data/trades_htf.db
+2026-05-11 20:03:26 [INFO    ] main                 Loading 5-minute higher-timeframe data...
+2026-05-11 20:03:26 [INFO    ] data_fetcher         Loading history for BTC_USDT...
+2026-05-11 20:03:26 [INFO    ] data_fetcher           ✓ BTC_USDT: 100 candles loaded
+2026-05-11 20:03:26 [INFO    ] data_fetcher         Loading history for ETH_USDT...
+2026-05-11 20:03:27 [INFO    ] data_fetcher           ✓ ETH_USDT: 100 candles loaded
+2026-05-11 20:03:27 [INFO    ] data_fetcher         Loading history for XAUT_USDT...
+2026-05-11 20:03:27 [INFO    ] data_fetcher           ✓ XAUT_USDT: 100 candles loaded
+2026-05-11 20:03:27 [INFO    ] data_fetcher         Loading history for SILVER_USDT...
+2026-05-11 20:03:27 [INFO    ] data_fetcher           ✓ SILVER_USDT: 100 candles loaded
+2026-05-11 20:03:27 [INFO    ] data_fetcher         Loading history for USOIL_USDT...
+2026-05-11 20:03:28 [INFO    ] data_fetcher           ✓ USOIL_USDT: 101 candles loaded
+2026-05-11 20:03:28 [INFO    ] main                   Leverage set: BTC_USDT × 20
+2026-05-11 20:03:29 [INFO    ] main                   Leverage set: ETH_USDT × 20
+2026-05-11 20:03:29 [INFO    ] main                   Leverage set: XAUT_USDT × 20
+2026-05-11 20:03:30 [INFO    ] main                   Leverage set: SILVER_USDT × 20
+2026-05-11 20:03:30 [INFO    ] main                   Leverage set: USOIL_USDT × 10
+2026-05-11 20:03:30 [INFO    ] main                 Initializing AI models...
+2026-05-11 20:03:30 [INFO    ] ai_model             Loaded saved model for BTC_USDT
+2026-05-11 20:03:30 [INFO    ] ai_model             Loaded saved model for ETH_USDT
+2026-05-11 20:03:30 [INFO    ] ai_model             ✓ Model trained & saved for XAUT_USDT (211 samples)
+2026-05-11 20:03:31 [INFO    ] ai_model             ✓ Model trained & saved for SILVER_USDT (211 samples)
+2026-05-11 20:03:31 [INFO    ] ai_model             ✓ Model trained & saved for USOIL_USDT (211 samples)
+2026-05-11 20:03:32 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 20:03:32 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 20:03:32 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 20:03:32 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 20:03:32 [INFO    ] main                 ✅ WebSocket live feed active
+2026-05-11 20:03:32 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 20:03:32 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 20:03:32 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 20:03:32 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 20:03:32 [INFO    ] risk_manager         Daily reset | balance=1000.00 USDT
+2026-05-11 20:03:32 [INFO    ] main                 Starting balance: 1000.00 USDT
+2026-05-11 20:03:32 [INFO    ] main                 🚀 Scalping loop started
+2026-05-11 20:03:32 [INFO    ] main                 📊 Dashboard → http://localhost:5000
+2026-05-11 20:03:48 [INFO    ] strategy             ✅ SCALP SIGNAL [BUY] SILVER_USDT | score=8/12 AI=HOLD(0.98) RSI=84.6 MACD=↑ vol=0.5x VWAP=above
+2026-05-11 20:03:48 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 20:03:48 [INFO    ] risk_manager         Scalp order | BUY @85.1600 SL=85.0100(-0.1500) TP=85.3850(+0.2250) vol=33 risk=5.00U
+2026-05-11 20:03:48 [INFO    ] mexc_client          [DRY-RUN] place_order symbol=SILVER_USDT side=1 vol=33 slp=85.01 tp=85.385
+2026-05-11 20:03:48 [INFO    ] trader               📈 OPENED BUY SILVER_USDT | entry=85.16 vol=33 SL=85.01 TP=85.385
+2026-05-11 20:04:05 [INFO    ] strategy             ✅ SCALP SIGNAL [BUY] USOIL_USDT | score=8/12 AI=HOLD(0.98) RSI=45.0 MACD=↓ vol=0.7x VWAP=above
+2026-05-11 20:04:05 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 20:04:05 [INFO    ] risk_manager         Scalp order | BUY @96.0000 SL=95.8971(-0.1029) TP=96.1543(+0.1543) vol=49 risk=5.00U
+2026-05-11 20:04:05 [INFO    ] mexc_client          [DRY-RUN] place_order symbol=USOIL_USDT side=1 vol=49 slp=95.897143 tp=96.154286
+2026-05-11 20:04:05 [INFO    ] trader               📈 OPENED BUY USOIL_USDT | entry=96.0 vol=49 SL=95.897143 TP=96.154286
+2026-05-11 20:04:38 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 20:04:38 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 20:04:43 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 20:04:45 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 20:04:45 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 20:04:45 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 20:04:45 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 20:04:45 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 20:04:45 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 20:04:45 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 20:05:53 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 20:05:53 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 20:05:58 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 20:05:59 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 20:06:00 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 20:06:00 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 20:06:00 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 20:06:00 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 20:06:00 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 20:06:00 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 20:06:58 [ERROR   ] mexc_client          WebSocket error: ping/pong timed out
+2026-05-11 20:07:06 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 20:07:12 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 20:07:14 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 20:07:14 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 20:07:14 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 20:07:14 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 20:07:14 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 20:07:14 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 20:07:14 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 20:08:26 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 20:08:26 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 20:08:31 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 20:08:33 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 20:08:33 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 20:08:33 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 20:08:34 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 20:08:34 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 20:08:34 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 20:08:34 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 20:09:41 [INFO    ] mexc_client          [DRY-RUN] place_order symbol=USOIL_USDT side=4 vol=49 slp=None tp=None
+2026-05-11 20:09:41 [INFO    ] trader               ❌ CLOSED BUY USOIL_USDT [SL] | exit=95.88 pnl=-5.88 USDT
+2026-05-11 20:09:41 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 20:09:41 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 20:09:46 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 20:09:47 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 20:09:47 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 20:09:47 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 20:09:47 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 20:09:47 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 20:09:47 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 20:09:47 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 20:09:56 [INFO    ] strategy             ✅ SCALP SIGNAL [BUY] XAUT_USDT | score=8/12 AI=HOLD(1.00) RSI=60.0 MACD=↑ vol=0.2x VWAP=above
+2026-05-11 20:09:57 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 20:09:57 [INFO    ] risk_manager         Scalp order | BUY @4720.3000 SL=4717.3714(-2.9286) TP=4724.6929(+4.3929) vol=2 risk=5.00U
+2026-05-11 20:09:57 [INFO    ] mexc_client          [DRY-RUN] place_order symbol=XAUT_USDT side=1 vol=2 slp=4717.371429 tp=4724.692857
+2026-05-11 20:09:57 [INFO    ] trader               📈 OPENED BUY XAUT_USDT | entry=4720.3 vol=2 SL=4717.371429 TP=4724.692857
+2026-05-11 20:10:49 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 20:10:49 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 20:10:54 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 20:10:55 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 20:10:55 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 20:10:55 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 20:10:55 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 20:10:55 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 20:10:55 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 20:10:55 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 20:12:29 [INFO    ] main                 🟡 DRY-RUN MODE – no real orders placed
+2026-05-11 20:12:29 [INFO    ] mexc_client          MEXCClient initialized | dry_run=True
+2026-05-11 20:12:30 [INFO    ] data_fetcher         Database initialized: data/trades.db
+2026-05-11 20:12:30 [INFO    ] trader               Loaded 2 open positions from DB
+2026-05-11 20:12:30 [INFO    ] trader               Trader ready | dry_run=True | open=2
+2026-05-11 20:12:30 [INFO    ] main                 ============================================================
+2026-05-11 20:12:30 [INFO    ] main                   MEXC SCALPING AI BOT  |  dry_run=True
+2026-05-11 20:12:30 [INFO    ] main                   Symbols : BTC_USDT, ETH_USDT, XAUT_USDT, SILVER_USDT, USOIL_USDT
+2026-05-11 20:12:30 [INFO    ] main                   Interval: Min1 | Check: 15s
+2026-05-11 20:12:30 [INFO    ] main                 ============================================================
+2026-05-11 20:12:30 [INFO    ] mexc_client          Testing MEXC connection...
+2026-05-11 20:12:31 [INFO    ] mexc_client          ✓ Public API OK | BTC price: 80932.1
+2026-05-11 20:12:31 [WARNING ] mexc_client          API keys not configured – only public API tested
+2026-05-11 20:12:31 [INFO    ] main                 Loading 1-minute historical data...
+2026-05-11 20:12:31 [INFO    ] data_fetcher         Loading history for BTC_USDT...
+2026-05-11 20:12:31 [INFO    ] data_fetcher           ✓ BTC_USDT: 300 candles loaded
+2026-05-11 20:12:31 [INFO    ] data_fetcher         Loading history for ETH_USDT...
+2026-05-11 20:12:31 [INFO    ] data_fetcher           ✓ ETH_USDT: 300 candles loaded
+2026-05-11 20:12:31 [INFO    ] data_fetcher         Loading history for XAUT_USDT...
+2026-05-11 20:12:32 [INFO    ] data_fetcher           ✓ XAUT_USDT: 300 candles loaded
+2026-05-11 20:12:32 [INFO    ] data_fetcher         Loading history for SILVER_USDT...
+2026-05-11 20:12:32 [INFO    ] data_fetcher           ✓ SILVER_USDT: 300 candles loaded
+2026-05-11 20:12:32 [INFO    ] data_fetcher         Loading history for USOIL_USDT...
+2026-05-11 20:12:32 [INFO    ] data_fetcher           ✓ USOIL_USDT: 301 candles loaded
+2026-05-11 20:12:32 [INFO    ] data_fetcher         Database initialized: data/trades_htf.db
+2026-05-11 20:12:32 [INFO    ] main                 Loading 5-minute higher-timeframe data...
+2026-05-11 20:12:32 [INFO    ] data_fetcher         Loading history for BTC_USDT...
+2026-05-11 20:12:32 [INFO    ] data_fetcher           ✓ BTC_USDT: 100 candles loaded
+2026-05-11 20:12:32 [INFO    ] data_fetcher         Loading history for ETH_USDT...
+2026-05-11 20:12:33 [INFO    ] data_fetcher           ✓ ETH_USDT: 100 candles loaded
+2026-05-11 20:12:33 [INFO    ] data_fetcher         Loading history for XAUT_USDT...
+2026-05-11 20:12:33 [INFO    ] data_fetcher           ✓ XAUT_USDT: 100 candles loaded
+2026-05-11 20:12:33 [INFO    ] data_fetcher         Loading history for SILVER_USDT...
+2026-05-11 20:12:33 [INFO    ] data_fetcher           ✓ SILVER_USDT: 100 candles loaded
+2026-05-11 20:12:33 [INFO    ] data_fetcher         Loading history for USOIL_USDT...
+2026-05-11 20:12:34 [INFO    ] data_fetcher           ✓ USOIL_USDT: 101 candles loaded
+2026-05-11 20:12:34 [INFO    ] main                   Leverage set: BTC_USDT × 10
+2026-05-11 20:12:35 [INFO    ] main                   Leverage set: ETH_USDT × 10
+2026-05-11 20:12:35 [INFO    ] main                   Leverage set: XAUT_USDT × 10
+2026-05-11 20:12:36 [INFO    ] main                   Leverage set: SILVER_USDT × 10
+2026-05-11 20:12:36 [INFO    ] main                   Leverage set: USOIL_USDT × 10
+2026-05-11 20:12:36 [INFO    ] main                 Initializing AI models...
+2026-05-11 20:12:36 [INFO    ] ai_model             Loaded saved model for BTC_USDT
+2026-05-11 20:12:37 [INFO    ] ai_model             Loaded saved model for ETH_USDT
+2026-05-11 20:12:37 [INFO    ] ai_model             Loaded saved model for XAUT_USDT
+2026-05-11 20:12:37 [INFO    ] ai_model             Loaded saved model for SILVER_USDT
+2026-05-11 20:12:37 [INFO    ] ai_model             Loaded saved model for USOIL_USDT
+2026-05-11 20:12:38 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 20:12:38 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 20:12:38 [INFO    ] main                 ✅ WebSocket live feed active
+2026-05-11 20:12:38 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 20:12:38 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 20:12:38 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 20:12:38 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 20:12:38 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 20:12:39 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 20:12:39 [INFO    ] risk_manager         Daily reset | balance=1000.00 USDT
+2026-05-11 20:12:39 [INFO    ] main                 Starting balance: 1000.00 USDT
+2026-05-11 20:12:39 [INFO    ] main                 🚀 Scalping loop started
+2026-05-11 20:12:39 [INFO    ] main                 📊 Dashboard → http://localhost:5000
+2026-05-11 20:12:54 [INFO    ] mexc_client          [DRY-RUN] place_order symbol=SILVER_USDT side=4 vol=33.0 slp=None tp=None
+2026-05-11 20:12:54 [INFO    ] trader               ✅ CLOSED BUY SILVER_USDT [TP] | exit=85.39 pnl=+7.59 USDT
+2026-05-11 20:13:41 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 20:13:42 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 20:13:48 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 20:13:52 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 20:13:53 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 20:13:53 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 20:13:53 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 20:13:53 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 20:13:54 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 20:13:54 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 20:14:54 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 20:14:55 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 20:15:00 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 20:15:00 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 20:15:00 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 20:15:00 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 20:15:00 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 20:15:00 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 20:15:00 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 20:15:00 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 20:15:02 [INFO    ] strategy             ✅ SCALP SIGNAL [BUY] ETH_USDT | score=8/12 AI=HOLD(1.00) RSI=81.2 MACD=↑ vol=0.0x VWAP=above
+2026-05-11 20:15:03 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 20:15:03 [INFO    ] risk_manager         Scalp order | BUY @2320.0600 SL=2317.9643(-2.0957) TP=2324.2514(+4.1914) vol=10 risk=20.00U
+2026-05-11 20:15:03 [INFO    ] mexc_client          [DRY-RUN] place_order symbol=ETH_USDT side=1 vol=10 slp=2317.964286 tp=2324.251429
+2026-05-11 20:15:03 [INFO    ] trader               📈 OPENED BUY ETH_USDT | entry=2320.06 vol=10 SL=2317.964286 TP=2324.251429
+2026-05-11 20:16:05 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 20:16:05 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 20:16:11 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 20:16:12 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 20:16:12 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 20:16:12 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 20:16:12 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 20:16:12 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 20:16:12 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 20:16:12 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 20:17:18 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 20:17:18 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 20:17:23 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 20:17:24 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 20:17:24 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 20:17:24 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 20:17:24 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 20:17:24 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 20:17:24 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 20:17:24 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 20:17:34 [INFO    ] mexc_client          [DRY-RUN] place_order symbol=XAUT_USDT side=4 vol=2.0 slp=None tp=None
+2026-05-11 20:17:34 [INFO    ] trader               ✅ CLOSED BUY XAUT_USDT [TP] | exit=4724.9 pnl=+9.20 USDT
+2026-05-11 20:17:49 [INFO    ] strategy             ✅ SCALP SIGNAL [BUY] BTC_USDT | score=8/12 AI=HOLD(1.00) RSI=77.9 MACD=↑ vol=3.3x VWAP=above
+2026-05-11 20:17:50 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 20:17:50 [INFO    ] risk_manager         Scalp order | BUY @80992.9000 SL=80927.0857(-65.8143) TP=81124.5286(+131.6286) vol=1 risk=20.00U
+2026-05-11 20:17:50 [INFO    ] mexc_client          [DRY-RUN] place_order symbol=BTC_USDT side=1 vol=1 slp=80927.085714 tp=81124.528571
+2026-05-11 20:17:50 [INFO    ] trader               📈 OPENED BUY BTC_USDT | entry=80992.9 vol=1 SL=80927.085714 TP=81124.528571
+2026-05-11 20:18:34 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 20:18:34 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 20:18:39 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 20:18:41 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 20:18:41 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 20:18:41 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 20:18:41 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 20:18:41 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 20:18:41 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 20:18:41 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 20:19:35 [INFO    ] mexc_client          [DRY-RUN] place_order symbol=BTC_USDT side=4 vol=1 slp=None tp=None
+2026-05-11 20:19:35 [INFO    ] trader               ❌ CLOSED BUY BTC_USDT [SL] | exit=80923.6 pnl=-69.30 USDT
+2026-05-11 20:19:49 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 20:19:49 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 20:19:50 [INFO    ] strategy             ✅ SCALP SIGNAL [BUY] SILVER_USDT | score=8/12 AI=HOLD(0.93) RSI=88.7 MACD=↑ vol=3.0x VWAP=above
+2026-05-11 20:19:51 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 20:19:51 [INFO    ] risk_manager         Scalp order | BUY @85.6100 SL=85.4486(-0.1614) TP=85.9329(+0.3229) vol=100 risk=20.00U
+2026-05-11 20:19:51 [INFO    ] mexc_client          [DRY-RUN] place_order symbol=SILVER_USDT side=1 vol=100 slp=85.448571 tp=85.932857
+2026-05-11 20:19:51 [INFO    ] trader               📈 OPENED BUY SILVER_USDT | entry=85.61 vol=100 SL=85.448571 TP=85.932857
+2026-05-11 20:19:54 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 20:19:54 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 20:19:54 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 20:19:54 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 20:19:54 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 20:19:54 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 20:19:54 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 20:19:54 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 20:21:01 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 20:21:01 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 20:21:06 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 20:21:07 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 20:21:07 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 20:21:07 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 20:21:07 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 20:21:07 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 20:21:07 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 20:21:07 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 20:22:14 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 20:22:14 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 20:22:19 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 20:22:20 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 20:22:20 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 20:22:20 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 20:22:20 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 20:22:20 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 20:22:20 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 20:22:20 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 20:23:21 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 20:23:21 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 20:23:26 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 20:23:27 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 20:23:27 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 20:23:27 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 20:23:27 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 20:23:27 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 20:23:27 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 20:23:27 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 20:31:17 [INFO    ] main                 🟡 DRY-RUN MODE – no real orders placed
+2026-05-11 20:31:17 [INFO    ] mexc_client          MEXCClient initialized | dry_run=True
+2026-05-11 20:31:17 [INFO    ] data_fetcher         Database initialized: data/trades.db
+2026-05-11 20:31:17 [INFO    ] trader               Loaded 0 open positions from DB
+2026-05-11 20:31:17 [INFO    ] trader               Trader ready | dry_run=True | open=0
+2026-05-11 20:31:17 [INFO    ] main                 ============================================================
+2026-05-11 20:31:17 [INFO    ] main                   MEXC SCALPING AI BOT  |  dry_run=True
+2026-05-11 20:31:17 [INFO    ] main                   Symbols : BTC_USDT, ETH_USDT, XAUT_USDT, SILVER_USDT, USOIL_USDT
+2026-05-11 20:31:17 [INFO    ] main                   Interval: Min1 | Check: 15s
+2026-05-11 20:31:17 [INFO    ] main                 ============================================================
+2026-05-11 20:31:17 [INFO    ] mexc_client          Testing MEXC connection...
+2026-05-11 20:31:19 [ERROR   ] mexc_client          API error GET /api/v1/contract/ticker?symbol=BTC_USDT: Requests are too frequent, please try again later
+2026-05-11 20:31:19 [ERROR   ] mexc_client          ✗ Public API failed
+2026-05-11 20:31:19 [WARNING ] main                 ⚠ API test failed – running in reduced mode (public data only)
+2026-05-11 20:31:19 [INFO    ] main                 Loading 1-minute historical data...
+2026-05-11 20:31:19 [INFO    ] data_fetcher         Loading history for BTC_USDT...
+2026-05-11 20:31:19 [INFO    ] data_fetcher           ✓ BTC_USDT: 300 candles loaded
+2026-05-11 20:31:19 [INFO    ] data_fetcher         Loading history for ETH_USDT...
+2026-05-11 20:31:19 [INFO    ] data_fetcher           ✓ ETH_USDT: 300 candles loaded
+2026-05-11 20:31:19 [INFO    ] data_fetcher         Loading history for XAUT_USDT...
+2026-05-11 20:31:19 [INFO    ] data_fetcher           ✓ XAUT_USDT: 300 candles loaded
+2026-05-11 20:31:19 [INFO    ] data_fetcher         Loading history for SILVER_USDT...
+2026-05-11 20:31:19 [INFO    ] data_fetcher           ✓ SILVER_USDT: 300 candles loaded
+2026-05-11 20:31:19 [INFO    ] data_fetcher         Loading history for USOIL_USDT...
+2026-05-11 20:31:20 [INFO    ] data_fetcher           ✓ USOIL_USDT: 301 candles loaded
+2026-05-11 20:31:20 [INFO    ] data_fetcher         Database initialized: data/trades_htf.db
+2026-05-11 20:31:20 [INFO    ] main                 Loading 5-minute higher-timeframe data...
+2026-05-11 20:31:20 [INFO    ] data_fetcher         Loading history for BTC_USDT...
+2026-05-11 20:31:20 [INFO    ] data_fetcher           ✓ BTC_USDT: 100 candles loaded
+2026-05-11 20:31:20 [INFO    ] data_fetcher         Loading history for ETH_USDT...
+2026-05-11 20:31:20 [INFO    ] data_fetcher           ✓ ETH_USDT: 100 candles loaded
+2026-05-11 20:31:20 [INFO    ] data_fetcher         Loading history for XAUT_USDT...
+2026-05-11 20:31:21 [INFO    ] data_fetcher           ✓ XAUT_USDT: 100 candles loaded
+2026-05-11 20:31:21 [INFO    ] data_fetcher         Loading history for SILVER_USDT...
+2026-05-11 20:31:22 [INFO    ] data_fetcher           ✓ SILVER_USDT: 100 candles loaded
+2026-05-11 20:31:22 [INFO    ] data_fetcher         Loading history for USOIL_USDT...
+2026-05-11 20:31:22 [INFO    ] data_fetcher           ✓ USOIL_USDT: 101 candles loaded
+2026-05-11 20:31:22 [INFO    ] main                   Leverage set: BTC_USDT × 10
+2026-05-11 20:31:23 [INFO    ] main                   Leverage set: ETH_USDT × 10
+2026-05-11 20:31:23 [INFO    ] main                   Leverage set: XAUT_USDT × 10
+2026-05-11 20:31:24 [INFO    ] main                   Leverage set: SILVER_USDT × 10
+2026-05-11 20:31:24 [INFO    ] main                   Leverage set: USOIL_USDT × 10
+2026-05-11 20:31:24 [INFO    ] main                 Initializing AI models...
+2026-05-11 20:31:24 [INFO    ] ai_model             Loaded saved model for BTC_USDT
+2026-05-11 20:31:24 [INFO    ] ai_model             Loaded saved model for ETH_USDT
+2026-05-11 20:31:24 [INFO    ] ai_model             Loaded saved model for XAUT_USDT
+2026-05-11 20:31:24 [INFO    ] ai_model             Loaded saved model for SILVER_USDT
+2026-05-11 20:31:24 [INFO    ] ai_model             Loaded saved model for USOIL_USDT
+2026-05-11 20:31:25 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 20:31:25 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 20:31:25 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 20:31:25 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 20:31:25 [INFO    ] main                 ✅ WebSocket live feed active
+2026-05-11 20:31:25 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 20:31:25 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 20:31:25 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 20:31:25 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 20:31:25 [INFO    ] risk_manager         Daily reset | balance=100.00 USDT
+2026-05-11 20:31:25 [INFO    ] main                 Starting balance: 100.00 USDT
+2026-05-11 20:31:25 [INFO    ] main                 🚀 Scalping loop started
+2026-05-11 20:31:25 [INFO    ] main                 📊 Dashboard → http://localhost:5000
+2026-05-11 20:31:41 [INFO    ] strategy             ✅ SCALP SIGNAL [BUY] ETH_USDT | score=8/12 AI=HOLD(1.00) RSI=92.8 MACD=↑ vol=0.1x VWAP=above
+2026-05-11 20:31:41 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 20:31:41 [INFO    ] risk_manager         Order | ETH_USDT BUY @2334.2200 SL=2331.0843(-3.1357) TP=2340.4914(+6.2714) vol=64 cs=0.01 risk≈2.00U
+2026-05-11 20:31:41 [INFO    ] mexc_client          [DRY-RUN] place_order symbol=ETH_USDT side=1 vol=64 slp=2331.084286 tp=2340.491429
+2026-05-11 20:31:41 [INFO    ] trader               📈 OPENED BUY ETH_USDT | entry=2334.22 vol=64 SL=2331.084286 TP=2340.491429
+2026-05-11 20:31:41 [INFO    ] strategy             ✅ SCALP SIGNAL [SELL] USOIL_USDT | score=9/12 AI=HOLD(0.98) RSI=53.2 MACD=↓ vol=0.1x VWAP=below
+2026-05-11 20:31:41 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 20:31:41 [INFO    ] risk_manager         Order | USOIL_USDT SELL @95.6500 SL=95.8343(-0.1843) TP=95.2814(+0.3686) vol=500 cs=0.01 risk≈2.00U
+2026-05-11 20:31:41 [INFO    ] mexc_client          [DRY-RUN] place_order symbol=USOIL_USDT side=3 vol=500 slp=95.834286 tp=95.281429
+2026-05-11 20:31:41 [INFO    ] trader               📈 OPENED SELL USOIL_USDT | entry=95.65 vol=500 SL=95.834286 TP=95.281429
+2026-05-11 20:32:26 [INFO    ] mexc_client          [DRY-RUN] place_order symbol=ETH_USDT side=4 vol=64 slp=None tp=None
+2026-05-11 20:32:27 [INFO    ] trader               ❌ CLOSED BUY ETH_USDT [SL] | exit=2328.94 pnl=-3.38 USDT
+2026-05-11 20:32:28 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 20:32:28 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 20:32:33 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 20:32:34 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 20:32:34 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 20:32:34 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 20:32:34 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 20:32:34 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 20:32:34 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 20:32:34 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 20:33:41 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 20:33:41 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 20:33:46 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 20:33:47 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 20:33:47 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 20:33:47 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 20:33:47 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 20:33:47 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 20:33:47 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 20:33:47 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 20:34:51 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 20:34:51 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 20:34:56 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 20:34:57 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 20:34:57 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 20:34:57 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 20:34:57 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 20:34:57 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 20:34:57 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 20:34:57 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 20:35:59 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 20:35:59 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 20:36:04 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 20:36:05 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 20:36:05 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 20:36:05 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 20:36:05 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 20:36:05 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 20:36:05 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 20:36:05 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 20:36:18 [INFO    ] mexc_client          [DRY-RUN] place_order symbol=USOIL_USDT side=2 vol=500 slp=None tp=None
+2026-05-11 20:36:18 [INFO    ] trader               ❌ CLOSED SELL USOIL_USDT [SL] | exit=95.9 pnl=-1.25 USDT
+2026-05-11 20:37:09 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 20:37:09 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 20:37:14 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 20:37:14 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 20:37:14 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 20:37:14 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 20:37:14 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 20:37:14 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 20:37:14 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 20:37:14 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 20:37:53 [INFO    ] strategy             ✅ SCALP SIGNAL [SELL] USOIL_USDT | score=8/12 AI=HOLD(0.98) RSI=53.9 MACD=↑ vol=0.1x VWAP=below
+2026-05-11 20:37:53 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 20:37:53 [INFO    ] risk_manager         Order | USOIL_USDT SELL @95.8300 SL=96.0300(-0.2000) TP=95.4300(+0.4000) vol=500 cs=0.01 risk≈2.00U
+2026-05-11 20:37:53 [INFO    ] mexc_client          [DRY-RUN] place_order symbol=USOIL_USDT side=3 vol=500 slp=96.03 tp=95.43
+2026-05-11 20:37:53 [INFO    ] trader               📈 OPENED SELL USOIL_USDT | entry=95.83 vol=500 SL=96.03 TP=95.43
+2026-05-11 20:38:21 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 20:38:21 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 20:38:26 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 20:38:27 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 20:38:27 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 20:38:27 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 20:38:27 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 20:38:27 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 20:38:27 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 20:38:27 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 20:39:31 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 20:39:31 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 20:39:36 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 20:39:37 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 20:39:37 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 20:39:37 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 20:39:37 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 20:39:37 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 20:39:37 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 20:39:37 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 20:40:38 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 20:40:38 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 20:40:43 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 20:40:44 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 20:40:44 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 20:40:44 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 20:40:44 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 20:40:44 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 20:40:44 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 20:40:44 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 20:41:53 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 20:41:53 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 20:41:58 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 20:41:59 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 20:41:59 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 20:41:59 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 20:41:59 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 20:41:59 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 20:41:59 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 20:41:59 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 20:43:01 [INFO    ] mexc_client          [DRY-RUN] place_order symbol=USOIL_USDT side=2 vol=500 slp=None tp=None
+2026-05-11 20:43:01 [INFO    ] trader               ❌ CLOSED SELL USOIL_USDT [SL] | exit=96.03 pnl=-1.00 USDT
+2026-05-11 20:43:08 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 20:43:08 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 20:43:13 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 20:43:14 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 20:43:14 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 20:43:14 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 20:43:14 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 20:43:14 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 20:43:14 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 20:43:14 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 20:44:23 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 20:44:23 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 20:44:28 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 20:44:29 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 20:44:29 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 20:44:29 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 20:44:29 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 20:44:29 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 20:44:29 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 20:44:29 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 20:45:07 [INFO    ] strategy             ✅ SCALP SIGNAL [BUY] USOIL_USDT | score=8/12 AI=HOLD(0.97) RSI=58.7 MACD=↑ vol=0.1x VWAP=above
+2026-05-11 20:45:07 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 20:45:07 [INFO    ] risk_manager         Order | USOIL_USDT BUY @96.3000 SL=95.9014(-0.3986) TP=97.0971(+0.7971) vol=500 cs=0.01 risk≈2.00U
+2026-05-11 20:45:07 [INFO    ] mexc_client          [DRY-RUN] place_order symbol=USOIL_USDT side=1 vol=500 slp=95.901429 tp=97.097143
+2026-05-11 20:45:07 [INFO    ] trader               📈 OPENED BUY USOIL_USDT | entry=96.3 vol=500 SL=95.901429 TP=97.097143
+2026-05-11 20:49:35 [INFO    ] main                 🟡 DRY-RUN MODE – no real orders placed
+2026-05-11 20:49:35 [INFO    ] mexc_client          MEXCClient initialized | dry_run=True
+2026-05-11 20:49:35 [INFO    ] data_fetcher         Database initialized: data/trades.db
+2026-05-11 20:49:35 [INFO    ] trader               Loaded 0 open positions from DB
+2026-05-11 20:49:35 [INFO    ] trader               Trader ready | dry_run=True | open=0
+2026-05-11 20:49:35 [INFO    ] main                 ============================================================
+2026-05-11 20:49:35 [INFO    ] main                   MEXC SCALPING AI BOT  |  dry_run=True
+2026-05-11 20:49:35 [INFO    ] main                   Symbols : BTC_USDT, ETH_USDT, XAUT_USDT, SILVER_USDT, USOIL_USDT
+2026-05-11 20:49:35 [INFO    ] main                   Interval: Min1 | Check: 15s
+2026-05-11 20:49:35 [INFO    ] main                 ============================================================
+2026-05-11 20:49:35 [INFO    ] mexc_client          Testing MEXC connection...
+2026-05-11 20:49:36 [INFO    ] mexc_client          ✓ Public API OK | BTC price: 81212.3
+2026-05-11 20:49:36 [WARNING ] mexc_client          API keys not configured – only public API tested
+2026-05-11 20:49:36 [INFO    ] main                 Loading 1-minute historical data...
+2026-05-11 20:49:36 [INFO    ] data_fetcher         Loading history for BTC_USDT...
+2026-05-11 20:49:36 [INFO    ] data_fetcher           ✓ BTC_USDT: 300 candles loaded
+2026-05-11 20:49:36 [INFO    ] data_fetcher         Loading history for ETH_USDT...
+2026-05-11 20:49:36 [INFO    ] data_fetcher           ✓ ETH_USDT: 300 candles loaded
+2026-05-11 20:49:36 [INFO    ] data_fetcher         Loading history for XAUT_USDT...
+2026-05-11 20:49:37 [INFO    ] data_fetcher           ✓ XAUT_USDT: 300 candles loaded
+2026-05-11 20:49:37 [INFO    ] data_fetcher         Loading history for SILVER_USDT...
+2026-05-11 20:49:37 [INFO    ] data_fetcher           ✓ SILVER_USDT: 300 candles loaded
+2026-05-11 20:49:37 [INFO    ] data_fetcher         Loading history for USOIL_USDT...
+2026-05-11 20:49:37 [INFO    ] data_fetcher           ✓ USOIL_USDT: 301 candles loaded
+2026-05-11 20:49:37 [INFO    ] data_fetcher         Database initialized: data/trades_htf.db
+2026-05-11 20:49:37 [INFO    ] main                 Loading 5-minute higher-timeframe data...
+2026-05-11 20:49:37 [INFO    ] data_fetcher         Loading history for BTC_USDT...
+2026-05-11 20:49:37 [INFO    ] data_fetcher           ✓ BTC_USDT: 100 candles loaded
+2026-05-11 20:49:37 [INFO    ] data_fetcher         Loading history for ETH_USDT...
+2026-05-11 20:49:38 [INFO    ] data_fetcher           ✓ ETH_USDT: 100 candles loaded
+2026-05-11 20:49:38 [INFO    ] data_fetcher         Loading history for XAUT_USDT...
+2026-05-11 20:49:38 [INFO    ] data_fetcher           ✓ XAUT_USDT: 100 candles loaded
+2026-05-11 20:49:38 [INFO    ] data_fetcher         Loading history for SILVER_USDT...
+2026-05-11 20:49:38 [INFO    ] data_fetcher           ✓ SILVER_USDT: 100 candles loaded
+2026-05-11 20:49:38 [INFO    ] data_fetcher         Loading history for USOIL_USDT...
+2026-05-11 20:49:38 [INFO    ] data_fetcher           ✓ USOIL_USDT: 101 candles loaded
+2026-05-11 20:49:39 [INFO    ] main                   Leverage set: BTC_USDT × 10
+2026-05-11 20:49:39 [INFO    ] main                   Leverage set: ETH_USDT × 10
+2026-05-11 20:49:40 [INFO    ] main                   Leverage set: XAUT_USDT × 10
+2026-05-11 20:49:40 [INFO    ] main                   Leverage set: SILVER_USDT × 10
+2026-05-11 20:49:41 [INFO    ] main                   Leverage set: USOIL_USDT × 10
+2026-05-11 20:49:41 [INFO    ] main                 Initializing AI models...
+2026-05-11 20:49:41 [INFO    ] ai_model             Loaded saved model for BTC_USDT
+2026-05-11 20:49:41 [INFO    ] ai_model             Loaded saved model for ETH_USDT
+2026-05-11 20:49:41 [INFO    ] ai_model             Loaded saved model for XAUT_USDT
+2026-05-11 20:49:41 [INFO    ] ai_model             Loaded saved model for SILVER_USDT
+2026-05-11 20:49:41 [INFO    ] ai_model             Loaded saved model for USOIL_USDT
+2026-05-11 20:49:42 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 20:49:42 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 20:49:42 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 20:49:42 [INFO    ] main                 ✅ WebSocket live feed active
+2026-05-11 20:49:42 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 20:49:42 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 20:49:42 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 20:49:42 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 20:49:42 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 20:49:42 [INFO    ] risk_manager         Daily reset | balance=100.00 USDT
+2026-05-11 20:49:42 [INFO    ] main                 Starting balance: 100.00 USDT
+2026-05-11 20:49:42 [INFO    ] main                 🚀 Scalping loop started
+2026-05-11 20:49:42 [INFO    ] main                 📊 Dashboard → http://localhost:5000
+2026-05-11 20:50:44 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 20:50:44 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 20:50:49 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 20:50:50 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 20:50:50 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 20:50:50 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 20:50:50 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 20:50:50 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 20:50:50 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 20:50:50 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 20:51:04 [INFO    ] main                 ⏹ Bot STOPPED by dashboard
+2026-05-11 20:51:59 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 20:51:59 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 20:52:04 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 20:52:05 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 20:52:05 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 20:52:05 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 20:52:05 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 20:52:05 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 20:52:05 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 20:52:05 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 20:53:08 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 20:53:08 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 20:53:13 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 20:53:14 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 20:53:14 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 20:53:14 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 20:53:14 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 20:53:14 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 20:53:14 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 20:53:14 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 20:54:19 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 20:54:19 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 20:54:24 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 20:54:25 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 20:54:25 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 20:54:25 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 20:54:25 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 20:54:25 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 20:54:25 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 20:54:25 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 20:55:34 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 20:55:34 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 20:55:39 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 20:55:40 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 20:55:40 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 20:55:40 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 20:55:40 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 20:55:41 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 20:55:41 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 20:55:41 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 20:56:48 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 20:56:48 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 20:56:53 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 20:56:54 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 20:56:54 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 20:56:54 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 20:56:54 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 20:56:54 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 20:56:54 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 20:56:54 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 20:57:58 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 20:57:58 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 20:58:03 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 20:58:04 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 20:58:04 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 20:58:04 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 20:58:04 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 20:58:04 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 20:58:04 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 20:58:04 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 20:59:13 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 20:59:13 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 20:59:18 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 20:59:19 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 20:59:19 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 20:59:19 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 20:59:19 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 20:59:19 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 20:59:19 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 20:59:19 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 21:00:28 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 21:00:28 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 21:00:33 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 21:00:34 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 21:00:34 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 21:00:34 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 21:00:34 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 21:00:34 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 21:00:34 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 21:00:34 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 21:01:38 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 21:01:38 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 21:01:43 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 21:01:44 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 21:01:44 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 21:01:44 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 21:01:44 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 21:01:44 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 21:01:44 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 21:01:44 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 21:02:48 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 21:02:48 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 21:02:53 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 21:02:54 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 21:02:54 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 21:02:54 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 21:02:54 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 21:02:54 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 21:02:54 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 21:02:54 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 21:04:01 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 21:04:01 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 21:04:06 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 21:04:07 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 21:04:07 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 21:04:07 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 21:04:07 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 21:04:07 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 21:04:07 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 21:04:07 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 21:05:09 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 21:05:09 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 21:05:14 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 21:05:15 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 21:05:15 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 21:05:15 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 21:05:15 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 21:05:15 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 21:05:15 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 21:05:15 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 21:06:24 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 21:06:24 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 21:06:29 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 21:06:30 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 21:06:30 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 21:06:30 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 21:06:30 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 21:06:30 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 21:06:30 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 21:06:30 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 21:07:38 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 21:07:38 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 21:07:43 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 21:07:44 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 21:07:44 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 21:07:44 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 21:07:44 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 21:07:44 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 21:07:44 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 21:07:44 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 21:08:48 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 21:08:48 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 21:08:53 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 21:08:54 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 21:08:54 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 21:08:54 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 21:08:54 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 21:08:54 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 21:08:54 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 21:08:54 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 21:09:58 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 21:09:58 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 21:10:03 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 21:10:04 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 21:10:04 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 21:10:04 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 21:10:04 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 21:10:04 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 21:10:04 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 21:10:04 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 21:11:09 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 21:11:09 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 21:11:14 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 21:11:15 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 21:11:15 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 21:11:15 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 21:11:15 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 21:11:15 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 21:11:15 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 21:11:15 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 21:12:23 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 21:12:23 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 21:12:28 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 21:12:30 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 21:12:30 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 21:12:30 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 21:12:30 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 21:12:30 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 21:12:30 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 21:12:30 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 22:08:33 [INFO    ] main                 🟡 DRY-RUN MODE – no real orders placed
+2026-05-11 22:08:33 [INFO    ] mexc_client          MEXCClient initialized | dry_run=True
+2026-05-11 22:08:33 [INFO    ] data_fetcher         Database initialized: data/trades.db
+2026-05-11 22:08:33 [INFO    ] ai_analyst           AI Analyst running in rule-based mode (no GEMINI_API_KEY)
+2026-05-11 22:08:33 [INFO    ] trader               Loaded 0 open positions from DB
+2026-05-11 22:08:33 [INFO    ] trader               Trader ready | dry_run=True | open=0
+2026-05-11 22:08:33 [INFO    ] main                 ============================================================
+2026-05-11 22:08:33 [INFO    ] main                   MEXC SCALPING AI BOT  |  dry_run=True
+2026-05-11 22:08:33 [INFO    ] main                   Symbols : BTC_USDT, ETH_USDT, XAUT_USDT, SILVER_USDT, USOIL_USDT
+2026-05-11 22:08:33 [INFO    ] main                   Interval: Min1 | Check: 15s
+2026-05-11 22:08:33 [INFO    ] main                 ============================================================
+2026-05-11 22:08:33 [INFO    ] mexc_client          Testing MEXC connection...
+2026-05-11 22:08:34 [INFO    ] mexc_client          ✓ Public API OK | BTC price: 81369.5
+2026-05-11 22:08:34 [WARNING ] mexc_client          API keys not configured – only public API tested
+2026-05-11 22:08:34 [INFO    ] main                 Loading 1-minute historical data...
+2026-05-11 22:08:34 [INFO    ] data_fetcher         Loading history for BTC_USDT...
+2026-05-11 22:08:35 [INFO    ] data_fetcher           ✓ BTC_USDT: 300 candles loaded
+2026-05-11 22:08:35 [INFO    ] data_fetcher         Loading history for ETH_USDT...
+2026-05-11 22:08:35 [INFO    ] data_fetcher           ✓ ETH_USDT: 300 candles loaded
+2026-05-11 22:08:35 [INFO    ] data_fetcher         Loading history for XAUT_USDT...
+2026-05-11 22:08:35 [INFO    ] data_fetcher           ✓ XAUT_USDT: 300 candles loaded
+2026-05-11 22:08:35 [INFO    ] data_fetcher         Loading history for SILVER_USDT...
+2026-05-11 22:08:35 [INFO    ] data_fetcher           ✓ SILVER_USDT: 300 candles loaded
+2026-05-11 22:08:35 [INFO    ] data_fetcher         Loading history for USOIL_USDT...
+2026-05-11 22:08:36 [INFO    ] data_fetcher           ✓ USOIL_USDT: 301 candles loaded
+2026-05-11 22:08:36 [INFO    ] data_fetcher         Database initialized: data/trades_htf.db
+2026-05-11 22:08:36 [INFO    ] main                 Loading 5-minute higher-timeframe data...
+2026-05-11 22:08:36 [INFO    ] data_fetcher         Loading history for BTC_USDT...
+2026-05-11 22:08:36 [INFO    ] data_fetcher           ✓ BTC_USDT: 100 candles loaded
+2026-05-11 22:08:36 [INFO    ] data_fetcher         Loading history for ETH_USDT...
+2026-05-11 22:08:36 [INFO    ] data_fetcher           ✓ ETH_USDT: 100 candles loaded
+2026-05-11 22:08:36 [INFO    ] data_fetcher         Loading history for XAUT_USDT...
+2026-05-11 22:08:36 [INFO    ] data_fetcher           ✓ XAUT_USDT: 100 candles loaded
+2026-05-11 22:08:36 [INFO    ] data_fetcher         Loading history for SILVER_USDT...
+2026-05-11 22:08:36 [INFO    ] data_fetcher           ✓ SILVER_USDT: 100 candles loaded
+2026-05-11 22:08:36 [INFO    ] data_fetcher         Loading history for USOIL_USDT...
+2026-05-11 22:08:37 [INFO    ] data_fetcher           ✓ USOIL_USDT: 101 candles loaded
+2026-05-11 22:08:37 [INFO    ] main                   Leverage set: BTC_USDT × 10
+2026-05-11 22:08:37 [INFO    ] main                   Leverage set: ETH_USDT × 10
+2026-05-11 22:08:38 [INFO    ] main                   Leverage set: XAUT_USDT × 10
+2026-05-11 22:08:38 [INFO    ] main                   Leverage set: SILVER_USDT × 10
+2026-05-11 22:08:39 [INFO    ] main                   Leverage set: USOIL_USDT × 10
+2026-05-11 22:08:39 [INFO    ] main                 Initializing AI models...
+2026-05-11 22:08:39 [INFO    ] ai_model             Loaded saved model for BTC_USDT
+2026-05-11 22:08:39 [INFO    ] ai_model             Loaded saved model for ETH_USDT
+2026-05-11 22:08:39 [INFO    ] ai_model             Loaded saved model for XAUT_USDT
+2026-05-11 22:08:39 [INFO    ] ai_model             Loaded saved model for SILVER_USDT
+2026-05-11 22:08:39 [INFO    ] ai_model             Loaded saved model for USOIL_USDT
+2026-05-11 22:08:39 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 22:08:39 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 22:08:39 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 22:08:39 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 22:08:39 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 22:08:39 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 22:08:39 [INFO    ] main                 ✅ WebSocket live feed active
+2026-05-11 22:08:39 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 22:08:39 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 22:08:39 [INFO    ] risk_manager         Daily reset | balance=100.00 USDT
+2026-05-11 22:08:39 [INFO    ] main                 Starting balance: 100.00 USDT
+2026-05-11 22:08:39 [INFO    ] main                 🚀 Scalping loop started
+2026-05-11 22:08:39 [INFO    ] main                 📊 Dashboard → http://localhost:5000
+2026-05-11 22:27:34 [INFO    ] main                 [DRY-RUN] DRY-RUN MODE - no real orders placed
+2026-05-11 22:27:34 [INFO    ] mexc_client          MEXCClient initialized | dry_run=True
+2026-05-11 22:27:34 [INFO    ] data_fetcher         Database initialized: data/trades.db
+2026-05-11 22:27:34 [INFO    ] ai_analyst           AI Analyst running in rule-based mode (no GEMINI_API_KEY)
+2026-05-11 22:27:34 [INFO    ] trader               Loaded 0 open positions from DB
+2026-05-11 22:27:34 [INFO    ] trader               Trader ready | dry_run=True | open=0
+2026-05-11 22:27:34 [INFO    ] main                 ============================================================
+2026-05-11 22:27:34 [INFO    ] main                   MEXC SCALPING AI BOT  |  dry_run=True
+2026-05-11 22:27:34 [INFO    ] main                   Symbols : BTC_USDT, ETH_USDT, XAUT_USDT, SILVER_USDT, USOIL_USDT
+2026-05-11 22:27:34 [INFO    ] main                   Interval: Min1 | Check: 15s
+2026-05-11 22:27:34 [INFO    ] main                 ============================================================
+2026-05-11 22:27:34 [INFO    ] mexc_client          Testing MEXC connection...
+2026-05-11 22:27:35 [INFO    ] mexc_client          ✓ Public API OK | BTC price: 81554.9
+2026-05-11 22:27:35 [WARNING ] mexc_client          API keys not configured – only public API tested
+2026-05-11 22:27:35 [INFO    ] main                 Loading 1-minute historical data...
+2026-05-11 22:27:35 [INFO    ] data_fetcher         Loading history for BTC_USDT...
+2026-05-11 22:27:35 [INFO    ] data_fetcher           [OK] BTC_USDT: 300 candles loaded
+2026-05-11 22:27:35 [INFO    ] data_fetcher         Loading history for ETH_USDT...
+2026-05-11 22:27:36 [INFO    ] data_fetcher           [OK] ETH_USDT: 300 candles loaded
+2026-05-11 22:27:36 [INFO    ] data_fetcher         Loading history for XAUT_USDT...
+2026-05-11 22:27:36 [INFO    ] data_fetcher           [OK] XAUT_USDT: 300 candles loaded
+2026-05-11 22:27:36 [INFO    ] data_fetcher         Loading history for SILVER_USDT...
+2026-05-11 22:27:36 [INFO    ] data_fetcher           [OK] SILVER_USDT: 300 candles loaded
+2026-05-11 22:27:36 [INFO    ] data_fetcher         Loading history for USOIL_USDT...
+2026-05-11 22:27:36 [INFO    ] data_fetcher           [OK] USOIL_USDT: 301 candles loaded
+2026-05-11 22:27:36 [INFO    ] data_fetcher         Database initialized: data/trades_htf.db
+2026-05-11 22:27:36 [INFO    ] main                 Loading 5-minute higher-timeframe data...
+2026-05-11 22:27:36 [INFO    ] data_fetcher         Loading history for BTC_USDT...
+2026-05-11 22:27:36 [INFO    ] data_fetcher           [OK] BTC_USDT: 100 candles loaded
+2026-05-11 22:27:36 [INFO    ] data_fetcher         Loading history for ETH_USDT...
+2026-05-11 22:27:37 [INFO    ] data_fetcher           [OK] ETH_USDT: 100 candles loaded
+2026-05-11 22:27:37 [INFO    ] data_fetcher         Loading history for XAUT_USDT...
+2026-05-11 22:27:37 [INFO    ] data_fetcher           [OK] XAUT_USDT: 100 candles loaded
+2026-05-11 22:27:37 [INFO    ] data_fetcher         Loading history for SILVER_USDT...
+2026-05-11 22:27:37 [INFO    ] data_fetcher           [OK] SILVER_USDT: 100 candles loaded
+2026-05-11 22:27:37 [INFO    ] data_fetcher         Loading history for USOIL_USDT...
+2026-05-11 22:27:37 [INFO    ] data_fetcher           [OK] USOIL_USDT: 101 candles loaded
+2026-05-11 22:27:38 [INFO    ] main                   Leverage set: BTC_USDT x 10
+2026-05-11 22:27:38 [INFO    ] main                   Leverage set: ETH_USDT x 10
+2026-05-11 22:27:38 [INFO    ] main                   Leverage set: XAUT_USDT x 10
+2026-05-11 22:27:39 [INFO    ] main                   Leverage set: SILVER_USDT x 10
+2026-05-11 22:27:39 [INFO    ] main                   Leverage set: USOIL_USDT x 10
+2026-05-11 22:27:39 [INFO    ] main                 Initializing AI models...
+2026-05-11 22:27:39 [INFO    ] ai_model             Loaded saved model for BTC_USDT
+2026-05-11 22:27:39 [INFO    ] ai_model             Loaded saved model for ETH_USDT
+2026-05-11 22:27:39 [INFO    ] ai_model             Loaded saved model for XAUT_USDT
+2026-05-11 22:27:39 [INFO    ] ai_model             Loaded saved model for SILVER_USDT
+2026-05-11 22:27:39 [INFO    ] ai_model             Loaded saved model for USOIL_USDT
+2026-05-11 22:27:40 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 22:27:40 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 22:27:40 [INFO    ] main                 [OK] WebSocket live feed active
+2026-05-11 22:27:40 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 22:27:40 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 22:27:40 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 22:27:40 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 22:27:40 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 22:27:40 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 22:27:40 [INFO    ] risk_manager         Daily reset | balance=100.00 USDT
+2026-05-11 22:27:40 [INFO    ] main                 Starting balance: 100.00 USDT
+2026-05-11 22:27:40 [INFO    ] main                 [RUN] Scalping loop started
+2026-05-11 22:27:40 [INFO    ] main                 [DASHBOARD] Dashboard -> http://localhost:5000
+2026-05-11 22:28:20 [INFO    ] main                 [DRY-RUN] DRY-RUN MODE - no real orders placed
+2026-05-11 22:28:20 [INFO    ] mexc_client          MEXCClient initialized | dry_run=True
+2026-05-11 22:28:20 [INFO    ] data_fetcher         Database initialized: data/trades.db
+2026-05-11 22:28:20 [INFO    ] ai_analyst           AI Analyst running in rule-based mode (no GEMINI_API_KEY)
+2026-05-11 22:28:20 [INFO    ] trader               Loaded 0 open positions from DB
+2026-05-11 22:28:20 [INFO    ] trader               Trader ready | dry_run=True | open=0
+2026-05-11 22:28:20 [INFO    ] main                 ============================================================
+2026-05-11 22:28:20 [INFO    ] main                   MEXC SCALPING AI BOT  |  dry_run=True
+2026-05-11 22:28:20 [INFO    ] main                   Symbols : BTC_USDT, ETH_USDT, XAUT_USDT, SILVER_USDT, USOIL_USDT
+2026-05-11 22:28:20 [INFO    ] main                   Interval: Min1 | Check: 15s
+2026-05-11 22:28:20 [INFO    ] main                 ============================================================
+2026-05-11 22:28:20 [INFO    ] mexc_client          Testing MEXC connection...
+2026-05-11 22:28:22 [INFO    ] mexc_client          ✓ Public API OK | BTC price: 81558.3
+2026-05-11 22:28:22 [WARNING ] mexc_client          API keys not configured – only public API tested
+2026-05-11 22:28:22 [INFO    ] main                 Loading 1-minute historical data...
+2026-05-11 22:28:22 [INFO    ] data_fetcher         Loading history for BTC_USDT...
+2026-05-11 22:28:22 [INFO    ] data_fetcher           [OK] BTC_USDT: 300 candles loaded
+2026-05-11 22:28:22 [INFO    ] data_fetcher         Loading history for ETH_USDT...
+2026-05-11 22:28:22 [INFO    ] data_fetcher           [OK] ETH_USDT: 300 candles loaded
+2026-05-11 22:28:22 [INFO    ] data_fetcher         Loading history for XAUT_USDT...
+2026-05-11 22:28:23 [INFO    ] data_fetcher           [OK] XAUT_USDT: 300 candles loaded
+2026-05-11 22:28:23 [INFO    ] data_fetcher         Loading history for SILVER_USDT...
+2026-05-11 22:28:23 [INFO    ] data_fetcher           [OK] SILVER_USDT: 300 candles loaded
+2026-05-11 22:28:23 [INFO    ] data_fetcher         Loading history for USOIL_USDT...
+2026-05-11 22:28:23 [INFO    ] data_fetcher           [OK] USOIL_USDT: 301 candles loaded
+2026-05-11 22:28:23 [INFO    ] data_fetcher         Database initialized: data/trades_htf.db
+2026-05-11 22:28:23 [INFO    ] main                 Loading 5-minute higher-timeframe data...
+2026-05-11 22:28:23 [INFO    ] data_fetcher         Loading history for BTC_USDT...
+2026-05-11 22:28:23 [INFO    ] data_fetcher           [OK] BTC_USDT: 100 candles loaded
+2026-05-11 22:28:23 [INFO    ] data_fetcher         Loading history for ETH_USDT...
+2026-05-11 22:28:24 [INFO    ] data_fetcher           [OK] ETH_USDT: 100 candles loaded
+2026-05-11 22:28:24 [INFO    ] data_fetcher         Loading history for XAUT_USDT...
+2026-05-11 22:28:24 [INFO    ] data_fetcher           [OK] XAUT_USDT: 100 candles loaded
+2026-05-11 22:28:24 [INFO    ] data_fetcher         Loading history for SILVER_USDT...
+2026-05-11 22:28:24 [INFO    ] data_fetcher           [OK] SILVER_USDT: 100 candles loaded
+2026-05-11 22:28:24 [INFO    ] data_fetcher         Loading history for USOIL_USDT...
+2026-05-11 22:28:24 [INFO    ] data_fetcher           [OK] USOIL_USDT: 101 candles loaded
+2026-05-11 22:28:25 [INFO    ] main                   Leverage set: BTC_USDT x 10
+2026-05-11 22:28:25 [INFO    ] main                   Leverage set: ETH_USDT x 10
+2026-05-11 22:28:25 [INFO    ] main                   Leverage set: XAUT_USDT x 10
+2026-05-11 22:28:26 [INFO    ] main                   Leverage set: SILVER_USDT x 10
+2026-05-11 22:28:26 [INFO    ] main                   Leverage set: USOIL_USDT x 10
+2026-05-11 22:28:26 [INFO    ] main                 Initializing AI models...
+2026-05-11 22:28:26 [INFO    ] ai_model             Loaded saved model for BTC_USDT
+2026-05-11 22:28:26 [INFO    ] ai_model             Loaded saved model for ETH_USDT
+2026-05-11 22:28:26 [INFO    ] ai_model             Loaded saved model for XAUT_USDT
+2026-05-11 22:28:26 [INFO    ] ai_model             Loaded saved model for SILVER_USDT
+2026-05-11 22:28:26 [INFO    ] ai_model             Loaded saved model for USOIL_USDT
+2026-05-11 22:28:27 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 22:28:27 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 22:28:27 [INFO    ] main                 [OK] WebSocket live feed active
+2026-05-11 22:28:27 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 22:28:27 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 22:28:27 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 22:28:27 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 22:28:27 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 22:28:28 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 22:28:28 [INFO    ] risk_manager         Daily reset | balance=100.00 USDT
+2026-05-11 22:28:28 [INFO    ] main                 Starting balance: 100.00 USDT
+2026-05-11 22:28:28 [INFO    ] main                 [RUN] Scalping loop started
+2026-05-11 22:28:28 [INFO    ] main                 [DASHBOARD] Dashboard -> http://localhost:5000
+2026-05-11 22:29:28 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 22:29:28 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 22:29:33 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 22:29:34 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 22:29:34 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 22:29:34 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 22:29:34 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 22:29:34 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 22:29:34 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 22:29:34 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 22:30:38 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 22:30:38 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 22:30:43 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 22:30:45 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 22:30:45 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 22:30:45 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 22:30:45 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 22:30:45 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 22:30:45 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 22:30:45 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 22:31:54 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 22:31:54 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 22:31:59 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 22:32:00 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 22:32:00 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 22:32:00 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 22:32:00 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 22:32:00 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 22:32:00 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 22:32:00 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 22:32:37 [INFO    ] main                 [START] Bot STARTED by dashboard
+2026-05-11 22:32:49 [INFO    ] strategy             [OK] [BUY] BTC_USDT | score=10/12 ADX=282 HTF=UP AI=HOLD(1.00) RSI=59 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 22:32:49 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 22:32:49 [INFO    ] risk_manager         Order | BTC_USDT BUY @81596.0000 SL=81523.0286(-72.9714) TP=81741.9429(+145.9429) vol=274 cs=0.0001 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 22:32:49 [INFO    ] mexc_client          [DRY-RUN] place_order symbol=BTC_USDT side=1 vol=274 slp=81523.028571 tp=81741.942857
+2026-05-11 22:32:49 [INFO    ] trader               [OPEN] BUY BTC_USDT | entry=81596.0 vol=274 SL=81523.028571 TP=81741.942857
+2026-05-11 22:33:04 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 22:33:04 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 22:33:09 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 22:33:10 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 22:33:10 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 22:33:10 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 22:33:10 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 22:33:10 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 22:33:10 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 22:33:10 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 22:34:18 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 22:34:18 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 22:34:23 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 22:34:24 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 22:34:24 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 22:34:24 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 22:34:24 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 22:34:24 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 22:34:24 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 22:34:24 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 22:34:44 [INFO    ] main                 [DRY-RUN] DRY-RUN MODE - no real orders placed
+2026-05-11 22:34:44 [INFO    ] mexc_client          MEXCClient initialized | dry_run=True
+2026-05-11 22:34:44 [INFO    ] data_fetcher         Database initialized: data/trades.db
+2026-05-11 22:34:44 [INFO    ] ai_analyst           AI Analyst running in rule-based mode (no GEMINI_API_KEY)
+2026-05-11 22:34:44 [INFO    ] trader               Loaded 1 open positions from DB
+2026-05-11 22:34:44 [INFO    ] trader               Trader ready | dry_run=True | open=1
+2026-05-11 22:34:44 [INFO    ] main                 ============================================================
+2026-05-11 22:34:44 [INFO    ] main                   MEXC SCALPING AI BOT  |  dry_run=True
+2026-05-11 22:34:44 [INFO    ] main                   Symbols : BTC_USDT, ETH_USDT, XAUT_USDT, SILVER_USDT, USOIL_USDT
+2026-05-11 22:34:44 [INFO    ] main                   Interval: Min1 | Check: 15s
+2026-05-11 22:34:44 [INFO    ] main                 ============================================================
+2026-05-11 22:34:44 [INFO    ] mexc_client          Testing MEXC connection...
+2026-05-11 22:34:45 [INFO    ] mexc_client          ✓ Public API OK | BTC price: 81626.3
+2026-05-11 22:34:45 [WARNING ] mexc_client          API keys not configured – only public API tested
+2026-05-11 22:34:45 [INFO    ] main                 Loading 1-minute historical data...
+2026-05-11 22:34:45 [INFO    ] data_fetcher         Loading history for BTC_USDT...
+2026-05-11 22:34:45 [INFO    ] data_fetcher           [OK] BTC_USDT: 300 candles loaded
+2026-05-11 22:34:45 [INFO    ] data_fetcher         Loading history for ETH_USDT...
+2026-05-11 22:34:46 [INFO    ] data_fetcher           [OK] ETH_USDT: 300 candles loaded
+2026-05-11 22:34:46 [INFO    ] data_fetcher         Loading history for XAUT_USDT...
+2026-05-11 22:34:46 [INFO    ] data_fetcher           [OK] XAUT_USDT: 300 candles loaded
+2026-05-11 22:34:46 [INFO    ] data_fetcher         Loading history for SILVER_USDT...
+2026-05-11 22:34:46 [INFO    ] data_fetcher           [OK] SILVER_USDT: 300 candles loaded
+2026-05-11 22:34:46 [INFO    ] data_fetcher         Loading history for USOIL_USDT...
+2026-05-11 22:34:46 [INFO    ] data_fetcher           [OK] USOIL_USDT: 301 candles loaded
+2026-05-11 22:34:46 [INFO    ] data_fetcher         Database initialized: data/trades_htf.db
+2026-05-11 22:34:46 [INFO    ] main                 Loading 5-minute higher-timeframe data...
+2026-05-11 22:34:46 [INFO    ] data_fetcher         Loading history for BTC_USDT...
+2026-05-11 22:34:47 [INFO    ] data_fetcher           [OK] BTC_USDT: 100 candles loaded
+2026-05-11 22:34:47 [INFO    ] data_fetcher         Loading history for ETH_USDT...
+2026-05-11 22:34:47 [INFO    ] data_fetcher           [OK] ETH_USDT: 100 candles loaded
+2026-05-11 22:34:47 [INFO    ] data_fetcher         Loading history for XAUT_USDT...
+2026-05-11 22:34:47 [INFO    ] data_fetcher           [OK] XAUT_USDT: 100 candles loaded
+2026-05-11 22:34:47 [INFO    ] data_fetcher         Loading history for SILVER_USDT...
+2026-05-11 22:34:47 [INFO    ] data_fetcher           [OK] SILVER_USDT: 100 candles loaded
+2026-05-11 22:34:47 [INFO    ] data_fetcher         Loading history for USOIL_USDT...
+2026-05-11 22:34:47 [INFO    ] data_fetcher           [OK] USOIL_USDT: 101 candles loaded
+2026-05-11 22:34:48 [INFO    ] main                   Leverage set: BTC_USDT x 10
+2026-05-11 22:34:48 [INFO    ] main                   Leverage set: ETH_USDT x 10
+2026-05-11 22:34:49 [INFO    ] main                   Leverage set: XAUT_USDT x 10
+2026-05-11 22:34:49 [INFO    ] main                   Leverage set: SILVER_USDT x 10
+2026-05-11 22:34:49 [INFO    ] main                   Leverage set: USOIL_USDT x 10
+2026-05-11 22:34:49 [INFO    ] main                 Initializing AI models...
+2026-05-11 22:34:50 [INFO    ] ai_model             Loaded saved model for BTC_USDT
+2026-05-11 22:34:50 [INFO    ] ai_model             Loaded saved model for ETH_USDT
+2026-05-11 22:34:50 [INFO    ] ai_model             Loaded saved model for XAUT_USDT
+2026-05-11 22:34:50 [INFO    ] ai_model             Loaded saved model for SILVER_USDT
+2026-05-11 22:34:50 [INFO    ] ai_model             Loaded saved model for USOIL_USDT
+2026-05-11 22:34:51 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 22:34:51 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 22:34:51 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 22:34:51 [INFO    ] main                 [OK] WebSocket live feed active
+2026-05-11 22:34:51 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 22:34:51 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 22:34:51 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 22:34:51 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 22:34:51 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 22:34:51 [INFO    ] risk_manager         Daily reset | balance=100.00 USDT
+2026-05-11 22:34:51 [INFO    ] main                 Starting balance: 100.00 USDT
+2026-05-11 22:34:51 [INFO    ] main                 [RUN] Scalping loop started
+2026-05-11 22:34:51 [INFO    ] main                 [DASHBOARD] Dashboard -> http://localhost:5000
+2026-05-11 22:35:14 [INFO    ] main                 [START] Bot STARTED by dashboard
+2026-05-11 22:35:58 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 22:35:58 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 22:36:03 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 22:36:04 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 22:36:04 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 22:36:04 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 22:36:04 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 22:36:04 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 22:36:04 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 22:36:04 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 22:37:08 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 22:37:08 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 22:37:13 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 22:37:14 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 22:37:14 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 22:37:14 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 22:37:14 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 22:37:14 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 22:37:14 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 22:37:14 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 22:38:24 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 22:38:24 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 22:38:29 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 22:38:30 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 22:38:30 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 22:38:30 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 22:38:30 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 22:38:30 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 22:38:30 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 22:38:30 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 22:38:30 [INFO    ] mexc_client          [DRY-RUN] place_order symbol=BTC_USDT side=4 vol=274.0 slp=None tp=None
+2026-05-11 22:38:30 [INFO    ] trader               [WIN] CLOSED BUY BTC_USDT [TP] | exit=81769.9 pnl=+4.76 USDT
+2026-05-11 22:39:39 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 22:39:39 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 22:39:44 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 22:39:45 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 22:39:45 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 22:39:45 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 22:39:45 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 22:39:45 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 22:39:45 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 22:39:45 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 22:40:54 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 22:40:54 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 22:40:59 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 22:41:00 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 22:41:00 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 22:41:00 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 22:41:00 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 22:41:00 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 22:41:00 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 22:41:00 [INFO    ] mexc_client          Subscribed to USOIL_USDT

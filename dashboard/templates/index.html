@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MEXC AI Trading Bot — Live Dashboard</title>
+  <meta name="description" content="Real-time AI-powered scalping dashboard for MEXC futures trading"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <link rel="stylesheet" href="/static/style.css"/>
+</head>
+<body>
+
+<!-- ═══════════════════ HEADER ═══════════════════ -->
+<header class="header">
+  <div class="header-left">
+    <div class="logo">
+      <div class="logo-icon">⚡</div>
+      <div>
+        <span class="logo-title">MEXC AI Trader</span>
+        <span class="logo-sub">Autonomous Scalping System</span>
+      </div>
+    </div>
+  </div>
+  <div class="header-center">
+    <div class="status-badge" id="botStatusBadge">
+      <span class="pulse-dot" id="pulseDot"></span>
+      <span id="botStatusText">Connecting…</span>
+    </div>
+  </div>
+  <div class="header-right">
+    <div class="ai-mode-badge" id="aiModeBadge">
+      <span class="ai-dot"></span><span id="aiModeText">AI</span>
+    </div>
+    <button class="btn btn-success" id="btnStart" onclick="control('start')">▶ Start</button>
+    <button class="btn btn-warning" id="btnPause" onclick="control('pause')">⏸ Pause</button>
+    <button class="btn btn-danger"  id="btnStop"  onclick="control('stop')">⏹ Stop</button>
+  </div>
+</header>
+
+<!-- ═══════════════════ TICKER BAR ═══════════════════ -->
+<div class="ticker-bar" id="tickerBar">
+  <div class="ticker-item" data-sym="BTC_USDT"><span class="t-name">BTC/USDT</span><span class="t-price" id="tick-BTC_USDT">—</span><span class="t-change" id="chg-BTC_USDT"></span></div>
+  <div class="ticker-item" data-sym="ETH_USDT"><span class="t-name">ETH/USDT</span><span class="t-price" id="tick-ETH_USDT">—</span><span class="t-change" id="chg-ETH_USDT"></span></div>
+  <div class="ticker-item" data-sym="XAUT_USDT"><span class="t-name">GOLD/USDT</span><span class="t-price" id="tick-XAUT_USDT">—</span><span class="t-change" id="chg-XAUT_USDT"></span></div>
+  <div class="ticker-item" data-sym="SILVER_USDT"><span class="t-name">SILVER/USDT</span><span class="t-price" id="tick-SILVER_USDT">—</span><span class="t-change" id="chg-SILVER_USDT"></span></div>
+  <div class="ticker-item" data-sym="USOIL_USDT"><span class="t-name">OIL/USDT</span><span class="t-price" id="tick-USOIL_USDT">—</span><span class="t-change" id="chg-USOIL_USDT"></span></div>
+</div>
+
+<!-- ═══════════════════ MAIN ═══════════════════ -->
+<main class="main">
+
+  <!-- Stats Row -->
+  <div class="stats-row">
+    <div class="stat-card">
+      <div class="stat-label">Total Trades</div>
+      <div class="stat-value" id="statTotal">0</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Win Rate</div>
+      <div class="stat-value green" id="statWinRate">0%</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Total PnL</div>
+      <div class="stat-value" id="statPnl">0.00 USDT</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Open Positions</div>
+      <div class="stat-value" id="statOpen">0</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Best Trade</div>
+      <div class="stat-value green" id="statBest">0.00</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Worst Trade</div>
+      <div class="stat-value red" id="statWorst">0.00</div>
+    </div>
+  </div>
+
+  <!-- ── Market Regime Row ── -->
+  <div class="regime-row" id="regimeRow">
+    <div class="regime-label">Market Regimes:</div>
+    <div class="regime-badges" id="regimeBadges">
+      <span class="regime-badge regime-unknown" data-sym="BTC_USDT">BTC ···</span>
+      <span class="regime-badge regime-unknown" data-sym="ETH_USDT">ETH ···</span>
+      <span class="regime-badge regime-unknown" data-sym="XAUT_USDT">GOLD ···</span>
+      <span class="regime-badge regime-unknown" data-sym="SILVER_USDT">SILVER ···</span>
+      <span class="regime-badge regime-unknown" data-sym="USOIL_USDT">OIL ···</span>
+    </div>
+  </div>
+
+  <!-- ── Main Grid ── -->
+  <div class="grid">
+
+    <!-- Open Positions -->
+    <div class="card col-span-2">
+      <div class="card-header">
+        <h2 class="card-title">📊 Open Positions</h2>
+        <span class="badge" id="posCountBadge">0</span>
+      </div>
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead><tr>
+            <th>Symbol</th><th>Side</th><th>Volume</th>
+            <th>Entry</th><th>Stop Loss</th><th>Take Profit</th>
+            <th>Unreal. PnL</th><th>Confidence</th>
+          </tr></thead>
+          <tbody id="positionsTable">
+            <tr><td colspan="8" class="empty-row">No open positions</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- PnL Chart -->
+    <div class="card">
+      <div class="card-header"><h2 class="card-title">📈 Cumulative PnL</h2></div>
+      <div class="chart-container"><canvas id="pnlChart"></canvas></div>
+    </div>
+
+    <!-- Signal Distribution -->
+    <div class="card">
+      <div class="card-header"><h2 class="card-title">🎯 Signal Distribution</h2></div>
+      <div class="chart-container"><canvas id="signalChart"></canvas></div>
+    </div>
+
+    <!-- 🤖 AI Analyst Panel -->
+    <div class="card col-span-2 ai-panel">
+      <div class="card-header">
+        <h2 class="card-title">🤖 AI Analyst — Live Feed</h2>
+        <div class="ai-panel-controls">
+          <select id="featureSymSel" onchange="loadFeatureImportance(this.value)" class="sym-select">
+            <option value="BTC_USDT">BTC_USDT</option>
+            <option value="ETH_USDT">ETH_USDT</option>
+            <option value="XAUT_USDT">XAUT_USDT</option>
+            <option value="SILVER_USDT">SILVER_USDT</option>
+            <option value="USOIL_USDT">USOIL_USDT</option>
+          </select>
+          <button class="btn-sm" onclick="loadFeatureImportance(document.getElementById('featureSymSel').value)">Load Features</button>
+        </div>
+      </div>
+      <div class="ai-grid">
+        <!-- Insight Feed -->
+        <div class="ai-feed-wrap">
+          <div class="ai-feed-header">Live Insights</div>
+          <div class="ai-feed" id="aiFeed">
+            <div class="ai-feed-empty">Waiting for AI analysis…</div>
+          </div>
+        </div>
+        <!-- Feature Importance -->
+        <div class="ai-features-wrap">
+          <div class="ai-feed-header">Feature Importance <span id="featureSymLabel" class="feature-sym-label">BTC_USDT</span></div>
+          <div class="ai-features" id="aiFeatures">
+            <div class="ai-feed-empty">Click "Load Features" to view</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 💬 Ask AI Chat -->
+    <div class="card ai-chat-card">
+      <div class="card-header"><h2 class="card-title">💬 Ask AI Analyst</h2></div>
+      <div class="ai-chat-body">
+        <div class="ai-chat-messages" id="chatMessages">
+          <div class="chat-bubble ai-bubble">Hello! I'm your AI trading analyst. Ask me anything about current market conditions, signals, or risk.</div>
+        </div>
+        <div class="ai-chat-input-row">
+          <input type="text" id="chatInput" class="chat-input"
+                 placeholder="e.g. Should I trade BTC right now?"
+                 onkeydown="if(event.key==='Enter') sendChat()"/>
+          <button class="btn btn-success chat-send" id="chatSendBtn" onclick="sendChat()">Send</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Score Gauge Panel -->
+    <div class="card">
+      <div class="card-header">
+        <h2 class="card-title">📡 Signal Scores</h2>
+        <select id="scoreSym" onchange="updateGaugeDisplay()" class="sym-select">
+          <option value="BTC_USDT">BTC</option>
+          <option value="ETH_USDT">ETH</option>
+          <option value="XAUT_USDT">GOLD</option>
+          <option value="SILVER_USDT">SILVER</option>
+          <option value="USOIL_USDT">OIL</option>
+        </select>
+      </div>
+      <div class="gauges-grid" id="gaugesGrid">
+        <div class="gauge-wrap">
+          <canvas id="scoreGauge" width="160" height="100"></canvas>
+          <div class="gauge-label" id="gaugeLabel">Score: —/12</div>
+        </div>
+        <div class="score-bars" id="scoreBars">
+          <div class="score-bar-row"><span>Long Score</span><div class="score-bar-track"><div class="score-bar-fill green" id="longBar" style="width:0%"></div></div><span id="longVal">0</span></div>
+          <div class="score-bar-row"><span>Short Score</span><div class="score-bar-track"><div class="score-bar-fill red" id="shortBar" style="width:0%"></div></div><span id="shortVal">0</span></div>
+          <div class="score-bar-row"><span>Confidence</span><div class="score-bar-track"><div class="score-bar-fill blue" id="confBar" style="width:0%"></div></div><span id="confVal">—</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Trade Log -->
+    <div class="card col-span-2">
+      <div class="card-header"><h2 class="card-title">📋 Trade History</h2></div>
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead><tr>
+            <th>Time</th><th>Symbol</th><th>Side</th>
+            <th>Entry</th><th>Exit</th><th>PnL</th><th>Reason</th><th>Status</th>
+          </tr></thead>
+          <tbody id="tradeTable">
+            <tr><td colspan="8" class="empty-row">No trades yet</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div><!-- /grid -->
+</main>
+
+<!-- Live notification area -->
+<div id="notificationArea"></div>
+
+<script src="/static/app.js"></script>
+</body>
+</html>

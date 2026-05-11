@@ -1,0 +1,58 @@
+bot:
+  name: "MEXC Scalping AI Bot"
+  version: "2.0.0"
+  dry_run: true        # Set true for paper trading (demo mode)
+  log_level: "INFO"
+
+mexc:
+  base_url: "https://contract.mexc.com"
+  ws_url: "wss://contract.mexc.com/edge"
+  recv_window: 5000
+
+symbols:
+  - name: "BTC_USDT"
+    display: "Bitcoin"
+    leverage: 10
+    min_size: 1
+  - name: "ETH_USDT"
+    display: "Ethereum"
+    leverage: 10
+    min_size: 1
+  - name: "XAUT_USDT"
+    display: "Gold"
+    leverage: 10
+    min_size: 1
+  - name: "SILVER_USDT"
+    display: "Silver"
+    leverage: 10
+    min_size: 1
+  - name: "USOIL_USDT"
+    display: "Crude Oil"
+    leverage: 10
+    min_size: 1
+
+trading:
+  timeframe: "Min1"          # 1-minute candles for scalping
+  htf_timeframe: "Min5"      # Higher timeframe for trend filter
+  lookback_candles: 300      # candles for indicator calculation
+  signal_check_interval: 8   # check signals every 8 seconds (fast scalping)
+  min_volume_usdt: 0         # min candle volume filter (0 = disabled)
+
+risk:
+  risk_per_trade_pct: 2.0    # 2% per trade = $2 on $100 demo account
+  max_open_positions: 5      # up to 5 concurrent positions (one per symbol)
+  max_daily_drawdown_pct: 10.0  # stop at -$10 loss/day
+  sl_atr_multiplier: 1.0     # tight SL for scalping
+  tp_atr_multiplier: 2.0     # 1:2 R:R
+  max_trades_per_hour: 30
+  cooldown_seconds: 10
+
+ai:
+  retrain_interval_hours: 2   # retrain every 2h for scalping freshness
+  min_confidence: 0.58
+  lookback_for_training: 250
+
+dashboard:
+  host: "0.0.0.0"
+  port: 5000
+  debug: false
