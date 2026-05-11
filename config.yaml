@@ -35,12 +35,12 @@ trading:
   timeframe: "Min1"          # 1-minute candles for scalping
   htf_timeframe: "Min5"      # Higher timeframe for trend filter
   lookback_candles: 300      # candles for indicator calculation
-  signal_check_interval: 8   # check signals every 8 seconds (fast scalping)
+  signal_check_interval: 1   # check signals every 1 second (ULTRA-fast scalping)
   min_volume_usdt: 0         # min candle volume filter (0 = disabled)
 
 risk:
   risk_per_trade_pct: 2.0    # 2% per trade = $2 on $100 demo account
-  max_open_positions: 5      # up to 5 concurrent positions (one per symbol)
+  max_open_positions: 10     # up to 10 concurrent positions (2 per coin)
   max_daily_drawdown_pct: 10.0  # stop at -$10 loss/day
   sl_atr_multiplier: 1.0     # tight SL for scalping
   tp_atr_multiplier: 2.0     # 1:2 R:R
@@ -49,7 +49,7 @@ risk:
 
 ai:
   retrain_interval_hours: 2   # retrain every 2h for scalping freshness
-  min_confidence: 0.58
+  min_confidence: 0.50
   lookback_for_training: 250
 
 dashboard:

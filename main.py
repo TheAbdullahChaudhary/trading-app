@@ -184,7 +184,11 @@ class ScalpingBot:
                 self.trader.monitor_positions(prices)
 
                 # -- Evaluate each symbol ---------------------
-                open_syms = {p["symbol"] for p in open_pos}
+                # Count positions per symbol
+                pos_counts = {}
+                for p in open_pos:
+                    s = p["symbol"]
+                    pos_counts[s] = pos_counts.get(s, 0) + 1
 
                 for sym in self._symbols:
                     allowed, reason = self.risk.is_trading_allowed(len(open_pos))
@@ -192,8 +196,7 @@ class ScalpingBot:
                         log.debug(f"Skipping {sym}: {reason}")
                         continue
 
-                    if sym in open_syms:
-                        continue  # already in a trade
+                    # No per-symbol limit - only global limit (max_open_positions: 10)
 
                     df    = self.fetcher.get_df(sym)
                     htf_df= self._htf_fetcher.get_df(sym)

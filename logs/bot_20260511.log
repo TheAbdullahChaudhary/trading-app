@@ -1182,3 +1182,912 @@
 2026-05-11 22:41:00 [INFO    ] mexc_client          Subscribed to XAUT_USDT
 2026-05-11 22:41:00 [INFO    ] mexc_client          Subscribed to SILVER_USDT
 2026-05-11 22:41:00 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 22:41:35 [INFO    ] main                 [DRY-RUN] DRY-RUN MODE - no real orders placed
+2026-05-11 22:41:35 [INFO    ] mexc_client          MEXCClient initialized | dry_run=True
+2026-05-11 22:41:35 [INFO    ] data_fetcher         Database initialized: data/trades.db
+2026-05-11 22:41:35 [INFO    ] ai_analyst           AI Analyst running in rule-based mode (no GEMINI_API_KEY)
+2026-05-11 22:41:35 [INFO    ] trader               Loaded 0 open positions from DB
+2026-05-11 22:41:35 [INFO    ] trader               Trader ready | dry_run=True | open=0
+2026-05-11 22:41:35 [INFO    ] main                 ============================================================
+2026-05-11 22:41:35 [INFO    ] main                   MEXC SCALPING AI BOT  |  dry_run=True
+2026-05-11 22:41:35 [INFO    ] main                   Symbols : BTC_USDT, ETH_USDT, XAUT_USDT, SILVER_USDT, USOIL_USDT
+2026-05-11 22:41:35 [INFO    ] main                   Interval: Min1 | Check: 8s
+2026-05-11 22:41:35 [INFO    ] main                 ============================================================
+2026-05-11 22:41:35 [INFO    ] mexc_client          Testing MEXC connection...
+2026-05-11 22:41:36 [INFO    ] mexc_client          ✓ Public API OK | BTC price: 81883.2
+2026-05-11 22:41:36 [WARNING ] mexc_client          API keys not configured – only public API tested
+2026-05-11 22:41:36 [INFO    ] main                 Loading 1-minute historical data...
+2026-05-11 22:41:36 [INFO    ] data_fetcher         Loading history for BTC_USDT...
+2026-05-11 22:41:36 [INFO    ] data_fetcher           [OK] BTC_USDT: 300 candles loaded
+2026-05-11 22:41:36 [INFO    ] data_fetcher         Loading history for ETH_USDT...
+2026-05-11 22:41:36 [INFO    ] data_fetcher           [OK] ETH_USDT: 300 candles loaded
+2026-05-11 22:41:36 [INFO    ] data_fetcher         Loading history for XAUT_USDT...
+2026-05-11 22:41:37 [INFO    ] data_fetcher           [OK] XAUT_USDT: 300 candles loaded
+2026-05-11 22:41:37 [INFO    ] data_fetcher         Loading history for SILVER_USDT...
+2026-05-11 22:41:37 [INFO    ] data_fetcher           [OK] SILVER_USDT: 300 candles loaded
+2026-05-11 22:41:37 [INFO    ] data_fetcher         Loading history for USOIL_USDT...
+2026-05-11 22:41:37 [INFO    ] data_fetcher           [OK] USOIL_USDT: 301 candles loaded
+2026-05-11 22:41:37 [INFO    ] data_fetcher         Database initialized: data/trades_htf.db
+2026-05-11 22:41:37 [INFO    ] main                 Loading 5-minute higher-timeframe data...
+2026-05-11 22:41:37 [INFO    ] data_fetcher         Loading history for BTC_USDT...
+2026-05-11 22:41:37 [INFO    ] data_fetcher           [OK] BTC_USDT: 100 candles loaded
+2026-05-11 22:41:37 [INFO    ] data_fetcher         Loading history for ETH_USDT...
+2026-05-11 22:41:38 [INFO    ] data_fetcher           [OK] ETH_USDT: 100 candles loaded
+2026-05-11 22:41:38 [INFO    ] data_fetcher         Loading history for XAUT_USDT...
+2026-05-11 22:41:38 [INFO    ] data_fetcher           [OK] XAUT_USDT: 100 candles loaded
+2026-05-11 22:41:38 [INFO    ] data_fetcher         Loading history for SILVER_USDT...
+2026-05-11 22:41:38 [INFO    ] data_fetcher           [OK] SILVER_USDT: 100 candles loaded
+2026-05-11 22:41:38 [INFO    ] data_fetcher         Loading history for USOIL_USDT...
+2026-05-11 22:41:38 [INFO    ] data_fetcher           [OK] USOIL_USDT: 101 candles loaded
+2026-05-11 22:41:39 [INFO    ] main                   Leverage set: BTC_USDT x 10
+2026-05-11 22:41:39 [INFO    ] main                   Leverage set: ETH_USDT x 10
+2026-05-11 22:41:39 [INFO    ] main                   Leverage set: XAUT_USDT x 10
+2026-05-11 22:41:40 [INFO    ] main                   Leverage set: SILVER_USDT x 10
+2026-05-11 22:41:40 [INFO    ] main                   Leverage set: USOIL_USDT x 10
+2026-05-11 22:41:40 [INFO    ] main                 Initializing AI models...
+2026-05-11 22:41:40 [INFO    ] ai_model             Loaded saved model for BTC_USDT
+2026-05-11 22:41:40 [INFO    ] ai_model             Loaded saved model for ETH_USDT
+2026-05-11 22:41:40 [INFO    ] ai_model             Loaded saved model for XAUT_USDT
+2026-05-11 22:41:40 [INFO    ] ai_model             Loaded saved model for SILVER_USDT
+2026-05-11 22:41:40 [INFO    ] ai_model             Loaded saved model for USOIL_USDT
+2026-05-11 22:41:41 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 22:41:41 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 22:41:41 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 22:41:41 [INFO    ] main                 [OK] WebSocket live feed active
+2026-05-11 22:41:41 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 22:41:41 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 22:41:41 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 22:41:41 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 22:41:41 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 22:41:41 [INFO    ] risk_manager         Daily reset | balance=100.00 USDT
+2026-05-11 22:41:41 [INFO    ] main                 Starting balance: 100.00 USDT
+2026-05-11 22:41:41 [INFO    ] main                 [RUN] Scalping loop started
+2026-05-11 22:41:41 [INFO    ] main                 [DASHBOARD] Dashboard -> http://localhost:5000
+2026-05-11 22:41:47 [INFO    ] main                 [START] Bot STARTED by dashboard
+2026-05-11 22:42:49 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 22:42:49 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 22:42:54 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 22:42:55 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 22:42:55 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 22:42:55 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 22:42:55 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 22:42:55 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 22:42:55 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 22:42:55 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 22:44:03 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 22:44:03 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 22:44:08 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 22:44:09 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 22:44:09 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 22:44:09 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 22:44:09 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 22:44:09 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 22:44:09 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 22:44:09 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 22:45:16 [INFO    ] strategy             [OK] [BUY] BTC_USDT | score=10/12 ADX=723 HTF=UP AI=HOLD(1.00) RSI=100 SLx2.0 TPx4.0 WR=100% streak=0SL
+2026-05-11 22:45:16 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 22:45:16 [INFO    ] risk_manager         Order | BTC_USDT BUY @81983.0000 SL=81838.7143(-144.2857) TP=82271.5714(+288.5714) vol=139 cs=0.0001 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 22:45:16 [INFO    ] mexc_client          [DRY-RUN] place_order symbol=BTC_USDT side=1 vol=139 slp=81838.714286 tp=82271.571429
+2026-05-11 22:45:16 [INFO    ] trader               [OPEN] BUY BTC_USDT | entry=81983.0 vol=139 SL=81838.714286 TP=82271.571429
+2026-05-11 22:45:16 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 22:45:19 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 22:45:19 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 22:45:24 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 22:45:25 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 22:45:25 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 22:45:25 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 22:45:25 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 22:45:25 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 22:45:25 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 22:45:25 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 22:45:25 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 22:45:33 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 22:45:42 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 22:45:50 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 22:45:58 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 22:46:07 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 22:46:15 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 22:46:24 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 22:46:29 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 22:46:29 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 22:46:32 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 22:46:34 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 22:46:35 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 22:46:35 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 22:46:35 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 22:46:35 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 22:46:35 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 22:46:35 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 22:46:35 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 22:46:40 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 22:46:49 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 22:46:57 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 22:47:05 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 22:47:14 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 22:47:22 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 22:47:31 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 22:47:38 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 22:47:38 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 22:47:39 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 22:47:43 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 22:47:44 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 22:47:44 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 22:47:44 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 22:47:44 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 22:47:44 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 22:47:44 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 22:47:44 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 22:47:48 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 22:47:56 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 22:48:05 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 22:48:13 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 22:48:22 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 22:48:30 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 22:48:39 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 22:48:47 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 22:48:49 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 22:48:49 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 22:48:54 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 22:48:55 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 22:48:55 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 22:48:55 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 22:48:55 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 22:48:55 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 22:48:55 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 22:48:55 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 22:48:56 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 22:49:04 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 22:49:13 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 22:49:54 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 22:50:03 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 22:50:04 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 22:50:04 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 22:50:09 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 22:50:10 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 22:50:10 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 22:50:10 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 22:50:10 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 22:50:10 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 22:50:10 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 22:50:10 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 22:50:12 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 22:50:20 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 22:50:29 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 22:50:38 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 22:50:48 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 22:50:57 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 22:51:05 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 22:51:13 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 22:51:13 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 22:51:14 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 22:51:18 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 22:51:19 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 22:51:19 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 22:51:19 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 22:51:19 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 22:51:19 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 22:51:19 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 22:51:19 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 22:51:22 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 22:51:31 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 22:51:40 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 22:51:49 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 22:51:58 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 22:52:07 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 22:52:16 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 22:52:19 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 22:52:19 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 22:52:24 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 22:52:25 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 22:52:25 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 22:52:25 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 22:52:25 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 22:52:25 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 22:52:25 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 22:52:25 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 22:52:25 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 22:52:34 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 22:52:43 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 22:52:51 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 22:53:00 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 22:53:09 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 22:53:17 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 22:53:26 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 22:53:29 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 22:53:29 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 22:53:34 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 22:53:34 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 22:53:35 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 22:53:35 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 22:53:35 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 22:53:35 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 22:53:35 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 22:53:35 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 22:53:35 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 22:53:43 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 22:53:51 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 22:54:00 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 22:54:08 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 22:54:17 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 22:54:25 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 22:54:34 [WARNING ] strategy             [WARN] AI risk veto ETH_USDT: ETH_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 22:54:41 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 22:54:41 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 22:54:46 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 22:54:48 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 22:54:48 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 22:54:48 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 22:54:48 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 22:54:48 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 22:54:48 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 22:54:48 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 22:55:15 [INFO    ] main                 [DRY-RUN] DRY-RUN MODE - no real orders placed
+2026-05-11 22:55:15 [INFO    ] mexc_client          MEXCClient initialized | dry_run=True
+2026-05-11 22:55:15 [INFO    ] data_fetcher         Database initialized: data/trades.db
+2026-05-11 22:55:15 [INFO    ] ai_analyst           AI Analyst running in rule-based mode (no GEMINI_API_KEY)
+2026-05-11 22:55:15 [INFO    ] trader               Loaded 1 open positions from DB
+2026-05-11 22:55:15 [INFO    ] trader               Trader ready | dry_run=True | open=1
+2026-05-11 22:55:15 [INFO    ] main                 ============================================================
+2026-05-11 22:55:15 [INFO    ] main                   MEXC SCALPING AI BOT  |  dry_run=True
+2026-05-11 22:55:15 [INFO    ] main                   Symbols : BTC_USDT, ETH_USDT, XAUT_USDT, SILVER_USDT, USOIL_USDT
+2026-05-11 22:55:15 [INFO    ] main                   Interval: Min1 | Check: 1s
+2026-05-11 22:55:15 [INFO    ] main                 ============================================================
+2026-05-11 22:55:15 [INFO    ] mexc_client          Testing MEXC connection...
+2026-05-11 22:55:16 [INFO    ] mexc_client          ✓ Public API OK | BTC price: 81868.8
+2026-05-11 22:55:16 [WARNING ] mexc_client          API keys not configured – only public API tested
+2026-05-11 22:55:16 [INFO    ] main                 Loading 1-minute historical data...
+2026-05-11 22:55:16 [INFO    ] data_fetcher         Loading history for BTC_USDT...
+2026-05-11 22:55:17 [INFO    ] data_fetcher           [OK] BTC_USDT: 300 candles loaded
+2026-05-11 22:55:17 [INFO    ] data_fetcher         Loading history for ETH_USDT...
+2026-05-11 22:55:17 [INFO    ] data_fetcher           [OK] ETH_USDT: 300 candles loaded
+2026-05-11 22:55:17 [INFO    ] data_fetcher         Loading history for XAUT_USDT...
+2026-05-11 22:55:17 [INFO    ] data_fetcher           [OK] XAUT_USDT: 300 candles loaded
+2026-05-11 22:55:17 [INFO    ] data_fetcher         Loading history for SILVER_USDT...
+2026-05-11 22:55:17 [INFO    ] data_fetcher           [OK] SILVER_USDT: 300 candles loaded
+2026-05-11 22:55:17 [INFO    ] data_fetcher         Loading history for USOIL_USDT...
+2026-05-11 22:55:18 [INFO    ] data_fetcher           [OK] USOIL_USDT: 301 candles loaded
+2026-05-11 22:55:18 [INFO    ] data_fetcher         Database initialized: data/trades_htf.db
+2026-05-11 22:55:18 [INFO    ] main                 Loading 5-minute higher-timeframe data...
+2026-05-11 22:55:18 [INFO    ] data_fetcher         Loading history for BTC_USDT...
+2026-05-11 22:55:18 [INFO    ] data_fetcher           [OK] BTC_USDT: 100 candles loaded
+2026-05-11 22:55:18 [INFO    ] data_fetcher         Loading history for ETH_USDT...
+2026-05-11 22:55:18 [INFO    ] data_fetcher           [OK] ETH_USDT: 100 candles loaded
+2026-05-11 22:55:18 [INFO    ] data_fetcher         Loading history for XAUT_USDT...
+2026-05-11 22:55:18 [INFO    ] data_fetcher           [OK] XAUT_USDT: 100 candles loaded
+2026-05-11 22:55:18 [INFO    ] data_fetcher         Loading history for SILVER_USDT...
+2026-05-11 22:55:18 [INFO    ] data_fetcher           [OK] SILVER_USDT: 100 candles loaded
+2026-05-11 22:55:18 [INFO    ] data_fetcher         Loading history for USOIL_USDT...
+2026-05-11 22:55:19 [INFO    ] data_fetcher           [OK] USOIL_USDT: 101 candles loaded
+2026-05-11 22:55:19 [INFO    ] main                   Leverage set: BTC_USDT x 10
+2026-05-11 22:55:19 [INFO    ] main                   Leverage set: ETH_USDT x 10
+2026-05-11 22:55:20 [INFO    ] main                   Leverage set: XAUT_USDT x 10
+2026-05-11 22:55:20 [INFO    ] main                   Leverage set: SILVER_USDT x 10
+2026-05-11 22:55:21 [INFO    ] main                   Leverage set: USOIL_USDT x 10
+2026-05-11 22:55:21 [INFO    ] main                 Initializing AI models...
+2026-05-11 22:55:21 [INFO    ] ai_model             Loaded saved model for BTC_USDT
+2026-05-11 22:55:21 [INFO    ] ai_model             Loaded saved model for ETH_USDT
+2026-05-11 22:55:21 [INFO    ] ai_model             Loaded saved model for XAUT_USDT
+2026-05-11 22:55:21 [INFO    ] ai_model             Loaded saved model for SILVER_USDT
+2026-05-11 22:55:21 [INFO    ] ai_model             Loaded saved model for USOIL_USDT
+2026-05-11 22:55:22 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 22:55:22 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 22:55:22 [INFO    ] main                 [OK] WebSocket live feed active
+2026-05-11 22:55:22 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 22:55:22 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 22:55:22 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 22:55:22 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 22:55:22 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 22:55:22 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 22:55:22 [INFO    ] risk_manager         Daily reset | balance=100.00 USDT
+2026-05-11 22:55:22 [INFO    ] main                 Starting balance: 100.00 USDT
+2026-05-11 22:55:22 [INFO    ] main                 [RUN] Scalping loop started
+2026-05-11 22:55:22 [INFO    ] main                 [DASHBOARD] Dashboard -> http://localhost:5000
+2026-05-11 22:56:08 [INFO    ] main                 [START] Bot STARTED by dashboard
+2026-05-11 22:56:28 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 22:56:28 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 22:56:33 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 22:56:34 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 22:56:34 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 22:56:34 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 22:56:34 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 22:56:34 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 22:56:34 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 22:56:34 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 22:57:34 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 22:57:34 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 22:57:35 [INFO    ] main                 [START] Bot STARTED by dashboard
+2026-05-11 22:57:39 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 22:57:40 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 22:57:40 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 22:57:40 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 22:57:40 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 22:57:40 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 22:57:40 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 22:57:40 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 22:58:49 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 22:58:49 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 22:58:54 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 22:58:55 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 22:58:55 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 22:58:55 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 22:58:55 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 22:58:55 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 22:58:55 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 22:58:55 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 23:00:04 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 23:00:04 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 23:00:09 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 23:00:10 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 23:00:10 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 23:00:10 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 23:00:10 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 23:00:10 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 23:00:10 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 23:00:10 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 23:01:18 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 23:01:18 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 23:01:23 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 23:01:24 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 23:01:24 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 23:01:24 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 23:01:24 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 23:01:24 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 23:01:24 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 23:01:24 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 23:01:25 [INFO    ] strategy             [OK] [BUY] SILVER_USDT | score=10/12 ADX=332 HTF=UP AI=HOLD(0.96) RSI=83 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:01:25 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:01:25 [INFO    ] risk_manager         Order | SILVER_USDT BUY @85.7600 SL=85.6514(-0.1086) TP=85.9771(+0.2171) vol=500 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:01:25 [INFO    ] mexc_client          [DRY-RUN] place_order symbol=SILVER_USDT side=1 vol=500 slp=85.651429 tp=85.977143
+2026-05-11 23:01:25 [INFO    ] trader               [OPEN] BUY SILVER_USDT | entry=85.76 vol=500 SL=85.651429 TP=85.977143
+2026-05-11 23:02:28 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 23:02:28 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 23:02:33 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 23:02:34 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 23:02:34 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 23:02:34 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 23:02:34 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 23:02:34 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 23:02:34 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 23:02:34 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 23:03:38 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 23:03:38 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 23:03:43 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 23:03:44 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 23:03:44 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 23:03:44 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 23:03:44 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 23:03:44 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 23:03:44 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 23:03:44 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 23:03:55 [INFO    ] strategy             [OK] [BUY] ETH_USDT | score=10/12 ADX=379 HTF=UP AI=HOLD(1.00) RSI=55 SLx2.0 TPx4.0 WR=50% streak=0SL
+2026-05-11 23:03:55 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:03:55 [INFO    ] risk_manager         Order | ETH_USDT BUY @2337.7700 SL=2334.1900(-3.5800) TP=2344.9300(+7.1600) vol=56 cs=0.01 risk≈2.00U SL×2.0 TP×4.0
+2026-05-11 23:03:55 [INFO    ] mexc_client          [DRY-RUN] place_order symbol=ETH_USDT side=1 vol=56 slp=2334.19 tp=2344.93
+2026-05-11 23:03:55 [INFO    ] trader               [OPEN] BUY ETH_USDT | entry=2337.77 vol=56 SL=2334.19 TP=2344.93
+2026-05-11 23:04:51 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 23:04:51 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 23:04:56 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 23:04:57 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 23:04:57 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 23:04:57 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 23:04:57 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 23:04:57 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 23:04:57 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 23:04:57 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 23:06:01 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 23:06:01 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 23:06:06 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 23:06:07 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 23:06:07 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 23:06:07 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 23:06:07 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 23:06:07 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 23:06:07 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 23:06:07 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 23:07:02 [INFO    ] trader               [BE] Breakeven set ETH_USDT: SL->2338.1280
+2026-05-11 23:07:08 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 23:07:08 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 23:07:13 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 23:07:14 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 23:07:14 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 23:07:14 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 23:07:14 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 23:07:14 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 23:07:14 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 23:07:14 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 23:08:00 [INFO    ] trader               [BE] Breakeven set SILVER_USDT: SL->85.7709
+2026-05-11 23:08:19 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 23:08:19 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 23:08:24 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 23:08:24 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 23:08:24 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 23:08:24 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 23:08:24 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 23:08:24 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 23:08:24 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 23:08:24 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 23:09:21 [INFO    ] mexc_client          [DRY-RUN] place_order symbol=SILVER_USDT side=4 vol=500 slp=None tp=None
+2026-05-11 23:09:21 [INFO    ] trader               [WIN] CLOSED BUY SILVER_USDT [SL] | exit=85.77 pnl=+0.05 USDT
+2026-05-11 23:09:24 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:09:26 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:09:27 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:09:29 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:09:31 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:09:31 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 23:09:31 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 23:09:33 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:09:34 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:09:36 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:09:36 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 23:09:37 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 23:09:37 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 23:09:37 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 23:09:37 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 23:09:37 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 23:09:37 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 23:09:37 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 23:09:38 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:09:39 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:09:41 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:09:42 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:09:44 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:09:45 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:09:47 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:09:49 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:09:52 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:09:53 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:09:55 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:09:56 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:09:58 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:10:00 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:10:01 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:10:03 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:10:04 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:10:06 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:10:07 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:10:09 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:10:11 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:10:12 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:10:14 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:10:15 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:10:17 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:10:19 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:10:21 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:10:22 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:10:24 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:10:26 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:10:28 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:10:29 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:10:31 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:10:32 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:10:34 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:10:36 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:10:38 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:10:39 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 23:10:39 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 23:10:39 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:10:41 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:10:42 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:10:44 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:10:44 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 23:10:45 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 23:10:45 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 23:10:45 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 23:10:45 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 23:10:45 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 23:10:45 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 23:10:45 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 23:10:45 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:10:47 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:10:48 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:10:49 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:10:51 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:10:53 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:10:54 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:10:56 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:10:57 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:10:58 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:11:00 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:11:01 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:11:03 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:11:04 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:11:05 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:11:07 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:11:08 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:11:10 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:11:11 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:11:13 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:11:15 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:11:16 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:11:18 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:11:19 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:11:21 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:11:23 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:11:24 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:11:26 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:11:27 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:11:28 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:11:30 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:11:31 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:11:32 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:11:34 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:11:35 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:11:36 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:11:38 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:11:39 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:11:40 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:11:42 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:11:43 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:11:44 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:11:46 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:11:47 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:11:48 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:11:48 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 23:11:48 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 23:11:50 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:11:51 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:11:52 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:11:53 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 23:11:54 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:11:55 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:11:55 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 23:11:55 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 23:11:55 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 23:11:55 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 23:11:55 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 23:11:55 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 23:11:55 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 23:13:04 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 23:13:04 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 23:13:09 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 23:13:10 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 23:13:10 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 23:13:10 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 23:13:10 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 23:13:10 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 23:13:10 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 23:13:10 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 23:13:15 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:13:16 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:13:17 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:13:19 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:13:20 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:13:21 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:13:22 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:13:24 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:13:25 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:13:27 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:13:28 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:13:30 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:13:31 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:13:33 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:13:34 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:13:36 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:13:37 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:13:39 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:13:40 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:13:41 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:13:42 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:13:44 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:13:45 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:13:46 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:13:48 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:13:49 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:13:50 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:13:52 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:13:53 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:13:55 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:13:56 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:13:57 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:13:59 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:14:00 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:14:02 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:14:06 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:14:08 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:14:09 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:14:11 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:14:14 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:14:15 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:14:19 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 23:14:19 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 23:14:24 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 23:14:25 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 23:14:25 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 23:14:25 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 23:14:25 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 23:14:25 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 23:14:25 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 23:14:25 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 23:14:27 [WARNING ] strategy             [WARN] AI risk veto SILVER_USDT: SILVER_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:15:52 [INFO    ] main                 [DRY-RUN] DRY-RUN MODE - no real orders placed
+2026-05-11 23:15:52 [INFO    ] mexc_client          MEXCClient initialized | dry_run=True
+2026-05-11 23:15:52 [INFO    ] data_fetcher         Database initialized: data/trades.db
+2026-05-11 23:15:52 [INFO    ] ai_analyst           AI Analyst running in rule-based mode (no GEMINI_API_KEY)
+2026-05-11 23:15:52 [INFO    ] trader               Loaded 2 open positions from DB
+2026-05-11 23:15:52 [INFO    ] trader               Trader ready | dry_run=True | open=2
+2026-05-11 23:15:52 [INFO    ] main                 ============================================================
+2026-05-11 23:15:52 [INFO    ] main                   MEXC SCALPING AI BOT  |  dry_run=True
+2026-05-11 23:15:52 [INFO    ] main                   Symbols : BTC_USDT, ETH_USDT, XAUT_USDT, SILVER_USDT, USOIL_USDT
+2026-05-11 23:15:52 [INFO    ] main                   Interval: Min1 | Check: 1s
+2026-05-11 23:15:52 [INFO    ] main                 ============================================================
+2026-05-11 23:15:52 [INFO    ] mexc_client          Testing MEXC connection...
+2026-05-11 23:15:53 [INFO    ] mexc_client          ✓ Public API OK | BTC price: 81904
+2026-05-11 23:15:53 [WARNING ] mexc_client          API keys not configured – only public API tested
+2026-05-11 23:15:53 [INFO    ] main                 Loading 1-minute historical data...
+2026-05-11 23:15:53 [INFO    ] data_fetcher         Loading history for BTC_USDT...
+2026-05-11 23:15:53 [INFO    ] data_fetcher           [OK] BTC_USDT: 300 candles loaded
+2026-05-11 23:15:53 [INFO    ] data_fetcher         Loading history for ETH_USDT...
+2026-05-11 23:15:53 [INFO    ] data_fetcher           [OK] ETH_USDT: 300 candles loaded
+2026-05-11 23:15:53 [INFO    ] data_fetcher         Loading history for XAUT_USDT...
+2026-05-11 23:15:54 [INFO    ] data_fetcher           [OK] XAUT_USDT: 300 candles loaded
+2026-05-11 23:15:54 [INFO    ] data_fetcher         Loading history for SILVER_USDT...
+2026-05-11 23:15:54 [INFO    ] data_fetcher           [OK] SILVER_USDT: 300 candles loaded
+2026-05-11 23:15:54 [INFO    ] data_fetcher         Loading history for USOIL_USDT...
+2026-05-11 23:15:54 [INFO    ] data_fetcher           [OK] USOIL_USDT: 301 candles loaded
+2026-05-11 23:15:54 [INFO    ] data_fetcher         Database initialized: data/trades_htf.db
+2026-05-11 23:15:54 [INFO    ] main                 Loading 5-minute higher-timeframe data...
+2026-05-11 23:15:54 [INFO    ] data_fetcher         Loading history for BTC_USDT...
+2026-05-11 23:15:54 [INFO    ] data_fetcher           [OK] BTC_USDT: 100 candles loaded
+2026-05-11 23:15:54 [INFO    ] data_fetcher         Loading history for ETH_USDT...
+2026-05-11 23:15:54 [INFO    ] data_fetcher           [OK] ETH_USDT: 100 candles loaded
+2026-05-11 23:15:54 [INFO    ] data_fetcher         Loading history for XAUT_USDT...
+2026-05-11 23:15:55 [INFO    ] data_fetcher           [OK] XAUT_USDT: 100 candles loaded
+2026-05-11 23:15:55 [INFO    ] data_fetcher         Loading history for SILVER_USDT...
+2026-05-11 23:15:55 [INFO    ] data_fetcher           [OK] SILVER_USDT: 100 candles loaded
+2026-05-11 23:15:55 [INFO    ] data_fetcher         Loading history for USOIL_USDT...
+2026-05-11 23:15:55 [INFO    ] data_fetcher           [OK] USOIL_USDT: 101 candles loaded
+2026-05-11 23:15:55 [INFO    ] main                   Leverage set: BTC_USDT x 10
+2026-05-11 23:15:56 [INFO    ] main                   Leverage set: ETH_USDT x 10
+2026-05-11 23:15:56 [INFO    ] main                   Leverage set: XAUT_USDT x 10
+2026-05-11 23:15:57 [INFO    ] main                   Leverage set: SILVER_USDT x 10
+2026-05-11 23:15:57 [INFO    ] main                   Leverage set: USOIL_USDT x 10
+2026-05-11 23:15:57 [INFO    ] main                 Initializing AI models...
+2026-05-11 23:15:57 [INFO    ] ai_model             Loaded saved model for BTC_USDT
+2026-05-11 23:15:57 [INFO    ] ai_model             Loaded saved model for ETH_USDT
+2026-05-11 23:15:57 [INFO    ] ai_model             Loaded saved model for XAUT_USDT
+2026-05-11 23:15:57 [INFO    ] ai_model             Loaded saved model for SILVER_USDT
+2026-05-11 23:15:57 [INFO    ] ai_model             Loaded saved model for USOIL_USDT
+2026-05-11 23:15:58 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 23:15:58 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 23:15:58 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 23:15:58 [INFO    ] main                 [OK] WebSocket live feed active
+2026-05-11 23:15:58 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 23:15:58 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 23:15:58 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 23:15:58 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 23:15:58 [ERROR   ] mexc_client          API error GET /api/v1/private/account/assets: Internal error. Please try again.
+2026-05-11 23:15:58 [INFO    ] risk_manager         Daily reset | balance=100.00 USDT
+2026-05-11 23:15:58 [INFO    ] main                 Starting balance: 100.00 USDT
+2026-05-11 23:15:58 [INFO    ] main                 [RUN] Scalping loop started
+2026-05-11 23:15:58 [INFO    ] main                 [DASHBOARD] Dashboard -> http://localhost:5000
+2026-05-11 23:16:01 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:16:02 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:16:04 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:16:05 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:16:07 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:16:09 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:16:10 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:16:11 [INFO    ] main                 [START] Bot STARTED by dashboard
+2026-05-11 23:16:12 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:16:13 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:16:15 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:16:16 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:16:18 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:16:19 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:16:20 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:16:22 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:16:23 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:16:25 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:16:26 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:16:28 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:16:30 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:16:32 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:16:33 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:16:35 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:16:36 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:16:38 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:16:39 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:16:41 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:16:43 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:16:44 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:16:46 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:16:47 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:16:49 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:16:50 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:16:52 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:16:53 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:16:55 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:16:56 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:16:58 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:17:00 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:17:01 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:17:03 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:17:03 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 23:17:03 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 23:17:04 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:17:06 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:17:07 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:17:08 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 23:17:09 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:17:09 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 23:17:09 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 23:17:09 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 23:17:09 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 23:17:09 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 23:17:09 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 23:17:09 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 23:17:10 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:17:12 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:17:13 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:17:15 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:17:16 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:17:18 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:17:20 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:17:21 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:17:23 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:17:24 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:17:26 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:17:28 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:17:30 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:17:31 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:17:33 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:17:34 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:17:36 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:17:38 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:17:40 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:17:41 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:17:43 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:17:47 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:17:49 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:17:51 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:17:54 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:17:56 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:17:57 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:17:59 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:18:00 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:18:02 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:18:17 [INFO    ] mexc_client          [DRY-RUN] place_order symbol=BTC_USDT side=4 vol=139.0 slp=None tp=None
+2026-05-11 23:18:17 [INFO    ] trader               [LOSS] CLOSED BUY BTC_USDT [SL] | exit=81836.2 pnl=-2.04 USDT
+2026-05-11 23:18:18 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 23:18:18 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 23:18:23 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 23:18:24 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 23:18:24 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 23:18:24 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 23:18:24 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 23:18:24 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 23:18:24 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 23:18:24 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 23:18:30 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:18:32 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:18:33 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:18:35 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:18:36 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:18:38 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:18:40 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:18:42 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:18:44 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:18:45 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:18:48 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:18:51 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:18:53 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:18:55 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:18:57 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:18:59 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:19:00 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:19:02 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:19:03 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:19:05 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:19:09 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:19:10 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:19:12 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:19:13 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:19:15 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:19:24 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:19:24 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 23:19:24 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 23:19:25 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:19:27 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:19:28 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:19:29 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 23:19:30 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:19:30 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 23:19:30 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 23:19:30 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 23:19:30 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 23:19:30 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 23:19:30 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 23:19:30 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 23:19:31 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:19:32 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:19:34 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:19:35 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:19:37 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:19:38 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:19:40 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:19:41 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:19:42 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:19:44 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:19:46 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:19:50 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:19:52 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:19:54 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:19:55 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:19:57 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:19:59 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:20:01 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:20:03 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:20:04 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:20:06 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:20:07 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:20:09 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:20:10 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:20:12 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:20:13 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:20:15 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:20:18 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:20:21 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:20:22 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:20:24 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:20:26 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:20:29 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:20:31 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:20:33 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:20:35 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:20:36 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:20:38 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:20:38 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 23:20:38 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 23:20:40 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:20:43 [INFO    ] mexc_client          Reconnecting WebSocket...
+2026-05-11 23:20:43 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:20:44 [INFO    ] mexc_client          WebSocket connected
+2026-05-11 23:20:44 [INFO    ] mexc_client          WebSocket ready
+2026-05-11 23:20:44 [INFO    ] mexc_client          Subscribed to BTC_USDT
+2026-05-11 23:20:44 [INFO    ] mexc_client          Subscribed to ETH_USDT
+2026-05-11 23:20:44 [INFO    ] mexc_client          Subscribed to XAUT_USDT
+2026-05-11 23:20:44 [INFO    ] mexc_client          Subscribed to SILVER_USDT
+2026-05-11 23:20:44 [INFO    ] mexc_client          Subscribed to USOIL_USDT
+2026-05-11 23:20:45 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:20:46 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:20:48 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:20:50 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:20:52 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:20:54 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:20:57 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:20:58 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:21:00 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:21:01 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:21:03 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:21:06 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:21:07 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:21:09 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:21:11 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:21:12 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:21:14 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:21:15 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:21:18 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:21:20 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:21:22 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:21:23 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:21:25 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:21:26 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:21:28 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:21:29 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:21:31 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:21:33 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:21:34 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:21:36 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:21:38 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:21:39 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:21:41 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:21:43 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:21:44 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:21:46 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:21:48 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:21:48 [ERROR   ] mexc_client          WebSocket error: fin=1 opcode=8 data=b''
+2026-05-11 23:21:48 [WARNING ] mexc_client          WebSocket closed: None None
+2026-05-11 23:21:49 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:21:51 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:21:52 [WARNING ] strategy             [WARN] AI risk veto USOIL_USDT: USOIL_USDT: Risk HIGH -- extreme conditions. No new entries; tighten stops.
+2026-05-11 23:21:53 [INFO    ] mexc_client          Reconnecting WebSocket...

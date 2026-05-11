@@ -190,12 +190,18 @@ function updateStats(s) {
   if (!s) return;
   document.getElementById('statTotal').textContent   = s.total_trades || 0;
   document.getElementById('statWinRate').textContent = (s.win_rate||0) + '%';
+  
   const pnl   = s.total_pnl || 0;
   const pnlEl = document.getElementById('statPnl');
   pnlEl.textContent  = (pnl>=0?'+':'') + fmtNum(pnl) + ' USDT';
   pnlEl.className    = 'stat-value ' + (pnl>=0?'green':'red');
-  document.getElementById('statBest').textContent  = '+' + fmtNum(s.max_win||0);
-  document.getElementById('statWorst').textContent = fmtNum(s.max_loss||0);
+  
+  const maxWin  = s.max_win || 0;
+  const maxLoss = s.max_loss || 0;
+  
+  document.getElementById('statBest').textContent  = (maxWin > 0 ? '+' : '') + fmtNum(maxWin);
+  // Using Math.abs to match user's example style "Worst Trade 4.76" (positive number for loss)
+  document.getElementById('statWorst').textContent = fmtNum(Math.abs(maxLoss));
 }
 
 // ══════════════════ BOT STATUS ══════════════════
@@ -422,7 +428,7 @@ function fmtNum(n) {
 // ══════════════════ INIT & POLL ══════════════════
 
 fetchAll();
-setInterval(fetchAll, 5000);
+setInterval(fetchAll, 2000);
 
 // Initial gauge draw
 setTimeout(updateGaugeDisplay, 1000);
