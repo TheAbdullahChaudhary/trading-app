@@ -1,0 +1,58 @@
+╔══════════════════════════════════════════════════════════════╗
+║           FIX DOCKER CONTAINER ON SERVER                     ║
+╚══════════════════════════════════════════════════════════════╝
+
+Your Docker container is missing dependencies!
+
+Error: ModuleNotFoundError: No module named 'websockets'
+
+═══════════════════════════════════════════════════════════════
+
+🔧 FIX STEPS (Run on server):
+
+1. Go to the trading-app directory:
+   cd /data/servers/app/trading-app
+
+2. Pull latest code (includes requirements.txt):
+   git pull origin main
+
+3. Run the fix script:
+   chmod +x fix_docker.sh
+   ./fix_docker.sh
+
+   OR manually:
+   
+   docker stop fcaabe02c001
+   docker build -t server-logs .
+   docker rm fcaabe02c001
+   docker run -d --name SERVER-LOGS --restart unless-stopped \
+     -v /data/servers/app/trading-app:/app -p 5000:5000 server-logs
+
+4. Check if it's working:
+   docker logs -f SERVER-LOGS
+
+═══════════════════════════════════════════════════════════════
+
+📦 WHAT WAS ADDED:
+
+requirements.txt now includes:
+✓ websockets>=12.0
+✓ scikit-learn>=1.3.0
+✓ All other dependencies
+
+═══════════════════════════════════════════════════════════════
+
+✅ AFTER FIX:
+
+Your bot will have:
+✓ Multi-exchange data (Binance, Coinbase)
+✓ AI ensemble (3 models)
+✓ Predictive signals
+✓ $100 demo trading
+✓ Auto-start enabled
+
+═══════════════════════════════════════════════════════════════
+
+Dashboard will be at: http://your-server-ip:5000
+
+The bot will start trading automatically in demo mode!
