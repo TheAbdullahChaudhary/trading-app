@@ -41,11 +41,11 @@ class TradeSignal:
 
 
 class Strategy:
-    MIN_SCORE     = 7        # need >=7/12 for TESTING (was 10)
-    MIN_ADX       = 20       # trend requirement (was 25)
-    MAX_SL_LOSSES = 2        # consecutive SL before extended pause
-    BASE_COOLDOWN = 60       # 1min between trades (was 180)
-    LOSS_COOLDOWN = 300      # 5-min pause after losses (was 900)
+    MIN_SCORE     = 4        # need >=4/12 VERY AGGRESSIVE (was 7)
+    MIN_ADX       = 15       # low trend requirement (was 20)
+    MAX_SL_LOSSES = 3        # more tolerance
+    BASE_COOLDOWN = 30       # 30sec between trades (was 60)
+    LOSS_COOLDOWN = 180      # 3-min pause (was 300)
     DB_PATH       = "data/trades.db"
 
     def __init__(self, model: AIModel, min_confidence: float = 0.60,
@@ -57,7 +57,7 @@ class Strategy:
         self.advanced_ai    = advanced_ai  # Multi-model AI
         self.predictive     = predictive   # Predictive signals
         self.multi_exchange = multi_exchange  # Cross-exchange arbitrage
-        self.min_confidence = 0.55  # LOWERED for testing (was 0.60)
+        self.min_confidence = 0.50  # VERY LOW for testing (was 0.55)
         self.base_cooldown  = cooldown_seconds
         self._last_trade_ts: Dict[str, float]  = {}
         self._last_reason:   Dict[str, str]    = {}   # last close reason per symbol
@@ -381,7 +381,7 @@ class Strategy:
         if rule_dir == ai_signal:
             final_conf = min((rule_conf + ai_conf) / 2 + 0.05, 0.98)
         elif ai_signal == "HOLD":
-            if rule_score >= 7:  # Lower threshold for testing
+            if rule_score >= 4:  # VERY LOW threshold - trade on rules alone
                 final_conf = rule_conf         # strong rule alone
             else:
                 return TradeSignal(symbol, "HOLD", 0.0, price, atr, rsi,
@@ -406,15 +406,15 @@ class Strategy:
             return TradeSignal(symbol, "HOLD", 0.0, price, atr, rsi,
                                reason=f"Conf {final_conf:.2f} < floor {min_conf:.2f} (WR={wr:.0%})")
         
-        # EXTRA: Require momentum confirmation (RELAXED for testing)
-        if abs(roc3) < 0.001:  # < 0.1% momentum (was 0.2%)
-            return TradeSignal(symbol, "HOLD", 0.0, price, atr, rsi,
-                               reason=f"Weak momentum ROC={roc3:.4f}")
+        # EXTRA: Require momentum confirmation (DISABLED for testing)
+        # if abs(roc3) < 0.001:
+        #     return TradeSignal(symbol, "HOLD", 0.0, price, atr, rsi,
+        #                        reason=f"Weak momentum ROC={roc3:.4f}")
         
-        # EXTRA: Require volume confirmation (RELAXED for testing)
-        if vol_r < 0.9:  # volume check (was 1.1)
-            return TradeSignal(symbol, "HOLD", 0.0, price, atr, rsi,
-                               reason=f"Low volume ratio={vol_r:.2f}")
+        # EXTRA: Require volume confirmation (DISABLED for testing)
+        # if vol_r < 0.9:
+        #     return TradeSignal(symbol, "HOLD", 0.0, price, atr, rsi,
+        #                        reason=f"Low volume ratio={vol_r:.2f}")
 
         # 12. Dynamic SL/TP multipliers
         sl_m, tp_m = self._dynamic_mult(symbol, atr, price, adx)
