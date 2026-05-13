@@ -1,0 +1,1065 @@
+16:14:42 [WARNING ] ai_model             LightGBM not found – rule-based mode only
+16:14:42 [WARNING ] ai_analyst           google-genai not installed — rule-based analyst active
+16:14:42 [INFO    ] main                 [DRY-RUN] DRY-RUN MODE - no real orders placed
+16:14:42 [INFO    ] mexc_client          MEXCClient initialized | dry_run=True
+16:14:42 [INFO    ] data_fetcher         Database initialized: data/trades.db
+16:14:42 [INFO    ] ai_analyst           AI Analyst running in rule-based mode (no GEMINI_API_KEY)
+16:14:42 [INFO    ] trader               Loaded 0 open positions from DB
+16:14:42 [INFO    ] trader               Trader ready | dry_run=True | open=0
+16:14:42 [INFO    ] main                 ============================================================
+16:14:42 [INFO    ] main                   MEXC SCALPING AI BOT  |  dry_run=True
+16:14:42 [INFO    ] main                   Symbols : BTC_USDT, ETH_USDT
+16:14:42 [INFO    ] main                   Interval: Min1 | Check: 5s
+16:14:42 [INFO    ] main                 ============================================================
+16:14:42 [INFO    ] mexc_client          Testing MEXC connection...
+16:14:43 [INFO    ] mexc_client          ✓ Public API OK | BTC price: 80555.1
+16:14:43 [ERROR   ] mexc_client          GET /api/v1/private/account/assets failed: 401 Client Error: Unauthorized for url: https://contract.mexc.com/api/v1/private/account/assets
+16:14:43 [INFO    ] mexc_client          ✓ Private API OK | Got account data
+16:14:43 [INFO    ] main                 Loading 1-minute historical data...
+16:14:43 [INFO    ] data_fetcher         Loading history for BTC_USDT...
+16:14:44 [INFO    ] data_fetcher           [OK] BTC_USDT: 300 candles loaded
+16:14:44 [INFO    ] data_fetcher         Loading history for ETH_USDT...
+16:14:44 [INFO    ] data_fetcher           [OK] ETH_USDT: 300 candles loaded
+16:14:44 [INFO    ] data_fetcher         Database initialized: data/trades_htf.db
+16:14:44 [INFO    ] main                 Loading 5-minute higher-timeframe data...
+16:14:44 [INFO    ] data_fetcher         Loading history for BTC_USDT...
+16:14:45 [INFO    ] data_fetcher           [OK] BTC_USDT: 100 candles loaded
+16:14:45 [INFO    ] data_fetcher         Loading history for ETH_USDT...
+16:14:45 [INFO    ] data_fetcher           [OK] ETH_USDT: 100 candles loaded
+16:14:45 [ERROR   ] mexc_client          POST /api/v1/private/position/change_leverage failed: 401 Client Error: Unauthorized for url: https://contract.mexc.com/api/v1/private/position/change_leverage
+16:14:46 [ERROR   ] mexc_client          POST /api/v1/private/position/change_leverage failed: 401 Client Error: Unauthorized for url: https://contract.mexc.com/api/v1/private/position/change_leverage
+16:14:46 [INFO    ] main                   Leverage set: BTC_USDT x 10
+16:14:47 [ERROR   ] mexc_client          POST /api/v1/private/position/change_leverage failed: 401 Client Error: Unauthorized for url: https://contract.mexc.com/api/v1/private/position/change_leverage
+16:14:49 [ERROR   ] mexc_client          POST /api/v1/private/position/change_leverage failed: 401 Client Error: Unauthorized for url: https://contract.mexc.com/api/v1/private/position/change_leverage
+16:14:49 [INFO    ] main                   Leverage set: ETH_USDT x 10
+16:14:49 [INFO    ] main                 Initializing AI models...
+16:14:49 [INFO    ] mexc_client          WebSocket connected
+16:14:49 [INFO    ] mexc_client          WebSocket ready
+16:14:49 [INFO    ] main                 [OK] WebSocket live feed active
+16:14:49 [INFO    ] mexc_client          Subscribed to BTC_USDT
+16:14:49 [INFO    ] mexc_client          Subscribed to ETH_USDT
+16:14:50 [ERROR   ] mexc_client          GET /api/v1/private/account/assets failed: 401 Client Error: Unauthorized for url: https://contract.mexc.com/api/v1/private/account/assets
+16:14:50 [INFO    ] risk_manager         Daily reset | balance=100.00 USDT
+16:14:50 [INFO    ] main                 Starting balance: 100.00 USDT
+16:14:50 [INFO    ] main                 [RUN] Scalping loop started
+16:14:50 [INFO    ] main                 [DASHBOARD] Dashboard -> http://localhost:5000
+Werkzeug appears to be used in a production deployment. Consider switching to a production web server instead.
+ * Serving Flask app 'dashboard.app'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.104.156:5000
+Press CTRL+C to quit
+16:14:55 [INFO    ] main                 Evaluating BTC_USDT @ 80551.00
+16:14:55 [INFO    ] main                 Evaluating ETH_USDT @ 2282.63
+16:15:00 [INFO    ] main                 Evaluating BTC_USDT @ 80547.30
+16:15:00 [INFO    ] main                 Evaluating ETH_USDT @ 2282.64
+16:15:05 [INFO    ] main                 Evaluating BTC_USDT @ 80545.10
+16:15:06 [INFO    ] main                 Evaluating ETH_USDT @ 2282.85
+16:15:11 [INFO    ] main                 Evaluating BTC_USDT @ 80542.70
+16:15:11 [INFO    ] main                 Evaluating ETH_USDT @ 2282.30
+16:15:16 [INFO    ] main                 Evaluating BTC_USDT @ 80533.00
+16:15:16 [INFO    ] main                 Evaluating ETH_USDT @ 2281.69
+16:15:21 [INFO    ] main                 Evaluating BTC_USDT @ 80516.70
+16:15:21 [INFO    ] main                 Evaluating ETH_USDT @ 2281.00
+16:15:26 [INFO    ] main                 Evaluating BTC_USDT @ 80513.90
+16:15:26 [INFO    ] main                 Evaluating ETH_USDT @ 2280.64
+16:15:31 [INFO    ] main                 Evaluating BTC_USDT @ 80515.00
+16:15:31 [INFO    ] main                 Evaluating ETH_USDT @ 2280.77
+16:15:36 [INFO    ] main                 Evaluating BTC_USDT @ 80517.90
+16:15:36 [INFO    ] main                 Evaluating ETH_USDT @ 2281.12
+16:15:42 [INFO    ] main                 Evaluating BTC_USDT @ 80518.10
+16:15:42 [INFO    ] main                 Evaluating ETH_USDT @ 2280.98
+16:15:47 [INFO    ] main                 Evaluating BTC_USDT @ 80513.00
+16:15:47 [INFO    ] main                 Evaluating ETH_USDT @ 2280.80
+127.0.0.1 - - [12/May/2026 16:15:49] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:15:50] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [12/May/2026 16:15:50] "GET /static/app.js HTTP/1.1" 304 -
+127.0.0.1 - - [12/May/2026 16:15:50] "GET /socket.io/?EIO=4&transport=polling&t=PuRvdi7 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:15:50] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:15:50] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:15:50] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:15:50] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:15:50] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:15:50] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:15:50] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:15:50] "GET /socket.io/?EIO=4&transport=polling&t=PuRvdje&sid=3VE1eDGgpOk5Vw68AAAA HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:15:50] "POST /socket.io/?EIO=4&transport=polling&t=PuRvdjd&sid=3VE1eDGgpOk5Vw68AAAA HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:15:50] "GET /socket.io/?EIO=4&transport=polling&t=PuRvdkS&sid=3VE1eDGgpOk5Vw68AAAA HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:15:50] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:15:50] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:15:50] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:15:50] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:15:50] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:15:50] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:15:50] "GET /api/stats HTTP/1.1" 200 -
+16:15:51 [WARNING ] mexc_client          WebSocket closed: None None
+127.0.0.1 - - [12/May/2026 16:15:52] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:15:52] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:15:52] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:15:52] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:15:52] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:15:52] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:15:52] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:15:52] "GET /api/ai/features/BTC_USDT HTTP/1.1" 200 -
+16:15:52 [INFO    ] main                 Evaluating BTC_USDT @ 80513.80
+16:15:52 [INFO    ] main                 Evaluating ETH_USDT @ 2280.93
+127.0.0.1 - - [12/May/2026 16:15:54] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:15:54] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:15:54] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:15:54] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:15:54] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:15:54] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:15:54] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:15:56] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:15:56] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:15:56] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:15:56] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:15:56] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:15:56] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:15:56] "GET /api/stats HTTP/1.1" 200 -
+16:15:56 [INFO    ] main                 [START] Bot STARTED by dashboard
+127.0.0.1 - - [12/May/2026 16:15:56] "POST /api/control/start HTTP/1.1" 200 -
+16:15:56 [INFO    ] mexc_client          Reconnecting WebSocket...
+16:15:57 [INFO    ] mexc_client          WebSocket connected
+16:15:57 [INFO    ] mexc_client          WebSocket ready
+16:15:57 [INFO    ] mexc_client          Subscribed to BTC_USDT
+16:15:57 [INFO    ] mexc_client          Subscribed to ETH_USDT
+16:15:57 [INFO    ] main                 Evaluating BTC_USDT @ 80513.80
+16:15:57 [INFO    ] main                 Evaluating ETH_USDT @ 2280.93
+127.0.0.1 - - [12/May/2026 16:15:58] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:15:58] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:15:58] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:15:58] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:15:58] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:15:58] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:15:58] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:00] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:00] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:00] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:00] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:00] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:00] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:00] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:02] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:02] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:02] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:02] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:02] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:02] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:02] "GET /api/stats HTTP/1.1" 200 -
+16:16:02 [INFO    ] main                 Evaluating BTC_USDT @ 80517.60
+16:16:02 [INFO    ] main                 Evaluating ETH_USDT @ 2281.17
+127.0.0.1 - - [12/May/2026 16:16:04] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:04] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:04] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:04] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:04] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:04] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:04] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:06] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:06] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:06] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:06] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:06] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:06] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:06] "GET /api/stats HTTP/1.1" 200 -
+16:16:08 [INFO    ] main                 Evaluating BTC_USDT @ 80508.10
+16:16:08 [INFO    ] main                 Evaluating ETH_USDT @ 2280.44
+127.0.0.1 - - [12/May/2026 16:16:08] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:08] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:08] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:08] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:08] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:08] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:08] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:10] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:10] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:10] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:10] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:10] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:10] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:10] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:12] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:12] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:12] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:12] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:12] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:12] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:12] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+16:16:13 [INFO    ] main                 Evaluating BTC_USDT @ 80508.00
+16:16:13 [INFO    ] main                 Evaluating ETH_USDT @ 2280.55
+127.0.0.1 - - [12/May/2026 16:16:14] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:14] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:14] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:14] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:14] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:14] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:14] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:16] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:16] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:16] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:16] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:16] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:16] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:16] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:18] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:18] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:18] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:18] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:18] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:18] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:18] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+16:16:18 [INFO    ] main                 Evaluating BTC_USDT @ 80499.90
+16:16:18 [INFO    ] main                 Evaluating ETH_USDT @ 2280.12
+127.0.0.1 - - [12/May/2026 16:16:20] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:20] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:20] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:20] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:20] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:20] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:20] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:22] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:22] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:22] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:22] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:22] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:22] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:22] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+16:16:23 [INFO    ] main                 Evaluating BTC_USDT @ 80494.90
+16:16:23 [INFO    ] main                 Evaluating ETH_USDT @ 2280.16
+127.0.0.1 - - [12/May/2026 16:16:24] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:24] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:24] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:24] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:24] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:24] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:24] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:26] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:26] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:26] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:26] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:26] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:26] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:26] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:28] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:28] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:28] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:28] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:28] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:28] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:28] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+16:16:28 [INFO    ] main                 Evaluating BTC_USDT @ 80494.50
+16:16:28 [INFO    ] main                 Evaluating ETH_USDT @ 2280.52
+127.0.0.1 - - [12/May/2026 16:16:30] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:30] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:30] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:30] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:30] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:30] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:30] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:32] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:32] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:32] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:32] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:32] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:32] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:32] "GET /api/stats HTTP/1.1" 200 -
+16:16:33 [INFO    ] main                 Evaluating BTC_USDT @ 80484.80
+16:16:33 [INFO    ] main                 Evaluating ETH_USDT @ 2280.20
+127.0.0.1 - - [12/May/2026 16:16:34] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:34] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:34] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:34] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:34] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:34] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:34] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:36] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:36] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:36] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:36] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:36] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:36] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:36] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:38] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:38] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:38] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:38] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:38] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:38] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:38] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+16:16:38 [INFO    ] main                 Evaluating BTC_USDT @ 80482.30
+16:16:38 [INFO    ] main                 Evaluating ETH_USDT @ 2280.28
+127.0.0.1 - - [12/May/2026 16:16:40] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:40] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:40] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:40] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:40] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:40] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:40] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:42] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:42] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:42] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:42] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:42] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:42] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:42] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+16:16:43 [INFO    ] main                 Evaluating BTC_USDT @ 80482.30
+16:16:43 [INFO    ] main                 Evaluating ETH_USDT @ 2280.29
+127.0.0.1 - - [12/May/2026 16:16:44] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:44] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:44] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:44] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:44] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:44] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:44] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:46] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:46] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:46] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:46] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:46] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:46] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:46] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:48] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:48] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:48] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:48] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:48] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:48] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:48] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+16:16:48 [INFO    ] main                 Evaluating BTC_USDT @ 80481.10
+16:16:49 [INFO    ] main                 Evaluating ETH_USDT @ 2280.11
+127.0.0.1 - - [12/May/2026 16:16:50] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:50] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:50] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:50] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:50] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:50] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:50] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:52] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:52] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:52] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:52] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:52] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:52] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:52] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+16:16:54 [INFO    ] main                 Evaluating BTC_USDT @ 80481.10
+16:16:54 [INFO    ] main                 Evaluating ETH_USDT @ 2279.83
+127.0.0.1 - - [12/May/2026 16:16:54] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:54] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:54] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:54] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:54] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:54] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:54] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:56] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:56] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:56] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:56] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:56] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:56] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:56] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:58] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:58] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:58] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:58] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:58] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:58] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:16:58] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+16:16:59 [INFO    ] main                 Evaluating BTC_USDT @ 80481.70
+16:16:59 [INFO    ] main                 Evaluating ETH_USDT @ 2280.30
+16:16:59 [WARNING ] mexc_client          WebSocket closed: None None
+127.0.0.1 - - [12/May/2026 16:17:00] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:00] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:00] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:00] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:00] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:00] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:00] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:02] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:02] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:02] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:02] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:02] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:02] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:02] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:04] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:04] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:04] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:04] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:04] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:04] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:04] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+16:17:04 [INFO    ] main                 Evaluating BTC_USDT @ 80482.60
+16:17:04 [INFO    ] main                 Evaluating ETH_USDT @ 2280.37
+16:17:04 [INFO    ] mexc_client          Reconnecting WebSocket...
+16:17:05 [INFO    ] mexc_client          WebSocket connected
+16:17:05 [INFO    ] mexc_client          WebSocket ready
+16:17:05 [INFO    ] mexc_client          Subscribed to BTC_USDT
+16:17:05 [INFO    ] mexc_client          Subscribed to ETH_USDT
+127.0.0.1 - - [12/May/2026 16:17:06] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:06] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:06] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:06] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:06] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:06] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:06] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:08] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:08] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:08] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:08] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:08] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:08] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:08] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+16:17:09 [INFO    ] main                 Evaluating BTC_USDT @ 80479.90
+16:17:09 [INFO    ] main                 Evaluating ETH_USDT @ 2280.27
+127.0.0.1 - - [12/May/2026 16:17:10] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:10] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:10] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:10] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:10] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:10] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:10] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:12] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:12] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:12] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:12] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:12] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:12] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:12] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:14] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:14] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:14] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:14] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:14] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:14] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:14] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+16:17:14 [INFO    ] main                 Evaluating BTC_USDT @ 80479.90
+16:17:14 [INFO    ] main                 Evaluating ETH_USDT @ 2280.34
+127.0.0.1 - - [12/May/2026 16:17:16] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:16] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:16] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:16] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:16] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:16] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:16] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:18] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:18] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:18] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:18] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:18] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:18] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:18] "GET /api/stats HTTP/1.1" 200 -
+16:17:19 [INFO    ] main                 Evaluating BTC_USDT @ 80479.90
+16:17:19 [INFO    ] main                 Evaluating ETH_USDT @ 2280.34
+127.0.0.1 - - [12/May/2026 16:17:20] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:20] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:20] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:20] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:20] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:20] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:20] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:22] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:22] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:22] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:22] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:22] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:22] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:22] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:24] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:24] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:24] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:24] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:24] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:24] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:24] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+16:17:24 [INFO    ] main                 Evaluating BTC_USDT @ 80478.40
+16:17:24 [INFO    ] main                 Evaluating ETH_USDT @ 2280.38
+127.0.0.1 - - [12/May/2026 16:17:26] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:26] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:26] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:26] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:26] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:26] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:26] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:28] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:28] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:28] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:28] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:28] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:28] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:28] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+16:17:29 [INFO    ] main                 Evaluating BTC_USDT @ 80478.30
+16:17:30 [INFO    ] main                 Evaluating ETH_USDT @ 2280.50
+127.0.0.1 - - [12/May/2026 16:17:30] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:30] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:30] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:30] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:30] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:30] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:30] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:32] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:32] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:32] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:32] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:32] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:32] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:32] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:34] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:34] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:34] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:34] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:34] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:34] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:34] "GET /api/stats HTTP/1.1" 200 -
+16:17:35 [INFO    ] main                 Evaluating BTC_USDT @ 80478.30
+16:17:35 [INFO    ] main                 Evaluating ETH_USDT @ 2280.60
+127.0.0.1 - - [12/May/2026 16:17:36] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:36] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:36] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:36] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:36] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:36] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:36] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:38] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:38] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:38] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:38] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:38] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:38] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:38] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+16:17:40 [INFO    ] main                 Evaluating BTC_USDT @ 80472.30
+16:17:40 [INFO    ] main                 Evaluating ETH_USDT @ 2280.12
+127.0.0.1 - - [12/May/2026 16:17:40] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:40] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:40] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:40] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:40] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:40] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:40] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:42] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:42] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:42] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:42] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:42] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:42] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:42] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:44] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:44] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:44] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:44] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:44] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:44] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:44] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+16:17:45 [INFO    ] main                 Evaluating BTC_USDT @ 80477.50
+16:17:45 [INFO    ] main                 Evaluating ETH_USDT @ 2280.22
+127.0.0.1 - - [12/May/2026 16:17:46] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:46] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:46] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:46] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:46] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:46] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:46] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:48] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:48] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:48] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:48] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:48] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:48] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:48] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:50] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:50] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:50] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:50] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:50] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:50] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:50] "GET /api/stats HTTP/1.1" 200 -
+16:17:50 [INFO    ] main                 Evaluating BTC_USDT @ 80477.60
+16:17:50 [INFO    ] main                 Evaluating ETH_USDT @ 2280.23
+127.0.0.1 - - [12/May/2026 16:17:52] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:52] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:52] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:52] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:52] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:52] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:52] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:54] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:54] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:54] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:54] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:54] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:54] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:54] "GET /api/stats HTTP/1.1" 200 -
+16:17:55 [INFO    ] main                 Evaluating BTC_USDT @ 80477.60
+16:17:55 [INFO    ] main                 Evaluating ETH_USDT @ 2280.13
+127.0.0.1 - - [12/May/2026 16:17:56] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:56] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:56] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:56] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:56] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:56] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:56] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:58] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:58] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:58] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:58] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:58] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:58] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:17:58] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:00] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:00] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:00] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:00] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:00] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:00] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:00] "GET /api/stats HTTP/1.1" 200 -
+16:18:00 [INFO    ] main                 Evaluating BTC_USDT @ 80477.50
+16:18:00 [INFO    ] main                 Evaluating ETH_USDT @ 2280.13
+127.0.0.1 - - [12/May/2026 16:18:02] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:02] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:02] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:02] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:02] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:02] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:02] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:04] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:04] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:04] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:04] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:04] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:04] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:04] "GET /api/stats HTTP/1.1" 200 -
+16:18:05 [INFO    ] main                 Evaluating BTC_USDT @ 80478.00
+16:18:05 [INFO    ] main                 Evaluating ETH_USDT @ 2280.16
+127.0.0.1 - - [12/May/2026 16:18:06] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:06] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:06] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:06] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:06] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:06] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:06] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:08] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:08] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:08] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:08] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:08] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:08] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:08] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+16:18:08 [WARNING ] mexc_client          WebSocket closed: None None
+127.0.0.1 - - [12/May/2026 16:18:10] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:10] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:10] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:10] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:10] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:10] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:10] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+16:18:10 [INFO    ] main                 Evaluating BTC_USDT @ 80478.00
+16:18:10 [INFO    ] main                 Evaluating ETH_USDT @ 2280.14
+127.0.0.1 - - [12/May/2026 16:18:12] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:12] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:12] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:12] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:12] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:12] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:12] "GET /api/stats HTTP/1.1" 200 -
+16:18:13 [INFO    ] mexc_client          Reconnecting WebSocket...
+127.0.0.1 - - [12/May/2026 16:18:14] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:14] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:14] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:14] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:14] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:14] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:14] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+16:18:15 [INFO    ] mexc_client          WebSocket connected
+16:18:15 [INFO    ] mexc_client          WebSocket ready
+16:18:15 [INFO    ] mexc_client          Subscribed to BTC_USDT
+16:18:15 [INFO    ] mexc_client          Subscribed to ETH_USDT
+16:18:15 [INFO    ] main                 Evaluating BTC_USDT @ 80478.00
+16:18:15 [INFO    ] main                 Evaluating ETH_USDT @ 2280.14
+127.0.0.1 - - [12/May/2026 16:18:16] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:16] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:16] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:16] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:16] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:16] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:16] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:18] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:18] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:18] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:18] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:18] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:18] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:18] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:20] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:20] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:20] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:20] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:20] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:20] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:20] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+16:18:21 [INFO    ] main                 Evaluating BTC_USDT @ 80477.90
+16:18:21 [INFO    ] main                 Evaluating ETH_USDT @ 2279.90
+127.0.0.1 - - [12/May/2026 16:18:22] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:22] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:22] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:22] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:22] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:22] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:22] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:24] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:24] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:24] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:24] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:24] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:24] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:24] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+16:18:26 [INFO    ] main                 Evaluating BTC_USDT @ 80466.00
+16:18:26 [INFO    ] main                 Evaluating ETH_USDT @ 2279.43
+127.0.0.1 - - [12/May/2026 16:18:26] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:26] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:26] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:26] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:26] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:26] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:26] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:28] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:28] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:28] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:28] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:28] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:28] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:28] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:30] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:30] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:30] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:30] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:30] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:30] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:30] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+16:18:31 [INFO    ] main                 Evaluating BTC_USDT @ 80465.00
+16:18:31 [INFO    ] main                 Evaluating ETH_USDT @ 2279.22
+127.0.0.1 - - [12/May/2026 16:18:32] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:32] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:32] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:32] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:32] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:32] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:32] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:34] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:34] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:34] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:34] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:34] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:34] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:34] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:36] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:36] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:36] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:36] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:36] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:36] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:36] "GET /api/stats HTTP/1.1" 200 -
+16:18:36 [INFO    ] main                 Evaluating BTC_USDT @ 80465.10
+16:18:36 [INFO    ] main                 Evaluating ETH_USDT @ 2279.01
+127.0.0.1 - - [12/May/2026 16:18:38] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:38] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:38] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:38] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:38] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:38] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:38] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:40] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:40] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:40] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:40] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:40] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:40] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:40] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+16:18:41 [INFO    ] main                 Evaluating BTC_USDT @ 80465.10
+16:18:41 [INFO    ] main                 Evaluating ETH_USDT @ 2279.07
+127.0.0.1 - - [12/May/2026 16:18:42] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:42] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:42] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:42] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:42] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:42] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:42] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:44] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:44] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:44] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:44] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:44] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:44] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:44] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:46] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:46] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:46] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:46] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:46] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:46] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:46] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+16:18:46 [INFO    ] main                 Evaluating BTC_USDT @ 80477.50
+16:18:46 [INFO    ] main                 Evaluating ETH_USDT @ 2279.23
+127.0.0.1 - - [12/May/2026 16:18:48] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:48] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:48] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:48] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:48] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:48] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:48] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:50] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:50] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:50] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:50] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:50] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:50] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:50] "GET /api/stats HTTP/1.1" 200 -
+16:18:51 [INFO    ] main                 Evaluating BTC_USDT @ 80462.90
+16:18:51 [INFO    ] main                 Evaluating ETH_USDT @ 2278.54
+127.0.0.1 - - [12/May/2026 16:18:52] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:52] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:52] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:52] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:52] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:52] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:52] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:52] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:52] "GET /socket.io/?EIO=4&transport=websocket&sid=3VE1eDGgpOk5Vw68AAAA HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:52] "GET /static/style.css HTTP/1.1" 304 -
+127.0.0.1 - - [12/May/2026 16:18:52] "GET /static/app.js HTTP/1.1" 304 -
+127.0.0.1 - - [12/May/2026 16:18:53] "GET /socket.io/?EIO=4&transport=polling&t=PuRwKNx HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:53] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:53] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:53] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:53] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:53] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:53] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:53] "GET /socket.io/?EIO=4&transport=polling&t=PuRwKOc&sid=lSjcnXfDD1FSBQBkAAAC HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:53] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:53] "POST /socket.io/?EIO=4&transport=polling&t=PuRwKOb&sid=lSjcnXfDD1FSBQBkAAAC HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:53] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:53] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:53] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:53] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:53] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:53] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:53] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:55] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:55] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:55] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:55] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:55] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:55] "GET /api/ai/features/BTC_USDT HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:55] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:55] "GET /api/stats HTTP/1.1" 200 -
+16:18:56 [INFO    ] main                 Evaluating BTC_USDT @ 80466.00
+16:18:56 [INFO    ] main                 Evaluating ETH_USDT @ 2278.54
+127.0.0.1 - - [12/May/2026 16:18:57] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:57] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:57] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:57] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:57] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:57] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:57] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:59] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:59] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:59] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:59] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:59] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:59] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:18:59] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:01] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:01] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:01] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:01] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:01] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:01] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:01] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+16:19:01 [INFO    ] main                 Evaluating BTC_USDT @ 80468.90
+16:19:01 [INFO    ] main                 Evaluating ETH_USDT @ 2278.82
+127.0.0.1 - - [12/May/2026 16:19:03] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:03] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:03] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:03] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:03] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:03] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:03] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:05] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:05] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:05] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:05] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:05] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:05] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:05] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+16:19:07 [INFO    ] main                 Evaluating BTC_USDT @ 80464.80
+16:19:07 [INFO    ] main                 Evaluating ETH_USDT @ 2278.43
+127.0.0.1 - - [12/May/2026 16:19:07] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:07] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:07] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:07] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:07] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:07] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:07] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:09] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:09] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:09] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:09] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:09] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:09] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:09] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:11] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:11] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:11] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:11] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:11] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:11] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:11] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+16:19:12 [INFO    ] main                 Evaluating BTC_USDT @ 80454.70
+16:19:12 [INFO    ] main                 Evaluating ETH_USDT @ 2278.10
+127.0.0.1 - - [12/May/2026 16:19:13] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:13] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:13] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:13] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:13] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:13] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:13] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:15] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:15] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:15] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:15] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:15] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:15] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:15] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:17] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:17] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:17] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:17] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:17] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:17] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:17] "GET /api/stats HTTP/1.1" 200 -
+16:19:17 [INFO    ] main                 Evaluating BTC_USDT @ 80465.90
+16:19:17 [INFO    ] main                 Evaluating ETH_USDT @ 2278.94
+127.0.0.1 - - [12/May/2026 16:19:19] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:19] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:19] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:19] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:19] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:19] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:19] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:21] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:21] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:21] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:21] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:21] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:21] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:21] "GET /api/stats HTTP/1.1" 200 -
+16:19:22 [INFO    ] main                 Evaluating BTC_USDT @ 80475.40
+16:19:22 [INFO    ] main                 Evaluating ETH_USDT @ 2279.23
+127.0.0.1 - - [12/May/2026 16:19:23] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:23] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:23] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:23] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:23] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:23] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:23] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+16:19:24 [WARNING ] mexc_client          WebSocket closed: None None
+127.0.0.1 - - [12/May/2026 16:19:25] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:25] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:25] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:25] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:25] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:25] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:25] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:27] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:27] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:27] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:27] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:27] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:27] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:27] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+16:19:27 [INFO    ] main                 Evaluating BTC_USDT @ 80475.40
+16:19:27 [INFO    ] main                 Evaluating ETH_USDT @ 2279.23
+127.0.0.1 - - [12/May/2026 16:19:29] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:29] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:29] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:29] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:29] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:29] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:29] "GET /api/stats HTTP/1.1" 200 -
+16:19:29 [INFO    ] mexc_client          Reconnecting WebSocket...
+16:19:30 [INFO    ] mexc_client          WebSocket connected
+16:19:30 [INFO    ] mexc_client          WebSocket ready
+16:19:30 [INFO    ] mexc_client          Subscribed to BTC_USDT
+16:19:30 [INFO    ] mexc_client          Subscribed to ETH_USDT
+127.0.0.1 - - [12/May/2026 16:19:31] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:31] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:31] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:31] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:31] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:31] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:31] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+16:19:32 [INFO    ] main                 Evaluating BTC_USDT @ 80489.90
+16:19:32 [INFO    ] main                 Evaluating ETH_USDT @ 2279.23
+127.0.0.1 - - [12/May/2026 16:19:33] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:33] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:33] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:33] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:33] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:33] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:33] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:35] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:35] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:35] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:35] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:35] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:35] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:35] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:37] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:37] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:37] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:37] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:37] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:37] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:37] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+16:19:37 [INFO    ] main                 Evaluating BTC_USDT @ 80492.00
+16:19:37 [INFO    ] main                 Evaluating ETH_USDT @ 2279.85
+127.0.0.1 - - [12/May/2026 16:19:39] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:39] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:39] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:39] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:39] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:39] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:39] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:41] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:41] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:41] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:41] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:41] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:41] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:41] "GET /api/trades HTTP/1.1" 200 -
+16:19:42 [INFO    ] main                 Evaluating BTC_USDT @ 80492.10
+16:19:42 [INFO    ] main                 Evaluating ETH_USDT @ 2279.86
+127.0.0.1 - - [12/May/2026 16:19:43] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:43] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:43] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:43] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:43] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:43] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:43] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:45] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:45] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:45] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:45] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:45] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:45] "GET /api/stats HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:45] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:47] "GET /api/prices HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:47] "GET /api/positions HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:47] "GET /api/ai/regime HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:47] "GET /api/ai/status HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:47] "GET /api/ai/insights?limit=20 HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:47] "GET /api/trades HTTP/1.1" 200 -
+127.0.0.1 - - [12/May/2026 16:19:47] "GET /api/stats HTTP/1.1" 200 -
+16:19:47 [INFO    ] main                 Evaluating BTC_USDT @ 80489.90
+16:19:48 [INFO    ] main                 Evaluating ETH_USDT @ 2280.00

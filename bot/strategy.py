@@ -41,18 +41,22 @@ class TradeSignal:
 
 
 class Strategy:
-    MIN_SCORE     = 8        # need >=8/12 (was 7)
-    MIN_ADX       = 18       # trend strength gate
+    MIN_SCORE     = 10       # need >=10/12 - MAXIMUM accuracy
+    MIN_ADX       = 25       # strong trend requirement
     MAX_SL_LOSSES = 2        # consecutive SL before extended pause
-    BASE_COOLDOWN = 60       # seconds between trades (same symbol)
-    LOSS_COOLDOWN = 300      # 5-min pause after 2 consecutive SL hits
+    BASE_COOLDOWN = 180      # 3min between trades
+    LOSS_COOLDOWN = 900      # 15-min pause after 2 consecutive SL hits
     DB_PATH       = "data/trades.db"
 
     def __init__(self, model: AIModel, min_confidence: float = 0.60,
                  cooldown_seconds: int = 60,
-                 analyst: Optional["AIAnalyst"] = None):
+                 analyst: Optional["AIAnalyst"] = None,
+                 advanced_ai=None, predictive=None, multi_exchange=None):
         self.model          = model
         self.analyst        = analyst    # may be None - gracefully skipped
+        self.advanced_ai    = advanced_ai  # Multi-model AI
+        self.predictive     = predictive   # Predictive signals
+        self.multi_exchange = multi_exchange  # Cross-exchange arbitrage
         self.min_confidence = min_confidence
         self.base_cooldown  = cooldown_seconds
         self._last_trade_ts: Dict[str, float]  = {}
@@ -182,24 +186,24 @@ class Strategy:
     def _dynamic_mult(self, symbol: str, atr: float, price: float,
                       adx: float) -> Tuple[float, float]:
         """
-        Widen SL in high volatility / high ADX; tighten in calm markets.
-        Base: SL=1.5xATR, TP=3.0xATR.
-        ADX  > 35 -> SL=2xATR, TP=4xATR (trending strongly)
-        ADX  < 20 -> SL=1.2xATR, TP=2.5xATR (borderline - very tight)
+        High accuracy mode: Wider stops, bigger targets.
+        Base: SL=2.0xATR, TP=4.5xATR (1:2.25 R:R).
+        ADX  > 35 -> SL=2.5xATR, TP=6.0xATR (strong trend)
+        ADX  < 30 -> SL=2.2xATR, TP=4.5xATR (moderate)
         """
         sl_pct = atr / price if price > 0 else 0.001
         if adx >= 35:
-            sl_m, tp_m = 2.0, 4.0
-        elif adx >= 25:
-            sl_m, tp_m = 1.5, 3.0
+            sl_m, tp_m = 2.5, 6.0
+        elif adx >= 30:
+            sl_m, tp_m = 2.0, 4.5
         else:
-            sl_m, tp_m = 1.2, 2.5
+            sl_m, tp_m = 2.2, 4.5
 
-        # If recent win rate is low, go slightly wider
+        # If recent win rate is low, go even wider
         wr = self._recent_win_rate(symbol)
-        if wr < 0.35:
-            sl_m = min(sl_m + 0.3, 2.5)
-            tp_m = min(tp_m + 0.5, 4.5)
+        if wr < 0.40:
+            sl_m = min(sl_m + 0.5, 3.5)
+            tp_m = min(tp_m + 1.5, 8.0)
 
         return sl_m, tp_m
 
@@ -215,6 +219,25 @@ class Strategy:
         if in_cd:
             return TradeSignal(symbol, "HOLD", 0.0, current_price, 0.0, 50.0,
                                reason=cd_reason)
+
+        # 1.5 PREDICTIVE SIGNALS - Analyze tick data for early entry
+        if self.predictive:
+            early_signal = self.predictive.analyze_tick_data(
+                symbol, current_price, 
+                df['volume'].iloc[-1] if 'volume' in df.columns else 0,
+                time.time()
+            )
+            if early_signal['strength'] >= 70:
+                log.info(f"{symbol}: PREDICTIVE signal {early_signal['signal']} "
+                        f"strength={early_signal['strength']}% - {early_signal['reason']}")
+        
+        # 1.6 ARBITRAGE SIGNALS - Check cross-exchange price differences
+        if self.multi_exchange:
+            self.multi_exchange.update_mexc_price(symbol, current_price)
+            arb_signal = self.multi_exchange.get_signal(symbol)
+            if arb_signal['strength'] >= 60:
+                log.info(f"{symbol}: ARBITRAGE signal {arb_signal['direction']} "
+                        f"strength={arb_signal['strength']:.0f}% - {arb_signal['reason']}")
 
         # 2. Compute indicators
         df_ind = compute_indicators(df)
@@ -232,6 +255,7 @@ class Strategy:
         # 3. ADX regime gate - skip choppy markets
         adx = self._adx(df_ind)
         if adx < self.MIN_ADX:
+            log.debug(f"{symbol}: Choppy market ADX={adx:.1f} < {self.MIN_ADX}")
             return TradeSignal(symbol, "HOLD", 0.0, price, atr, 50.0,
                                reason=f"Choppy market ADX={adx:.1f} < {self.MIN_ADX}")
 
@@ -331,8 +355,29 @@ class Strategy:
             return TradeSignal(symbol, "HOLD", 0.0, price, atr, rsi,
                                reason="BUY vetoed - strong HTF downtrend")
 
-        # 10. AI confirmation
+        # 10. AI confirmation (ENHANCED with multi-model ensemble)
         ai_signal, ai_conf = self.model.predict(symbol, df)
+        
+        # 10.5 ADVANCED AI ENSEMBLE - Multi-model prediction
+        ensemble_signal = None
+        ensemble_conf = 0
+        if self.advanced_ai:
+            try:
+                prediction = self.advanced_ai.predict_next_move(symbol, df)
+                ensemble_signal = prediction['direction']
+                ensemble_conf = prediction['confidence'] / 100
+                
+                if prediction['confidence'] >= 70:
+                    log.info(f"{symbol}: ENSEMBLE predicts {ensemble_signal} "
+                            f"conf={prediction['confidence']}% | {', '.join(prediction['signals'][:3])}")
+                    
+                    # If ensemble strongly agrees with rules, boost confidence
+                    if ensemble_signal == rule_dir and prediction['model_agreement'] >= 0.67:
+                        ai_conf = max(ai_conf, ensemble_conf)
+                        log.info(f"{symbol}: Ensemble BOOST - using conf={ai_conf:.2f}")
+            except Exception as e:
+                log.debug(f"{symbol}: Ensemble prediction failed: {e}")
+        
         if rule_dir == ai_signal:
             final_conf = min((rule_conf + ai_conf) / 2 + 0.05, 0.98)
         elif ai_signal == "HOLD":
@@ -345,13 +390,31 @@ class Strategy:
             # AI opposes - skip
             return TradeSignal(symbol, "HOLD", 0.0, price, atr, rsi,
                                reason=f"AI disagrees: rule={rule_dir} AI={ai_signal}")
+        
+        # 10.7 ARBITRAGE BOOST - If cross-exchange signal agrees, boost confidence
+        if self.multi_exchange:
+            arb_signal = self.multi_exchange.get_signal(symbol)
+            if arb_signal['direction'] == rule_dir and arb_signal['strength'] >= 60:
+                boost = min(arb_signal['strength'] / 1000, 0.10)  # Max 10% boost
+                final_conf = min(final_conf + boost, 0.98)
+                log.info(f"{symbol}: ARBITRAGE BOOST +{boost:.2f} → conf={final_conf:.2f}")
 
         # 11. Confidence floor (adaptive based on recent win-rate)
         wr = self._recent_win_rate(symbol)
-        min_conf = self.min_confidence + max(0, (0.5 - wr) * 0.2)  # harder after losses
+        min_conf = self.min_confidence + max(0, (0.5 - wr) * 0.3)  # stricter after losses
         if final_conf < min_conf:
             return TradeSignal(symbol, "HOLD", 0.0, price, atr, rsi,
                                reason=f"Conf {final_conf:.2f} < floor {min_conf:.2f} (WR={wr:.0%})")
+        
+        # EXTRA: Require strong momentum confirmation for high accuracy
+        if abs(roc3) < 0.002:  # < 0.2% momentum
+            return TradeSignal(symbol, "HOLD", 0.0, price, atr, rsi,
+                               reason=f"Weak momentum ROC={roc3:.4f}")
+        
+        # EXTRA: Require volume confirmation
+        if vol_r < 1.1:  # volume must be above average
+            return TradeSignal(symbol, "HOLD", 0.0, price, atr, rsi,
+                               reason=f"Low volume ratio={vol_r:.2f}")
 
         # 12. Dynamic SL/TP multipliers
         sl_m, tp_m = self._dynamic_mult(symbol, atr, price, adx)

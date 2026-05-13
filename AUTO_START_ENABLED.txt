@@ -1,0 +1,82 @@
+╔══════════════════════════════════════════════════════════════╗
+║           AUTO-START ENABLED - FULLY AUTOMATED               ║
+╚══════════════════════════════════════════════════════════════╝
+
+✅ Bot now starts AUTOMATICALLY - no manual action needed!
+
+═══════════════════════════════════════════════════════════════
+
+🚀 WHAT CHANGED
+
+1. Bot starts trading immediately on launch
+   - No need to click "▶ Start" button
+   - Evaluates markets every 3 seconds
+   - Places trades automatically when conditions met
+
+2. Systemd service installed
+   - Starts automatically on server reboot
+   - Auto-restarts if bot crashes
+   - Runs 24/7 in background
+
+═══════════════════════════════════════════════════════════════
+
+📊 CURRENT STATUS
+
+Bot: RUNNING & AUTO-TRADING
+Dashboard: http://192.168.104.156:5000
+Mode: High Accuracy (Score ≥10/12)
+Symbols: BTC, ETH, GOLD, SILVER, OIL
+Balance: $100 USDT (Demo)
+
+═══════════════════════════════════════════════════════════════
+
+🔧 MANAGEMENT COMMANDS
+
+Check status:
+  sudo systemctl status trading-bot
+
+Stop bot:
+  sudo systemctl stop trading-bot
+
+Start bot:
+  sudo systemctl start trading-bot
+
+Restart bot:
+  sudo systemctl restart trading-bot
+
+View logs:
+  tail -f logs/bot_20260512.log
+  # OR
+  sudo journalctl -u trading-bot -f
+
+Disable auto-start:
+  sudo systemctl disable trading-bot
+
+═══════════════════════════════════════════════════════════════
+
+⚡ FULLY AUTOMATED FEATURES
+
+✓ Starts on server boot
+✓ Auto-restarts on crash
+✓ No manual start needed
+✓ Trades 24/7 automatically
+✓ Evaluates all 5 symbols
+✓ High accuracy filters active
+✓ Risk management enforced
+
+═══════════════════════════════════════════════════════════════
+
+⚠️  IMPORTANT
+
+The bot is now FULLY AUTONOMOUS:
+  - Will trade without your input
+  - Follows high accuracy rules (Score ≥10/12)
+  - Max 2 positions, 0.8% risk per trade
+  - Stops at 3% daily loss
+
+Monitor dashboard regularly:
+  http://192.168.104.156:5000
+
+═══════════════════════════════════════════════════════════════
+
+Bot is running NOW and will continue after reboot! 🚀

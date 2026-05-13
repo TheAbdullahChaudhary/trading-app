@@ -1,8 +1,9 @@
 bot:
   name: "MEXC Scalping AI Bot"
   version: "2.0.0"
-  dry_run: true        # Set true for paper trading (demo mode)
+  dry_run: true        # DEMO MODE - $100 paper trading
   log_level: "INFO"
+  auto_restart: true   # Auto-restart on errors
 
 mexc:
   base_url: "https://contract.mexc.com"
@@ -12,44 +13,44 @@ mexc:
 symbols:
   - name: "BTC_USDT"
     display: "Bitcoin"
-    leverage: 50       # High leverage as requested
+    leverage: 10
     min_size: 1
   - name: "ETH_USDT"
     display: "Ethereum"
-    leverage: 50
+    leverage: 10
     min_size: 1
   - name: "XAUT_USDT"
     display: "Gold"
-    leverage: 50
+    leverage: 10
     min_size: 1
   - name: "SILVER_USDT"
     display: "Silver"
-    leverage: 50
+    leverage: 10
     min_size: 1
   - name: "USOIL_USDT"
     display: "Crude Oil"
-    leverage: 50
+    leverage: 10
     min_size: 1
 
 trading:
   timeframe: "Min1"          # 1-minute candles for scalping
   htf_timeframe: "Min5"      # Higher timeframe for trend filter
   lookback_candles: 300      # candles for indicator calculation
-  signal_check_interval: 1   # check signals every 1 second (ULTRA-fast scalping)
+  signal_check_interval: 3   # check every 3 seconds (faster updates)
   min_volume_usdt: 0         # min candle volume filter (0 = disabled)
 
 risk:
-  risk_per_trade_pct: 2.0    # 2% per trade = $2 on $100 demo account
-  max_open_positions: 10     # up to 10 concurrent positions
-  max_daily_drawdown_pct: 10.0  # stop at -$10 loss/day
-  sl_atr_multiplier: 0.8     # Tight SL for quick exit
-  tp_atr_multiplier: 0.8     # Aggressive TP for quick profit
-  max_trades_per_hour: 50
-  cooldown_seconds: 10
+  risk_per_trade_pct: 0.8    # 0.8% per trade - ultra conservative
+  max_open_positions: 2      # max 2 positions - focus on quality
+  max_daily_drawdown_pct: 3.0  # stop at 3% loss
+  sl_atr_multiplier: 2.0     # Wider SL - high accuracy trades
+  tp_atr_multiplier: 4.0     # 1:2 risk/reward
+  max_trades_per_hour: 5     # max 5 trades/hour
+  cooldown_seconds: 180      # 3min between trades
 
 ai:
-  retrain_interval_hours: 2   # retrain every 2h for scalping freshness
-  min_confidence: 0.50
+  retrain_interval_hours: 6   # retrain every 6h - more stable
+  min_confidence: 0.70        # 70% confidence minimum - HIGH accuracy
   lookback_for_training: 250
 
 dashboard:

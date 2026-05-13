@@ -1,0 +1,42 @@
+✅ ALL 5 SYMBOLS NOW ENABLED
+
+Bot restarted with:
+  ✓ BTC/USDT
+  ✓ ETH/USDT  
+  ✓ GOLD/USDT (XAUT_USDT)
+  ✓ SILVER/USDT
+  ✓ OIL/USDT (USOIL_USDT)
+
+Updates every 3 seconds (faster than before)
+
+═══════════════════════════════════════════════════════════════
+
+🌐 DASHBOARD: http://192.168.104.156:5000
+
+⚠️  IMPORTANT: Click "▶ Start" button to activate trading!
+
+═══════════════════════════════════════════════════════════════
+
+⚠️  WARNING ABOUT COMMODITIES
+
+Your previous results showed:
+  - SILVER: Multiple losses (-$2.29, -$2.10, -$2.00)
+  - OIL: Mixed results (-$0.70, +$4.26, $0.00)
+  - GOLD: Not tested yet
+
+The HIGH ACCURACY settings should help, but these symbols are
+more volatile. Monitor them closely!
+
+If they continue losing, disable them again in config.yaml
+
+═══════════════════════════════════════════════════════════════
+
+Current Settings:
+  - Score ≥10/12 (very selective)
+  - ADX ≥25 (strong trends)
+  - Confidence ≥70%
+  - Updates every 3 seconds
+  - Max 2 positions
+  - 0.8% risk per trade
+
+Refresh dashboard to see all 5 symbols with live prices!

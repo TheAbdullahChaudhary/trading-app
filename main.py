@@ -21,6 +21,9 @@ from bot.mexc_client  import MEXCClient
 from bot.data_fetcher import DataFetcher
 from bot.ai_model     import AIModel
 from bot.ai_analyst   import AIAnalyst
+from bot.advanced_ai  import AdvancedAI
+from bot.predictive_signals import PredictiveSignals
+from bot.multi_exchange import MultiExchangeAggregator
 from bot.strategy     import Strategy
 from bot.risk_manager import RiskManager
 from bot.trader       import Trader
@@ -69,12 +72,18 @@ class ScalpingBot:
             min_confidence=ai_cfg["min_confidence"],
             lookback=ai_cfg["lookback_for_training"]
         )
+        self.advanced_ai = AdvancedAI()  # Multi-model ensemble
+        self.predictive = PredictiveSignals()  # Early signal detection
+        self.multi_exchange = MultiExchangeAggregator()  # Cross-exchange arbitrage
         self.analyst  = AIAnalyst(api_key=gemini_key or None)
         self.strategy = Strategy(
             self.model,
             min_confidence=ai_cfg["min_confidence"],
             cooldown_seconds=rcfg.get("cooldown_seconds", 30),
             analyst=self.analyst,
+            advanced_ai=self.advanced_ai,  # Pass advanced AI
+            predictive=self.predictive,    # Pass predictive engine
+            multi_exchange=self.multi_exchange,  # Pass multi-exchange
         )
         self.trader = Trader(self.client, self.risk, dry_run=dry_run)
 
@@ -138,6 +147,12 @@ class ScalpingBot:
                 df = self.fetcher.get_df(sym)
                 if df is not None:
                     self.model.train(sym, df)
+            
+            # Train advanced AI models
+            df = self.fetcher.get_df(sym)
+            if df is not None and len(df) >= 200:
+                self.advanced_ai.train_models(sym, df)
+                log.info(f"  Advanced AI trained: {sym}")
 
         # Subscribe WebSocket (1m real-time feed)
         self.client.subscribe_ws(
@@ -146,6 +161,21 @@ class ScalpingBot:
             on_ticker=self.fetcher.on_ticker,
         )
         log.info("[OK] WebSocket live feed active")
+        
+        # Start multi-exchange aggregator in background
+        import threading
+        def run_multi_exchange():
+            import asyncio
+            loop = asyncio.new_event_loop()
+            asyncio.set_event_loop(loop)
+            try:
+                loop.run_until_complete(self.multi_exchange.start(self._symbols))
+            except Exception as e:
+                log.error(f"Multi-exchange error: {e}")
+        
+        exchange_thread = threading.Thread(target=run_multi_exchange, daemon=True)
+        exchange_thread.start()
+        log.info("[OK] Multi-exchange aggregator started (Binance, Coinbase)")
 
         # Daily balance reset
         balance = self._get_balance()
@@ -166,19 +196,26 @@ class ScalpingBot:
     # -- Main scalping loop -----------------------------------
 
     def run_scalping_loop(self):
-        self._running = True
+        self._running = True  # AUTO-START enabled
         last_retrain  = time.time()
         last_balance  = time.time()
 
-        log.info("[RUN] Scalping loop started")
+        log.info("[RUN] Scalping loop started - AUTO-TRADING ACTIVE")
         while True:
-            if not self._running or self._paused:
+            # Auto-start: no need to wait for dashboard button
+            # if not self._running or self._paused:
+            #     time.sleep(1)
+            #     continue
+            
+            if self._paused:  # Only check pause, not running flag
                 time.sleep(1)
                 continue
 
             try:
                 prices = self.fetcher.get_all_prices()
                 open_pos = self.trader.get_open_positions()
+                
+                log.debug(f"Loop tick: prices={len(prices)}, positions={len(open_pos)}, running={self._running}")
 
                 # -- Monitor SL/TP ----------------------------
                 self.trader.monitor_positions(prices)
@@ -203,8 +240,10 @@ class ScalpingBot:
                     price = prices.get(sym, 0)
 
                     if df is None or len(df) < 60 or price <= 0:
+                        log.debug(f"{sym}: Insufficient data df={df is not None}, len={len(df) if df is not None else 0}, price={price}")
                         continue
 
+                    log.info(f"Evaluating {sym} @ {price:.2f}")
                     sig = self.strategy.evaluate(sym, df, price, htf_df=htf_df)
 
                     if sig.signal in ("BUY", "SELL") and sig.atr > 0:

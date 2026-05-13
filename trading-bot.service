@@ -1,0 +1,18 @@
+[Unit]
+Description=MEXC Trading Bot - Auto-Start
+After=network.target
+
+[Service]
+Type=simple
+User=devops
+WorkingDirectory=/home/devops/application/trading-app
+ExecStart=/usr/bin/python3 /home/devops/application/trading-app/main.py --dry-run
+Restart=always
+RestartSec=10
+StandardOutput=append:/home/devops/application/trading-app/logs/systemd.log
+StandardError=append:/home/devops/application/trading-app/logs/systemd.log
+
+Environment="PYTHONUNBUFFERED=1"
+
+[Install]
+WantedBy=multi-user.target
