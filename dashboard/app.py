@@ -1,21 +1,23 @@
 """Flask + SocketIO dashboard server — with AI Analyst endpoints."""
 import threading
 import os
+from pathlib import Path
 from flask import Flask, jsonify, render_template, request, session, redirect, url_for
 from flask_socketio import SocketIO
 from functools import wraps
 from dotenv import load_dotenv
 
-# Load dashboard credentials
-load_dotenv('.env.dashboard')
+# Load dashboard credentials from parent directory
+env_path = Path(__file__).parent.parent / '.env.dashboard'
+load_dotenv(env_path)
 
 app = Flask(__name__)
 app.config["SECRET_KEY"] = os.getenv("SECRET_KEY", "mexc_trading_bot_2024")
 socketio = SocketIO(app, cors_allowed_origins="*", async_mode="threading")
 
 # Login credentials from .env.dashboard
-USERNAME = os.getenv("DASHBOARD_USERNAME", "admin")
-PASSWORD = os.getenv("DASHBOARD_PASSWORD", "trading2024")
+USERNAME = os.getenv("DASHBOARD_USERNAME", "abdullah")
+PASSWORD = os.getenv("DASHBOARD_PASSWORD", "abdullah")
 
 # Set by main.py after bot is initialized
 _trader        = None

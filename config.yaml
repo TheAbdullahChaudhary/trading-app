@@ -19,19 +19,18 @@ symbols:
     display: "Ethereum"
     leverage: 15
     min_size: 1
-  # Disabled: Poor performance, high volatility
-  # - name: "XAUT_USDT"
-  #   display: "Gold"
-  #   leverage: 10
-  #   min_size: 1
-  # - name: "SILVER_USDT"
-  #   display: "Silver"
-  #   leverage: 10
-  #   min_size: 1
-  # - name: "USOIL_USDT"
-  #   display: "Crude Oil"
-  #   leverage: 10
-  #   min_size: 1
+  - name: "XAUT_USDT"
+    display: "Gold"
+    leverage: 15
+    min_size: 1
+  - name: "SILVER_USDT"
+    display: "Silver"
+    leverage: 15
+    min_size: 1
+  - name: "USOIL_USDT"
+    display: "Crude Oil"
+    leverage: 15
+    min_size: 1
 
 trading:
   timeframe: "Min1"          # 1-minute candles for scalping
