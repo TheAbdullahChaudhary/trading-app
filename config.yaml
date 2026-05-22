@@ -13,24 +13,25 @@ mexc:
 symbols:
   - name: "BTC_USDT"
     display: "Bitcoin"
-    leverage: 10
+    leverage: 15
     min_size: 1
   - name: "ETH_USDT"
     display: "Ethereum"
-    leverage: 10
+    leverage: 15
     min_size: 1
-  - name: "XAUT_USDT"
-    display: "Gold"
-    leverage: 10
-    min_size: 1
-  - name: "SILVER_USDT"
-    display: "Silver"
-    leverage: 10
-    min_size: 1
-  - name: "USOIL_USDT"
-    display: "Crude Oil"
-    leverage: 10
-    min_size: 1
+  # Disabled: Poor performance, high volatility
+  # - name: "XAUT_USDT"
+  #   display: "Gold"
+  #   leverage: 10
+  #   min_size: 1
+  # - name: "SILVER_USDT"
+  #   display: "Silver"
+  #   leverage: 10
+  #   min_size: 1
+  # - name: "USOIL_USDT"
+  #   display: "Crude Oil"
+  #   leverage: 10
+  #   min_size: 1
 
 trading:
   timeframe: "Min1"          # 1-minute candles for scalping
@@ -40,16 +41,16 @@ trading:
   min_volume_usdt: 0         # min candle volume filter (0 = disabled)
 
 risk:
-  risk_per_trade_pct: 0.8    # 0.8% per trade - ultra conservative
-  max_open_positions: 2      # max 2 positions - focus on quality
-  max_daily_drawdown_pct: 3.0  # stop at 3% loss
-  sl_atr_multiplier: 2.0     # Wider SL - high accuracy trades
-  tp_atr_multiplier: 4.0     # 1:2 risk/reward
+  risk_per_trade_pct: 2.0    # 2% per trade - aggressive but controlled
+  max_open_positions: 2      # max 2 positions - more opportunities
+  max_daily_drawdown_pct: 5.0  # stop at 5% loss
+  sl_atr_multiplier: 1.5     # Tighter SL
+  tp_atr_multiplier: 4.5     # Better R:R (1:3)
   max_trades_per_hour: 5     # max 5 trades/hour
   cooldown_seconds: 180      # 3min between trades
 
 ai:
-  retrain_interval_hours: 6   # retrain every 6h - more stable
+  retrain_interval_hours: 4   # retrain every 4h - adapt faster
   min_confidence: 0.70        # 70% confidence minimum - HIGH accuracy
   lookback_for_training: 250
 

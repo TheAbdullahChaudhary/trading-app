@@ -1,11 +1,21 @@
 """Flask + SocketIO dashboard server — with AI Analyst endpoints."""
 import threading
-from flask import Flask, jsonify, render_template, request
+import os
+from flask import Flask, jsonify, render_template, request, session, redirect, url_for
 from flask_socketio import SocketIO
+from functools import wraps
+from dotenv import load_dotenv
+
+# Load dashboard credentials
+load_dotenv('.env.dashboard')
 
 app = Flask(__name__)
-app.config["SECRET_KEY"] = "mexc_trading_bot_2024"
+app.config["SECRET_KEY"] = os.getenv("SECRET_KEY", "mexc_trading_bot_2024")
 socketio = SocketIO(app, cors_allowed_origins="*", async_mode="threading")
+
+# Login credentials from .env.dashboard
+USERNAME = os.getenv("DASHBOARD_USERNAME", "admin")
+PASSWORD = os.getenv("DASHBOARD_PASSWORD", "trading2024")
 
 # Set by main.py after bot is initialized
 _trader        = None
@@ -14,6 +24,15 @@ _analyst       = None   # AIAnalyst instance
 _ai_model      = None   # AIModel instance (for feature importance)
 _bot_state     = {"running": False, "paused": False}
 _bot_controller = None
+
+
+def login_required(f):
+    @wraps(f)
+    def decorated_function(*args, **kwargs):
+        if not session.get('logged_in'):
+            return redirect(url_for('login'))
+        return f(*args, **kwargs)
+    return decorated_function
 
 
 def init_dashboard(trader, fetcher, bot_controller, analyst=None, ai_model=None):
@@ -43,39 +62,66 @@ def emit_ai_alert(alert_dict: dict):
     socketio.emit("ai_alert", alert_dict)
 
 
+# -------------------- AUTH ROUTES --------------------
+
+@app.route("/login", methods=["GET", "POST"])
+def login():
+    if request.method == "POST":
+        username = request.form.get("username")
+        password = request.form.get("password")
+        if username == USERNAME and password == PASSWORD:
+            session['logged_in'] = True
+            return redirect(url_for('index'))
+        return render_template("login.html", error="Invalid credentials")
+    return render_template("login.html")
+
+
+@app.route("/logout")
+def logout():
+    session.pop('logged_in', None)
+    return redirect(url_for('login'))
+
+
 # -------------------- CORE ROUTES --------------------
 
 @app.route("/")
+@login_required
 def index():
     return render_template("index.html")
 
 
 @app.route("/api/prices")
+@login_required
 def prices():
     return jsonify(_fetcher.get_all_prices() if _fetcher else {})
 
 
 @app.route("/api/positions")
+@login_required
 def positions():
     return jsonify(_trader.get_open_positions() if _trader else [])
 
 
 @app.route("/api/trades")
+@login_required
 def trades():
     return jsonify(_trader.get_trade_log(50) if _trader else [])
 
 
 @app.route("/api/stats")
+@login_required
 def stats():
     return jsonify(_trader.get_stats() if _trader else {})
 
 
 @app.route("/api/status")
+@login_required
 def status():
     return jsonify(_bot_state)
 
 
 @app.route("/api/control/<cmd>", methods=["POST"])
+@login_required
 def control(cmd):
     global _bot_state
     if _bot_controller:
@@ -91,6 +137,7 @@ def control(cmd):
 
 
 @app.route("/api/control/close_all", methods=["POST"])
+@login_required
 def close_all():
     if _trader:
         _trader.close_all_positions()
@@ -98,6 +145,7 @@ def close_all():
 
 
 @app.route("/api/control/close/<symbol>", methods=["POST"])
+@login_required
 def close_one(symbol):
     if _trader:
         ok = _trader.close_position_by_symbol(symbol)
@@ -108,6 +156,7 @@ def close_one(symbol):
 # -------------------- AI ROUTES --------------------
 
 @app.route("/api/ai/insights")
+@login_required
 def ai_insights():
     limit = int(request.args.get("limit", 30))
     if _analyst:

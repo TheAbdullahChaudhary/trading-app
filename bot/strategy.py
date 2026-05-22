@@ -41,11 +41,11 @@ class TradeSignal:
 
 
 class Strategy:
-    MIN_SCORE     = 6        # need >=6/12 - BALANCED (was 4)
-    MIN_ADX       = 18       # moderate trend (was 15)
-    MAX_SL_LOSSES = 2        # tighter control
-    BASE_COOLDOWN = 120      # 2min between trades (was 30)
-    LOSS_COOLDOWN = 300      # 5-min pause after losses
+    MIN_SCORE     = 8        # need >=8/12 - HIGH quality (relaxed from 9)
+    MIN_ADX       = 23       # strong trend required (relaxed from 25)
+    MAX_SL_LOSSES = 2        # pause after 2 losses (was 1)
+    BASE_COOLDOWN = 180      # 3min between trades (was 300)
+    LOSS_COOLDOWN = 360      # 6-min pause after losses (was 600)
     DB_PATH       = "data/trades.db"
 
     def __init__(self, model: AIModel, min_confidence: float = 0.60,
@@ -57,7 +57,7 @@ class Strategy:
         self.advanced_ai    = advanced_ai  # Multi-model AI
         self.predictive     = predictive   # Predictive signals
         self.multi_exchange = multi_exchange  # Cross-exchange arbitrage
-        self.min_confidence = 0.58  # Balanced confidence (was 0.50)
+        self.min_confidence = 0.70  # High confidence (relaxed from 0.75)
         self.base_cooldown  = cooldown_seconds
         self._last_trade_ts: Dict[str, float]  = {}
         self._last_reason:   Dict[str, str]    = {}   # last close reason per symbol
@@ -213,6 +213,22 @@ class Strategy:
                  current_price: float,
                  htf_df: Optional[pd.DataFrame] = None) -> TradeSignal:
         none = TradeSignal(symbol, "HOLD", 0.0, current_price, 0.0, 50.0)
+
+        # 0. TIME FILTER - Avoid low liquidity periods (weekends, late night UTC)
+        from datetime import datetime
+        now = datetime.utcnow()
+        hour = now.hour
+        weekday = now.weekday()
+        
+        # Skip weekends (Saturday=5, Sunday=6)
+        if weekday >= 5:
+            return TradeSignal(symbol, "HOLD", 0.0, current_price, 0.0, 50.0,
+                               reason="Weekend - low liquidity")
+        
+        # Skip low liquidity hours (0-4 UTC, 22-24 UTC)
+        if hour < 4 or hour >= 22:
+            return TradeSignal(symbol, "HOLD", 0.0, current_price, 0.0, 50.0,
+                               reason=f"Low liquidity hour {hour}:00 UTC")
 
         # 1. Cooldown / loss-streak gate
         in_cd, cd_reason = self._in_cooldown(symbol)
@@ -406,15 +422,34 @@ class Strategy:
             return TradeSignal(symbol, "HOLD", 0.0, price, atr, rsi,
                                reason=f"Conf {final_conf:.2f} < floor {min_conf:.2f} (WR={wr:.0%})")
         
-        # EXTRA: Require momentum confirmation (RE-ENABLED)
-        if abs(roc3) < 0.0015:  # 0.15% minimum momentum
+        # EXTRA: Require momentum confirmation (BALANCED)
+        if abs(roc3) < 0.002:  # 0.2% minimum momentum (relaxed from 0.3%)
             return TradeSignal(symbol, "HOLD", 0.0, price, atr, rsi,
                                reason=f"Weak momentum ROC={roc3:.4f}")
         
-        # EXTRA: Require volume confirmation (RE-ENABLED)
-        if vol_r < 1.0:  # volume must be at least average
+        # EXTRA: Require volume confirmation (BALANCED)
+        if vol_r < 1.1:  # volume must be 10% above average (relaxed from 1.2x)
             return TradeSignal(symbol, "HOLD", 0.0, price, atr, rsi,
                                reason=f"Low volume ratio={vol_r:.2f}")
+        
+        # EXTRA: Volatility filter - avoid extreme volatility
+        atr_pct = (atr / price) * 100 if price > 0 else 0
+        if atr_pct > 4.0:  # ATR > 4% of price = too volatile (relaxed from 3%)
+            return TradeSignal(symbol, "HOLD", 0.0, price, atr, rsi,
+                               reason=f"Extreme volatility ATR={atr_pct:.2f}%")
+        
+        # EXTRA: Bollinger Band filter - avoid extremes
+        if bb_pct < 0.05 or bb_pct > 0.95:  # Too close to bands (relaxed from 0.1/0.9)
+            return TradeSignal(symbol, "HOLD", 0.0, price, atr, rsi,
+                               reason=f"BB extreme position={bb_pct:.2f}")
+        
+        # EXTRA: RSI divergence check - avoid overbought/oversold extremes
+        if rule_dir == "BUY" and rsi > 70:  # Relaxed from 65
+            return TradeSignal(symbol, "HOLD", 0.0, price, atr, rsi,
+                               reason=f"BUY rejected - RSI overbought {rsi:.1f}")
+        if rule_dir == "SELL" and rsi < 30:  # Relaxed from 35
+            return TradeSignal(symbol, "HOLD", 0.0, price, atr, rsi,
+                               reason=f"SELL rejected - RSI oversold {rsi:.1f}")
 
         # 12. Dynamic SL/TP multipliers
         sl_m, tp_m = self._dynamic_mult(symbol, atr, price, adx)
